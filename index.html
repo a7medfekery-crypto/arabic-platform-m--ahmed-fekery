@@ -431,24 +431,6 @@
       margin-bottom: 8px;
     }
 
-    .video-container {
-      position: relative;
-      padding-bottom: 56.25%;
-      height: 0;
-      overflow: hidden;
-      border-radius: 8px;
-      margin-bottom: 1rem;
-    }
-
-    .video-container iframe {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      border: 0;
-    }
-
     .form-group { margin-bottom: 1rem; }
     .form-group label { display: block; margin-bottom: 5px; font-weight: 700; }
     .form-control {
@@ -528,7 +510,7 @@
         <div class="teacher-profile-header">
           <img src="teacher.jpg" onerror="this.src='teacher.png'; this.onerror=null;" alt="أ/ أحمد فكري" class="hero-teacher-photo" />
           <div>
-            <div class="hero-badge"><i class="fa-solid fa-star"></i> معلم  لغة عربية</div>
+            <div class="hero-badge"><i class="fa-solid fa-star"></i> معلم لغة عربية</div>
             <h3 style="margin-top: 4px; font-size: 1.15rem; color: #fff;">أ/ أحمد فكري</h3>
           </div>
         </div>
@@ -592,18 +574,6 @@
 
   </div>
 
-  <!-- Video View Modal -->
-  <div class="modal-overlay" id="videoModal">
-    <div class="modal-content">
-      <button class="modal-close" onclick="closeModal('videoModal')">&times;</button>
-      <h3 id="videoModalTitle" style="margin-bottom: 1rem; color: var(--primary);"></h3>
-      <div class="video-container">
-        <iframe id="videoIframe" src="" allowfullscreen></iframe>
-      </div>
-      <p id="videoModalDesc" style="color: var(--text-muted); font-size: 0.95rem;"></p>
-    </div>
-  </div>
-
   <!-- Quiz Modal -->
   <div class="modal-overlay" id="quizModal">
     <div class="modal-content">
@@ -662,11 +632,6 @@
     </div>
   </div>
 
-  <footer>
-    <p>جميع الحقوق محفوظة &copy; 2026 | الأستاذ أحمد فكري - معلم اللغة العربية</p>
-    <p style="margin-top: 5px;"><i class="fa-solid fa-phone"></i> للتواصل والاستفسارات: 01005599895</p>
-  </footer>
-
   <script>
     const TEACHER_PIN = "1188";
     const GOOGLE_SHEET_URL = "YOUR_GOOGLE_SCRIPT_WEB_APP_URL_HERE";
@@ -716,24 +681,10 @@
       { q: 'الكلمة التي لا تفيد معنى بمفردها وتفهم فقط في سياق الجملة هي:', options: ['الاسم', 'الفعل', 'الحرف', 'الخبر'], correct: 2 }
     ];
 
+    // تم إفراغ الشروحات والملخصات لجميع الصفوف
     const defaultData = {
-      lessons: [
-        { id: 1, grade: 'p4', branch: 'نحو', title: 'أقسام الكلام (اسم، فعل، حرف)', desc: 'شرح مبسط لعلامات الاسم وأنواع الأفعال والحروف مع أ/ أحمد فكري.', videoUrl: 'https://www.youtube.com/embed/dQw4w9WgXcQ' },
-        { id: 2, grade: 'p4', branch: 'نصوص', title: 'نص يا مصر (شعر)', desc: 'شرح معاني الكلمات ومظاهر الجمال وتدريبات الأداء.', videoUrl: 'https://www.youtube.com/embed/dQw4w9WgXcQ' },
-        { id: 3, grade: 'p5', branch: 'نحو', title: 'إعراب جمع التكسير', desc: 'علامات إعراب جمع التكسير في الرفع والنصب والجر مع أمثلة عملية.', videoUrl: 'https://www.youtube.com/embed/dQw4w9WgXcQ' },
-        { id: 4, grade: 'p6', branch: 'نحو', title: 'الأسماء الخمسة وإعرابها', desc: 'شروط عمل الأسماء الخمسة وعلامات إعرابها الفرعية بالتفصيل.', videoUrl: 'https://www.youtube.com/embed/dQw4w9WgXcQ' },
-        { id: 5, grade: 'm1', branch: 'نحو', title: 'همزة القطع وألف الوصل', desc: 'مواضع همزة القطع وألف الوصل في الأسماء والأفعال والحروف بطريقة سهلة.', videoUrl: 'https://www.youtube.com/embed/dQw4w9WgXcQ' },
-        { id: 6, grade: 'm2', branch: 'نحو', title: 'المعرب والمبني من الأسماء', desc: 'الضمائر، أسماء الإشارة، الأسماء الموصولة وغيرها.', videoUrl: 'https://www.youtube.com/embed/dQw4w9WgXcQ' },
-        { id: 7, grade: 'm3', branch: 'نحو', title: 'المنادى وأنواعه وأحكامه', desc: 'شرح المنادى المضاف، الشبيه بالمضاف، النكرة غير المقصودة، والمبني.', videoUrl: 'https://www.youtube.com/embed/dQw4w9WgXcQ' }
-      ],
-      summaries: [
-        { id: 1, grade: 'p4', branch: 'نحو', title: 'مذكرة القواعد النحوية الشاملة', desc: 'إعداد أ/ أحمد فكري - ملخص شامل يشمل جميع القواعد مع تدريبات إعرابية.', fileUrl: '#' },
-        { id: 2, grade: 'p5', branch: 'إملاء', title: 'قواعد الهمزات وعلامات الترقيم', desc: 'مذكرة مبسطة تشرح ترتيب قوى الحركات وطريقة رسم الهمزة بسهولة.', fileUrl: '#' },
-        { id: 3, grade: 'p6', branch: 'نحو', title: 'ملخص النواسخ (كان وأخواتها وإن وأخواتها)', desc: 'مقارنة شاملة مع جدول إعراب متكامل للدروس المقررة.', fileUrl: '#' },
-        { id: 4, grade: 'm1', branch: 'نصوص', title: 'سلسلة التميز في مواطن الجمال', desc: 'تجميع التعبيرات الجمالية والمحسنات البديعية المقررة.', fileUrl: '#' },
-        { id: 5, grade: 'm2', branch: 'نحو', title: 'كبسولة النحو (النعت، الحال، والتوكيد)', desc: 'طريقة التحويل بين المنصوبات ونماذج إعرابية مجابة.', fileUrl: '#' },
-        { id: 6, grade: 'm3', branch: 'نحو', title: 'خلاصة المشتقات لطلاب الشهادة الإعدادية', desc: 'أسهل طريقة لاستخراج وصياغة المشتقات مع تدريبات الامتحانات.', fileUrl: '#' }
-      ],
+      lessons: [],
+      summaries: [],
       quizzes: [
         {
           id: 101,
@@ -800,27 +751,9 @@
       const grid = document.getElementById('lessons-grid');
       
       if (list.length === 0) {
-        grid.innerHTML = `<p style="grid-column: 1/-1; text-align: center; color: var(--text-muted); padding: 2rem;">لا توجد شروحات مضافة حالياً لهذا الصف.</p>`;
+        grid.innerHTML = `<p style="grid-column: 1/-1; text-align: center; color: var(--text-muted); padding: 2rem; font-weight: 600;">لا توجد شروحات مضافة حالياً لهذا الصف.</p>`;
         return;
       }
-
-      grid.innerHTML = list.map(item => `
-        <div class="card">
-          <div class="card-header">
-            <span class="card-tag">${item.branch}</span>
-            <small><i class="fa-solid fa-play-circle"></i> فيديو شرح</small>
-          </div>
-          <div class="card-body">
-            <h4 class="card-title">${item.title}</h4>
-            <p class="card-desc">${item.desc}</p>
-          </div>
-          <div class="card-footer">
-            <button class="btn btn-primary" onclick="watchVideo('${item.title}', '${item.desc}', '${item.videoUrl}')">
-              <i class="fa-solid fa-circle-play"></i> مشاهدة الدرس
-            </button>
-          </div>
-        </div>
-      `).join('');
     }
 
     function renderSummaries() {
@@ -828,27 +761,9 @@
       const grid = document.getElementById('summaries-grid');
 
       if (list.length === 0) {
-        grid.innerHTML = `<p style="grid-column: 1/-1; text-align: center; color: var(--text-muted); padding: 2rem;">لا توجد مذكرات مضافة لهذا الصف حالياً.</p>`;
+        grid.innerHTML = `<p style="grid-column: 1/-1; text-align: center; color: var(--text-muted); padding: 2rem; font-weight: 600;">لا توجد مذكرات أو ملخصات مضافة لهذا الصف حالياً.</p>`;
         return;
       }
-
-      grid.innerHTML = list.map(item => `
-        <div class="card">
-          <div class="card-header" style="background: #2b580c;">
-            <span class="card-tag">${item.branch}</span>
-            <small><i class="fa-solid fa-file-lines"></i> PDF / مذكرة</small>
-          </div>
-          <div class="card-body">
-            <h4 class="card-title">${item.title}</h4>
-            <p class="card-desc">${item.desc}</p>
-          </div>
-          <div class="card-footer">
-            <a href="${item.fileUrl}" target="_blank" class="btn btn-accent">
-              <i class="fa-solid fa-download"></i> معاينة وتحميل
-            </a>
-          </div>
-        </div>
-      `).join('');
     }
 
     function renderQuizzes() {
@@ -856,7 +771,7 @@
       const grid = document.getElementById('quizzes-grid');
 
       if (list.length === 0) {
-        grid.innerHTML = `<p style="grid-column: 1/-1; text-align: center; color: var(--text-muted); padding: 2rem;">لا توجد اختبارات مضافة لهذا الصف بعد.</p>`;
+        grid.innerHTML = `<p style="grid-column: 1/-1; text-align: center; color: var(--text-muted); padding: 2rem; font-weight: 600;">لا توجد اختبارات مضافة لهذا الصف بعد.</p>`;
         return;
       }
 
@@ -883,13 +798,6 @@
       renderQuizzes();
       renderLessons();
       renderSummaries();
-    }
-
-    function watchVideo(title, desc, url) {
-      document.getElementById('videoModalTitle').innerText = title;
-      document.getElementById('videoModalDesc').innerText = desc;
-      document.getElementById('videoIframe').src = url;
-      document.getElementById('videoModal').classList.add('active');
     }
 
     let activeQuiz = null;
@@ -1041,9 +949,6 @@
 
     function closeModal(id) {
       document.getElementById(id).classList.remove('active');
-      if (id === 'videoModal') {
-        document.getElementById('videoIframe').src = '';
-      }
     }
 
     renderAll();
