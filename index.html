@@ -1,0 +1,1052 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>اللغة العربية مع أ/ أحمد فكري | المنصة التعليمية</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <style>
+    :root {
+      --primary: #0f382c;
+      --primary-light: #1b533e;
+      --accent: #d4a373;
+      --accent-hover: #b08968;
+      --bg-main: #f4f6f8;
+      --card-bg: #ffffff;
+      --text-dark: #1e293b;
+      --text-muted: #64748b;
+      --border-color: #e2e8f0;
+      --success: #16a34a;
+      --danger: #dc2626;
+      --whatsapp: #25d366;
+      --radius: 14px;
+      --shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+      --transition: all 0.3s ease;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: 'Cairo', sans-serif;
+    }
+
+    body {
+      background-color: var(--bg-main);
+      color: var(--text-dark);
+      line-height: 1.6;
+    }
+
+    .top-contact-bar {
+      background: #09231b;
+      color: #e2e8f0;
+      padding: 6px 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 0.85rem;
+    }
+
+    .top-contact-bar a {
+      color: #fff;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .navbar {
+      background: var(--primary);
+      color: white;
+      padding: 0.8rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      box-shadow: 0 3px 12px rgba(0, 0, 0, 0.15);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-size: 1.35rem;
+      font-weight: 800;
+    }
+
+    .nav-teacher-avatar {
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      border: 2px solid var(--accent);
+      object-fit: cover;
+      background-color: var(--primary-light);
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 0.6rem;
+      list-style: none;
+    }
+
+    .nav-btn {
+      background: transparent;
+      border: none;
+      color: white;
+      font-size: 0.95rem;
+      font-weight: 600;
+      padding: 8px 14px;
+      border-radius: 8px;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      transition: var(--transition);
+    }
+
+    .nav-btn:hover, .nav-btn.active {
+      background: var(--primary-light);
+      color: #fff;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 1.5rem auto;
+      padding: 0 1.2rem;
+    }
+
+    /* Hero Banner Layout */
+    .hero-container {
+      background: linear-gradient(135deg, #0b2e23 0%, #1b533e 100%);
+      border-radius: var(--radius);
+      color: white;
+      overflow: hidden;
+      margin-bottom: 2rem;
+      box-shadow: var(--shadow);
+      display: grid;
+      grid-template-columns: 1.2fr 0.9fr;
+      align-items: center;
+    }
+
+    .hero-content {
+      padding: 2.2rem;
+    }
+
+    .teacher-profile-header {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      margin-bottom: 1rem;
+    }
+
+    .hero-teacher-photo {
+      width: 70px;
+      height: 70px;
+      border-radius: 50%;
+      border: 3px solid var(--accent);
+      object-fit: cover;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+      background-color: var(--primary);
+    }
+
+    .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: rgba(212, 163, 115, 0.2);
+      color: var(--accent);
+      border: 1px solid var(--accent);
+      padding: 4px 12px;
+      border-radius: 50px;
+      font-size: 0.85rem;
+      font-weight: 700;
+    }
+
+    .hero-content h1 {
+      font-size: 2.1rem;
+      font-weight: 900;
+      line-height: 1.3;
+      margin-bottom: 0.8rem;
+    }
+
+    .hero-content p {
+      color: #cbd5e1;
+      font-size: 1rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .hero-actions {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+
+    .hero-image-wrapper {
+      padding: 1.5rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .hero-side-img {
+      width: 100%;
+      max-height: 280px;
+      object-fit: cover;
+      border-radius: 12px;
+      box-shadow: 0 6px 20px rgba(0,0,0,0.35);
+      border: 2px solid rgba(212, 163, 115, 0.4);
+    }
+
+    .grade-selector {
+      background: var(--card-bg);
+      padding: 1.2rem;
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      margin-bottom: 2rem;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .grade-selector label {
+      font-weight: 800;
+      color: var(--primary);
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .grade-buttons {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .grade-btn {
+      background: #f8fafc;
+      border: 1px solid var(--border-color);
+      padding: 9px 16px;
+      border-radius: 8px;
+      cursor: pointer;
+      font-weight: 700;
+      color: #334155;
+      transition: var(--transition);
+      flex: 1 1 calc(16.66% - 10px);
+      min-width: 140px;
+      text-align: center;
+    }
+
+    .grade-btn:hover { background: #e2e8f0; }
+
+    .grade-btn.active {
+      background: var(--primary);
+      color: white;
+      border-color: var(--primary);
+    }
+
+    .section-title {
+      font-size: 1.45rem;
+      font-weight: 800;
+      color: var(--primary);
+      margin-bottom: 1.5rem;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      border-bottom: 2px solid var(--accent);
+      padding-bottom: 0.5rem;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+      gap: 1.5rem;
+    }
+
+    .card {
+      background: var(--card-bg);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      border: 1px solid var(--border-color);
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      transition: var(--transition);
+    }
+
+    .card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+    }
+
+    .card-header {
+      background: var(--primary-light);
+      color: white;
+      padding: 12px 16px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .card-tag {
+      background: var(--accent);
+      color: #212529;
+      font-size: 0.75rem;
+      font-weight: 800;
+      padding: 3px 8px;
+      border-radius: 4px;
+    }
+
+    .card-body {
+      padding: 1.2rem;
+      flex-grow: 1;
+    }
+
+    .card-title {
+      font-size: 1.15rem;
+      font-weight: 700;
+      margin-bottom: 8px;
+    }
+
+    .card-desc {
+      color: var(--text-muted);
+      font-size: 0.9rem;
+      margin-bottom: 1rem;
+    }
+
+    .card-footer {
+      padding: 12px 16px;
+      background: #fafafa;
+      border-top: 1px solid var(--border-color);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .btn {
+      padding: 9px 16px;
+      border-radius: 8px;
+      font-size: 0.9rem;
+      font-weight: 700;
+      cursor: pointer;
+      border: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      text-decoration: none;
+      transition: var(--transition);
+    }
+
+    .btn-primary { background: var(--primary); color: white; }
+    .btn-primary:hover { background: var(--primary-light); }
+    .btn-accent { background: var(--accent); color: #212529; }
+    .btn-accent:hover { background: var(--accent-hover); }
+    .btn-whatsapp { background: var(--whatsapp); color: white; }
+    .btn-whatsapp:hover { background: #1ebd56; }
+    .btn-success { background: var(--success); color: white; }
+    .btn-danger { background: var(--danger); color: white; }
+
+    .modal-overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.65);
+      display: none;
+      justify-content: center;
+      align-items: center;
+      z-index: 2000;
+      padding: 1rem;
+    }
+
+    .modal-overlay.active { display: flex; }
+
+    .modal-content {
+      background: white;
+      border-radius: var(--radius);
+      width: 100%;
+      max-width: 750px;
+      max-height: 90vh;
+      overflow-y: auto;
+      padding: 2rem;
+      position: relative;
+    }
+
+    .modal-close {
+      position: absolute;
+      top: 15px;
+      left: 15px;
+      background: transparent;
+      border: none;
+      font-size: 1.5rem;
+      cursor: pointer;
+      color: var(--text-muted);
+    }
+
+    .quiz-question {
+      margin-bottom: 1.5rem;
+      background: #fdfdfd;
+      padding: 1rem;
+      border: 1px solid var(--border-color);
+      border-radius: 8px;
+    }
+
+    .quiz-question p { font-weight: 700; margin-bottom: 0.8rem; }
+
+    .quiz-options label {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      background: #f8f9fa;
+      padding: 8px 12px;
+      border-radius: 6px;
+      margin-bottom: 6px;
+      cursor: pointer;
+      border: 1px solid transparent;
+      transition: var(--transition);
+    }
+
+    .quiz-options label:hover { background: #e9ecef; }
+
+    .quiz-result {
+      text-align: center;
+      padding: 1.5rem;
+      background: #f0fdf4;
+      border: 1px solid #bbf7d0;
+      border-radius: 8px;
+      margin-top: 1rem;
+      display: none;
+    }
+
+    .score-badge {
+      font-size: 2.2rem;
+      font-weight: 900;
+      color: var(--success);
+      margin-bottom: 8px;
+    }
+
+    .video-container {
+      position: relative;
+      padding-bottom: 56.25%;
+      height: 0;
+      overflow: hidden;
+      border-radius: 8px;
+      margin-bottom: 1rem;
+    }
+
+    .video-container iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border: 0;
+    }
+
+    .form-group { margin-bottom: 1rem; }
+    .form-group label { display: block; margin-bottom: 5px; font-weight: 700; }
+    .form-control {
+      width: 100%;
+      padding: 10px 12px;
+      border-radius: 8px;
+      border: 1px solid #cbd5e1;
+      font-size: 0.95rem;
+    }
+
+    .table-container {
+      overflow-x: auto;
+      margin-top: 1rem;
+    }
+    table.data-table {
+      width: 100%;
+      border-collapse: collapse;
+      text-align: right;
+    }
+    table.data-table th, table.data-table td {
+      padding: 10px 12px;
+      border-bottom: 1px solid var(--border-color);
+      font-size: 0.9rem;
+    }
+    table.data-table th {
+      background-color: var(--primary-light);
+      color: white;
+    }
+
+    footer {
+      background: #09231b;
+      color: #94a3b8;
+      text-align: center;
+      padding: 1.5rem;
+      margin-top: 3rem;
+      font-size: 0.9rem;
+    }
+
+    @media (max-width: 850px) {
+      .hero-container { grid-template-columns: 1fr; }
+      .hero-image-wrapper { display: none; }
+      .navbar { flex-direction: column; gap: 1rem; }
+      .nav-links { flex-wrap: wrap; justify-content: center; }
+      .grade-btn { flex: 1 1 calc(50% - 10px); }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Top Contact Bar -->
+  <div class="top-contact-bar">
+    <div><i class="fa-solid fa-graduation-cap"></i> منصة الأستاذ أحمد فكري للغة العربية</div>
+    <div>
+      <a href="tel:01005599895"><i class="fa-solid fa-phone"></i> 01005599895</a>
+    </div>
+  </div>
+
+  <!-- Top Navbar -->
+  <nav class="navbar">
+    <div class="brand">
+      <img src="teacher.jpg" onerror="this.src='teacher.png'; this.onerror=null;" alt="أ/ أحمد فكري" class="nav-teacher-avatar" />
+      <span>اللغة العربية مع أ/ أحمد فكري</span>
+    </div>
+    <ul class="nav-links">
+      <li><button class="nav-btn active" id="btn-quizzes" onclick="switchTab('quizzes')"><i class="fa-solid fa-pen-nib"></i> الاختبارات الإلكترونية</button></li>
+      <li><button class="nav-btn" id="btn-lessons" onclick="switchTab('lessons')"><i class="fa-solid fa-video"></i> الشروحات</button></li>
+      <li><button class="nav-btn" id="btn-summaries" onclick="switchTab('summaries')"><i class="fa-solid fa-file-pdf"></i> المذكرات والملخصات</button></li>
+      <li><button class="nav-btn" onclick="promptTeacherAccess()"><i class="fa-solid fa-lock"></i> سجل الدرجات (للمعلم)</button></li>
+    </ul>
+  </nav>
+
+  <div class="container">
+    
+    <!-- Hero Banner with Teacher Info & Left Side Image -->
+    <div class="hero-container">
+      <div class="hero-content">
+        <div class="teacher-profile-header">
+          <img src="teacher.jpg" onerror="this.src='teacher.png'; this.onerror=null;" alt="أ/ أحمد فكري" class="hero-teacher-photo" />
+          <div>
+            <div class="hero-badge"><i class="fa-solid fa-star"></i> معلم  لغة عربية</div>
+            <h3 style="margin-top: 4px; font-size: 1.15rem; color: #fff;">أ/ أحمد فكري</h3>
+          </div>
+        </div>
+        <h1>منصة الاختبارات الإلكترونية والتقييم</h1>
+        <p>اختر صفك الدراسي وابدأ بحل الاختبارات التفاعلية لقياس مستواك والحصول على تقييم فوري ومباشر.</p>
+        <div class="hero-actions">
+          <a href="https://wa.me/201005599895" target="_blank" class="btn btn-whatsapp">
+            <i class="fa-brands fa-whatsapp"></i> تواصل واتساب: 01005599895
+          </a>
+          <a href="tel:01005599895" class="btn btn-accent">
+            <i class="fa-solid fa-phone"></i> اتصال مباشر
+          </a>
+        </div>
+      </div>
+      
+      <!-- الصورة المضافة على اليسار بجوار النص -->
+      <div class="hero-image-wrapper">
+        <img src="hero-side.png" onerror="this.src='cover.png'; this.onerror=null;" alt="منصة الاختبارات" class="hero-side-img" />
+      </div>
+    </div>
+
+    <!-- Stage Selector -->
+    <div class="grade-selector">
+      <label><i class="fa-solid fa-layer-group"></i> اختر المرحلة الدراسية:</label>
+      <div class="grade-buttons">
+        <button class="grade-btn active" onclick="setGrade('p4')">الرابع الابتدائي</button>
+        <button class="grade-btn" onclick="setGrade('p5')">الخامس الابتدائي</button>
+        <button class="grade-btn" onclick="setGrade('p6')">السادس الابتدائي</button>
+        <button class="grade-btn" onclick="setGrade('m1')">الأول الإعدادي</button>
+        <button class="grade-btn" onclick="setGrade('m2')">الثاني الإعدادي</button>
+        <button class="grade-btn" onclick="setGrade('m3')">الثالث الإعدادي</button>
+      </div>
+    </div>
+
+    <!-- 1. الاختبارات الإلكترونية -->
+    <section id="quizzes-section">
+      <div class="section-title">
+        <i class="fa-solid fa-award"></i>
+        <span id="quizzes-title">الاختبارات الإلكترونية - الصف الرابع الابتدائي</span>
+      </div>
+      <div class="grid" id="quizzes-grid"></div>
+    </section>
+
+    <!-- 2. الشروحات -->
+    <section id="lessons-section" style="display: none;">
+      <div class="section-title">
+        <i class="fa-solid fa-chalkboard-user"></i>
+        <span id="lessons-title">شروحات - الصف الرابع الابتدائي</span>
+      </div>
+      <div class="grid" id="lessons-grid"></div>
+    </section>
+
+    <!-- 3. التلخيصات والمذكرات -->
+    <section id="summaries-section" style="display: none;">
+      <div class="section-title">
+        <i class="fa-solid fa-book-open"></i>
+        <span id="summaries-title">المذكرات والتلخيصات - الصف الرابع الابتدائي</span>
+      </div>
+      <div class="grid" id="summaries-grid"></div>
+    </section>
+
+  </div>
+
+  <!-- Video View Modal -->
+  <div class="modal-overlay" id="videoModal">
+    <div class="modal-content">
+      <button class="modal-close" onclick="closeModal('videoModal')">&times;</button>
+      <h3 id="videoModalTitle" style="margin-bottom: 1rem; color: var(--primary);"></h3>
+      <div class="video-container">
+        <iframe id="videoIframe" src="" allowfullscreen></iframe>
+      </div>
+      <p id="videoModalDesc" style="color: var(--text-muted); font-size: 0.95rem;"></p>
+    </div>
+  </div>
+
+  <!-- Quiz Modal -->
+  <div class="modal-overlay" id="quizModal">
+    <div class="modal-content">
+      <button class="modal-close" onclick="closeModal('quizModal')">&times;</button>
+      <h3 id="quizTitle" style="margin-bottom: 1rem; color: var(--primary);"></h3>
+      
+      <form id="quizForm" onsubmit="submitQuiz(event)">
+        <div style="background: #f1f3f5; padding: 1.2rem; border-radius: 8px; margin-bottom: 1.5rem;">
+          <div class="form-group" style="margin-bottom: 0;">
+            <label style="color: var(--primary); font-size: 1.05rem;"><i class="fa-solid fa-user-pen"></i> اكتب اسمك ثلاثي لبدء الاختبار *</label>
+            <input type="text" id="studentName" class="form-control" placeholder="مثال: محمد أحمد علي" required />
+          </div>
+        </div>
+
+        <div id="quizQuestionsContainer"></div>
+        <button type="submit" id="quizSubmitBtn" class="btn btn-primary" style="width: 100%; margin-top: 1rem; padding: 12px; font-size: 1.05rem;">
+          <i class="fa-solid fa-paper-plane"></i> إرسال الإجابات وحفظ النتيجة
+        </button>
+      </form>
+
+      <div id="quizResult" class="quiz-result">
+        <h3 id="studentNameResult" style="color: var(--primary); margin-bottom: 8px;"></h3>
+        <div class="score-badge" id="scoreText">0 / 0</div>
+        <p id="scoreMessage" style="font-weight: 700;"></p>
+        <button class="btn btn-accent" style="margin-top: 1.2rem;" onclick="closeModal('quizModal')">إغلاق</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Scores List Modal (Protected Gradebook) -->
+  <div class="modal-overlay" id="scoresModal">
+    <div class="modal-content" style="max-width: 800px;">
+      <button class="modal-close" onclick="closeModal('scoresModal')">&times;</button>
+      <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1.5rem;">
+        <h3 style="color: var(--primary);"><i class="fa-solid fa-award"></i> كشف درجات الطلاب (لوحة المعلم)</h3>
+        <div style="display: flex; gap: 8px;">
+          <button class="btn btn-success" onclick="exportScoresToCSV()"><i class="fa-solid fa-file-excel"></i> تصدير Excel</button>
+          <button class="btn btn-danger" onclick="clearAllScores()"><i class="fa-solid fa-trash"></i> مسح السجل</button>
+        </div>
+      </div>
+      <div class="table-container">
+        <table class="data-table">
+          <thead>
+            <tr>
+              <th>#</th>
+              <th>اسم الطالب</th>
+              <th>عنوان الاختبار</th>
+              <th>المرحلة</th>
+              <th>الدرجة</th>
+              <th>التاريخ</th>
+            </tr>
+          </thead>
+          <tbody id="scoresTableBody"></tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <p>جميع الحقوق محفوظة &copy; 2026 | الأستاذ أحمد فكري - معلم اللغة العربية</p>
+    <p style="margin-top: 5px;"><i class="fa-solid fa-phone"></i> للتواصل والاستفسارات: 01005599895</p>
+  </footer>
+
+  <script>
+    const TEACHER_PIN = "1188";
+    const GOOGLE_SHEET_URL = "YOUR_GOOGLE_SCRIPT_WEB_APP_URL_HERE";
+
+    const gradeNames = {
+      'p4': 'الصف الرابع الابتدائي',
+      'p5': 'الصف الخامس الابتدائي',
+      'p6': 'الصف السادس الابتدائي',
+      'm1': 'الصف الأول الإعدادي',
+      'm2': 'الصف الثاني الإعدادي',
+      'm3': 'الصف الثالث الإعدادي'
+    };
+
+    let currentGrade = 'p4';
+    let currentTab = 'quizzes';
+
+    const grade4Full30Questions = [
+      { q: 'كلمة "مدرسة" تدل على:', options: ['اسم', 'فعل', 'حرف', 'جملة'], correct: 0 },
+      { q: 'كلمة "يَكْتُبُ" تدل على حدث في زمن الحاضر، فهي:', options: ['اسم', 'فعل ماضٍ', 'فعل مضارع', 'حرف'], correct: 2 },
+      { q: 'من علامات الاسم التي تميزه:', options: ['دخول (الـ) والتنوين', 'اتصال تاء التأنيث الساكنة', 'دلالته على طلب', 'ليس له معنى بمفرده'], correct: 0 },
+      { q: 'كلمة "إلى" في جملة "ذهبَ أحمد إلى المدرسة" تصنف على أنها:', options: ['اسم', 'فعل', 'حرف جر', 'حرف عطف'], correct: 2 },
+      { q: 'كلمة "شجرة" تعد اسماً لأنها تدل على:', options: ['إنسان', 'حيوان', 'نبات', 'جماد'], correct: 2 },
+      { q: 'الفعل في جملة "قرأَ التلميذُ القصةَ" هو:', options: ['التلميذُ', 'القصةَ', 'قرأَ', 'تلميذ'], correct: 2 },
+      { q: 'الكلمة التي تنتهي بتنوين من الكلمات الآتية هي بالضرورة:', options: ['فعل', 'اسم', 'حرف', 'ظرف فقط'], correct: 1 },
+      { q: 'كلمة "في" ليس لها معنى تام إلا مع:', options: ['غيرها من الكلمات', 'نفسها فقط', 'الأفعال فقط', 'الضمائر فقط'], correct: 0 },
+      { q: 'الفعل الذي يدل على طلب حدوث شيء في المستقبل يسمى:', options: ['فعلاً ماضياً', 'فعلاً مضارعاً', 'فعل أمر', 'اسماً'], correct: 2 },
+      { q: 'كلمة "عصفور" تعد اسماً لأنها تدل على:', options: ['طائر / حيوان', 'جماد', 'نبات', 'مكان'], correct: 0 },
+      { q: 'الكلمة التي تدل على فعل ماضٍ فيما يلي هي:', options: ['يَلْعَبُ', 'لَعِبَ', 'اِلْعَبْ', 'لاعبٌ'], correct: 1 },
+      { q: 'أي من الكلمات الآتية يعتبر حرف عطف؟', options: ['ثم', 'عن', 'في', 'إلى'], correct: 0 },
+      { q: 'كلمة "حديقةٌ" تعتبر اسماً لأن بها علامة وهي:', options: ['التاء المربوطة والتنوين', 'التاء المفتوحة', 'الألف واللام', 'ياء الملكية'], correct: 0 },
+      { q: 'نوع كلمة "سافَرَ" هو:', options: ['فعل ماضٍ', 'فعل مضارع', 'فعل أمر', 'اسم فاعل'], correct: 0 },
+      { q: 'الكلمة التي تبدأ بـ (الـ) في الجملة "النجاحُ هدفُ المجتهدِ" تعد:', options: ['حرفاً', 'اسماً', 'فعلاً', 'صوتاً'], correct: 1 },
+      { q: 'كلمة "اِحْرِصْ" في جملة "احرص على وقتك" هي:', options: ['فعل أمر', 'فعل ماضٍ', 'فعل مضارع', 'اسم'], correct: 0 },
+      { q: 'حروف الجر من أمثلتها:', options: ['(من - إلى - عن - على)', '(واو - فاء - ثم - أو)', '(كان - أصبح - أضحى)', '(كتب - يكتب - اكتب)'], correct: 0 },
+      { q: 'الاسم الذي يدل على جماد فيما يلي هو:', options: ['قلم', 'أسد', 'زهرة', 'خالد'], correct: 0 },
+      { q: 'كلمة "يَرْسُمُ" تبدأ بحرف من حروف المضارعة وتدل على:', options: ['حدث وقع وانتهى', 'حدث مستمر في الحاضر', 'طلب الرسم', 'مكان الرسم'], correct: 1 },
+      { q: 'الكلمة التي تدل على صفة من الكلمات الآتية وتعتبر اسماً هي:', options: ['نشيط', 'ينام', 'إلى', 'ثم'], correct: 0 },
+      { q: 'في جملة "وضعتُ الكتابَ على الطاولةِ"، الحرف هو:', options: ['وضعت', 'الكتاب', 'على', 'الطاولة'], correct: 2 },
+      { q: 'كلمة "مصر" اسم يدل على:', options: ['إنسان', 'مكان / بلد', 'جماد', 'نبات'], correct: 1 },
+      { q: 'الجملة التي تبدأ بفعل ماضٍ هي:', options: ['شربَ الطفلُ الحليبَ', 'يشربُ الطفلُ الحليبَ', 'اشربْ الحليبَ يا طفل', 'الحليبُ مفيدٌ للطفل'], correct: 0 },
+      { q: 'الاسم الواقع بعد حرف الجر في "خرجَ المعلمُ من الفصلِ" هو:', options: ['المعلمُ', 'خرجَ', 'الفصلِ', 'من'], correct: 2 },
+      { q: 'كلمة "أو" في جملة "سافر بالقطارِ أو السيارةِ" هي:', options: ['حرف عطف', 'حرف جر', 'فعل أمر', 'اسم إشارة'], correct: 0 },
+      { q: 'أي كلمة من الكلمات الآتية لا تقبل دخول (الـ) التعريف عليها؟', options: ['كتاب', 'قلم', 'يَفْهَمُ', 'سماء'], correct: 2 },
+      { q: 'كلمة "صادقاً" اسم وعلامته:', options: ['دخول حرف الجر', 'التنوين', 'التاء المربوطة', 'الألف واللام'], correct: 1 },
+      { q: 'الفعل "نَجَحَ" يدل على حدث:', options: ['يحدث الآن', 'انتهى في الماضي', 'سيحدث في المستقبل بطلب', 'لا يرتبط بزمن'], correct: 1 },
+      { q: 'كل ما دل على اسم إنسان أو حيوان أو نبات أو جماد أو صفة أو مكان يسمى:', options: ['اسماً', 'فعلاً', 'حرفاً', 'جملة'], correct: 0 },
+      { q: 'الكلمة التي لا تفيد معنى بمفردها وتفهم فقط في سياق الجملة هي:', options: ['الاسم', 'الفعل', 'الحرف', 'الخبر'], correct: 2 }
+    ];
+
+    const defaultData = {
+      lessons: [
+        { id: 1, grade: 'p4', branch: 'نحو', title: 'أقسام الكلام (اسم، فعل، حرف)', desc: 'شرح مبسط لعلامات الاسم وأنواع الأفعال والحروف مع أ/ أحمد فكري.', videoUrl: 'https://www.youtube.com/embed/dQw4w9WgXcQ' },
+        { id: 2, grade: 'p4', branch: 'نصوص', title: 'نص يا مصر (شعر)', desc: 'شرح معاني الكلمات ومظاهر الجمال وتدريبات الأداء.', videoUrl: 'https://www.youtube.com/embed/dQw4w9WgXcQ' },
+        { id: 3, grade: 'p5', branch: 'نحو', title: 'إعراب جمع التكسير', desc: 'علامات إعراب جمع التكسير في الرفع والنصب والجر مع أمثلة عملية.', videoUrl: 'https://www.youtube.com/embed/dQw4w9WgXcQ' },
+        { id: 4, grade: 'p6', branch: 'نحو', title: 'الأسماء الخمسة وإعرابها', desc: 'شروط عمل الأسماء الخمسة وعلامات إعرابها الفرعية بالتفصيل.', videoUrl: 'https://www.youtube.com/embed/dQw4w9WgXcQ' },
+        { id: 5, grade: 'm1', branch: 'نحو', title: 'همزة القطع وألف الوصل', desc: 'مواضع همزة القطع وألف الوصل في الأسماء والأفعال والحروف بطريقة سهلة.', videoUrl: 'https://www.youtube.com/embed/dQw4w9WgXcQ' },
+        { id: 6, grade: 'm2', branch: 'نحو', title: 'المعرب والمبني من الأسماء', desc: 'الضمائر، أسماء الإشارة، الأسماء الموصولة وغيرها.', videoUrl: 'https://www.youtube.com/embed/dQw4w9WgXcQ' },
+        { id: 7, grade: 'm3', branch: 'نحو', title: 'المنادى وأنواعه وأحكامه', desc: 'شرح المنادى المضاف، الشبيه بالمضاف، النكرة غير المقصودة، والمبني.', videoUrl: 'https://www.youtube.com/embed/dQw4w9WgXcQ' }
+      ],
+      summaries: [
+        { id: 1, grade: 'p4', branch: 'نحو', title: 'مذكرة القواعد النحوية الشاملة', desc: 'إعداد أ/ أحمد فكري - ملخص شامل يشمل جميع القواعد مع تدريبات إعرابية.', fileUrl: '#' },
+        { id: 2, grade: 'p5', branch: 'إملاء', title: 'قواعد الهمزات وعلامات الترقيم', desc: 'مذكرة مبسطة تشرح ترتيب قوى الحركات وطريقة رسم الهمزة بسهولة.', fileUrl: '#' },
+        { id: 3, grade: 'p6', branch: 'نحو', title: 'ملخص النواسخ (كان وأخواتها وإن وأخواتها)', desc: 'مقارنة شاملة مع جدول إعراب متكامل للدروس المقررة.', fileUrl: '#' },
+        { id: 4, grade: 'm1', branch: 'نصوص', title: 'سلسلة التميز في مواطن الجمال', desc: 'تجميع التعبيرات الجمالية والمحسنات البديعية المقررة.', fileUrl: '#' },
+        { id: 5, grade: 'm2', branch: 'نحو', title: 'كبسولة النحو (النعت، الحال، والتوكيد)', desc: 'طريقة التحويل بين المنصوبات ونماذج إعرابية مجابة.', fileUrl: '#' },
+        { id: 6, grade: 'm3', branch: 'نحو', title: 'خلاصة المشتقات لطلاب الشهادة الإعدادية', desc: 'أسهل طريقة لاستخراج وصياغة المشتقات مع تدريبات الامتحانات.', fileUrl: '#' }
+      ],
+      quizzes: [
+        {
+          id: 101,
+          grade: 'p4',
+          title: 'اختبار نحو شامل (30 سؤال): الاسم والفعل والحرف',
+          questions: grade4Full30Questions
+        },
+        {
+          id: 2,
+          grade: 'p5',
+          title: 'اختبار: علامات إعراب الفاعل والمفعول به',
+          questions: [
+            { q: 'يُرفع الفاعل بالضمة إذا كان:', options: ['مفرداً', 'مثنى', 'جمع مذكر سالم'], correct: 0 },
+            { q: 'قرأ التلميذُ قصتين. إعراب "قصتين":', options: ['فاعل مرفوع', 'مفعول به منصوب بالياء', 'خبر مرفوع'], correct: 1 }
+          ]
+        },
+        {
+          id: 3,
+          grade: 'm3',
+          title: 'اختبار نحو: المنادى والممنوع من الصرف',
+          questions: [
+            { q: 'يا طالباً للعلمِ اجتهد. نوع المنادى:', options: ['مضاف', 'شبيه بالمضاف', 'نكرة مقصودة'], correct: 1 },
+            { q: 'يا محمدُ، أقبل. حكم المنادى:', options: ['معرب منصوب', 'مبني على الضم في محل نصب', 'مجرور'], correct: 1 }
+          ]
+        }
+      ]
+    };
+
+    function loadScores() {
+      const saved = localStorage.getItem('ahmed_fekry_student_scores_final');
+      return saved ? JSON.parse(saved) : [];
+    }
+
+    function saveScores(scores) {
+      localStorage.setItem('ahmed_fekry_student_scores_final', JSON.stringify(scores));
+    }
+
+    function setGrade(grade) {
+      currentGrade = grade;
+      document.querySelectorAll('.grade-btn').forEach(btn => btn.classList.remove('active'));
+      event.target.classList.add('active');
+
+      document.getElementById('lessons-title').innerText = `شروحات - ${gradeNames[grade]}`;
+      document.getElementById('summaries-title').innerText = `المذكرات والتلخيصات - ${gradeNames[grade]}`;
+      document.getElementById('quizzes-title').innerText = `الاختبارات الإلكترونية - ${gradeNames[grade]}`;
+
+      renderAll();
+    }
+
+    function switchTab(tab) {
+      currentTab = tab;
+      document.querySelectorAll('.nav-links .nav-btn').forEach(b => b.classList.remove('active'));
+      
+      const activeBtn = document.getElementById(`btn-${tab}`);
+      if (activeBtn) activeBtn.classList.add('active');
+
+      document.getElementById('quizzes-section').style.display = tab === 'quizzes' ? 'block' : 'none';
+      document.getElementById('lessons-section').style.display = tab === 'lessons' ? 'block' : 'none';
+      document.getElementById('summaries-section').style.display = tab === 'summaries' ? 'block' : 'none';
+    }
+
+    function renderLessons() {
+      const list = defaultData.lessons.filter(item => item.grade === currentGrade);
+      const grid = document.getElementById('lessons-grid');
+      
+      if (list.length === 0) {
+        grid.innerHTML = `<p style="grid-column: 1/-1; text-align: center; color: var(--text-muted); padding: 2rem;">لا توجد شروحات مضافة حالياً لهذا الصف.</p>`;
+        return;
+      }
+
+      grid.innerHTML = list.map(item => `
+        <div class="card">
+          <div class="card-header">
+            <span class="card-tag">${item.branch}</span>
+            <small><i class="fa-solid fa-play-circle"></i> فيديو شرح</small>
+          </div>
+          <div class="card-body">
+            <h4 class="card-title">${item.title}</h4>
+            <p class="card-desc">${item.desc}</p>
+          </div>
+          <div class="card-footer">
+            <button class="btn btn-primary" onclick="watchVideo('${item.title}', '${item.desc}', '${item.videoUrl}')">
+              <i class="fa-solid fa-circle-play"></i> مشاهدة الدرس
+            </button>
+          </div>
+        </div>
+      `).join('');
+    }
+
+    function renderSummaries() {
+      const list = defaultData.summaries.filter(item => item.grade === currentGrade);
+      const grid = document.getElementById('summaries-grid');
+
+      if (list.length === 0) {
+        grid.innerHTML = `<p style="grid-column: 1/-1; text-align: center; color: var(--text-muted); padding: 2rem;">لا توجد مذكرات مضافة لهذا الصف حالياً.</p>`;
+        return;
+      }
+
+      grid.innerHTML = list.map(item => `
+        <div class="card">
+          <div class="card-header" style="background: #2b580c;">
+            <span class="card-tag">${item.branch}</span>
+            <small><i class="fa-solid fa-file-lines"></i> PDF / مذكرة</small>
+          </div>
+          <div class="card-body">
+            <h4 class="card-title">${item.title}</h4>
+            <p class="card-desc">${item.desc}</p>
+          </div>
+          <div class="card-footer">
+            <a href="${item.fileUrl}" target="_blank" class="btn btn-accent">
+              <i class="fa-solid fa-download"></i> معاينة وتحميل
+            </a>
+          </div>
+        </div>
+      `).join('');
+    }
+
+    function renderQuizzes() {
+      const list = defaultData.quizzes.filter(item => item.grade === currentGrade);
+      const grid = document.getElementById('quizzes-grid');
+
+      if (list.length === 0) {
+        grid.innerHTML = `<p style="grid-column: 1/-1; text-align: center; color: var(--text-muted); padding: 2rem;">لا توجد اختبارات مضافة لهذا الصف بعد.</p>`;
+        return;
+      }
+
+      grid.innerHTML = list.map(quiz => `
+        <div class="card">
+          <div class="card-header" style="background: #582f0e;">
+            <span class="card-tag">اختبار إلكتروني</span>
+            <small><i class="fa-solid fa-clock"></i> تصحيح فوري</small>
+          </div>
+          <div class="card-body">
+            <h4 class="card-title">${quiz.title}</h4>
+            <p class="card-desc">عدد الأسئلة: ${quiz.questions.length} سؤال اختيار من متعدد.</p>
+          </div>
+          <div class="card-footer">
+            <button class="btn btn-primary" onclick="startQuiz(${quiz.id})">
+              <i class="fa-solid fa-pen-to-square"></i> ابدأ الاختبار الآن
+            </button>
+          </div>
+        </div>
+      `).join('');
+    }
+
+    function renderAll() {
+      renderQuizzes();
+      renderLessons();
+      renderSummaries();
+    }
+
+    function watchVideo(title, desc, url) {
+      document.getElementById('videoModalTitle').innerText = title;
+      document.getElementById('videoModalDesc').innerText = desc;
+      document.getElementById('videoIframe').src = url;
+      document.getElementById('videoModal').classList.add('active');
+    }
+
+    let activeQuiz = null;
+    function startQuiz(quizId) {
+      activeQuiz = defaultData.quizzes.find(q => q.id === quizId);
+      if (!activeQuiz) return;
+
+      document.getElementById('quizTitle').innerText = activeQuiz.title;
+      document.getElementById('quizResult').style.display = 'none';
+      document.getElementById('quizForm').style.display = 'block';
+      document.getElementById('studentName').value = '';
+
+      const container = document.getElementById('quizQuestionsContainer');
+      container.innerHTML = activeQuiz.questions.map((q, qIndex) => `
+        <div class="quiz-question">
+          <p>${qIndex + 1}. ${q.q}</p>
+          <div class="quiz-options">
+            ${q.options.map((opt, optIndex) => `
+              <label>
+                <input type="radio" name="q_${qIndex}" value="${optIndex}" required />
+                <span>${opt}</span>
+              </label>
+            `).join('')}
+          </div>
+        </div>
+      `).join('');
+
+      document.getElementById('quizModal').classList.add('active');
+    }
+
+    function submitQuiz(e) {
+      e.preventDefault();
+      if (!activeQuiz) return;
+
+      const studentName = document.getElementById('studentName').value.trim();
+      let score = 0;
+      const total = activeQuiz.questions.length;
+
+      activeQuiz.questions.forEach((q, i) => {
+        const selected = document.querySelector(`input[name="q_${i}"]:checked`);
+        if (selected && parseInt(selected.value) === q.correct) {
+          score++;
+        }
+      });
+
+      const now = new Date();
+      const dateStr = `${now.getFullYear()}/${now.getMonth()+1}/${now.getDate()} - ${now.getHours()}:${String(now.getMinutes()).padStart(2, '0')}`;
+
+      // الحفظ المحلي
+      const scores = loadScores();
+      const record = {
+        id: Date.now(),
+        studentName: studentName,
+        quizTitle: activeQuiz.title,
+        gradeName: gradeNames[activeQuiz.grade] || activeQuiz.grade,
+        score: score,
+        total: total,
+        date: dateStr
+      };
+      scores.unshift(record);
+      saveScores(scores);
+
+      // الإرسال السحابي
+      if (GOOGLE_SHEET_URL && GOOGLE_SHEET_URL !== "YOUR_GOOGLE_SCRIPT_WEB_APP_URL_HERE") {
+        fetch(GOOGLE_SHEET_URL, {
+          method: "POST",
+          mode: "no-cors",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify(record)
+        }).catch(err => console.log("Sync Error:", err));
+      }
+
+      document.getElementById('quizForm').style.display = 'none';
+      const resultDiv = document.getElementById('quizResult');
+      resultDiv.style.display = 'block';
+
+      document.getElementById('studentNameResult').innerText = `أحسنت يا بطل: ${studentName}`;
+      document.getElementById('scoreText').innerText = `${score} / ${total}`;
+      const msg = document.getElementById('scoreMessage');
+      
+      const percentage = (score / total) * 100;
+      if (percentage >= 90) {
+        msg.innerText = "ممتاز جداً وبارك الله فيك! درجة متفوقة 🌟";
+        msg.style.color = "var(--success)";
+      } else if (percentage >= 65) {
+        msg.innerText = "أداء طيب، راجع ما أخطأت فيه لتحقيق الدرجة النهائية 👍";
+        msg.style.color = "var(--primary)";
+      } else {
+        msg.innerText = "تحتاج لمراجعة الشرح وقواعد الدرس مرة أخرى 💪";
+        msg.style.color = "var(--danger)";
+      }
+    }
+
+    function promptTeacherAccess() {
+      const pin = prompt("لوحة المعلم: يرجى إدخال رمز المرور لعرض الدرجات:");
+      if (pin === TEACHER_PIN) {
+        openScoresModal();
+      } else if (pin !== null) {
+        alert("رمز المرور غير صحيح!");
+      }
+    }
+
+    function openScoresModal() {
+      const scores = loadScores();
+      const tbody = document.getElementById('scoresTableBody');
+      if (scores.length === 0) {
+        tbody.innerHTML = `<tr><td colspan="6" style="text-align:center; padding: 2rem; color: var(--text-muted);">لا توجد درجات مسجلة حتى الآن.</td></tr>`;
+      } else {
+        tbody.innerHTML = scores.map((s, idx) => `
+          <tr>
+            <td>${idx + 1}</td>
+            <td><strong>${s.studentName}</strong></td>
+            <td>${s.quizTitle}</td>
+            <td>${s.gradeName}</td>
+            <td><span style="color:var(--success); font-weight:bold;">${s.score} / ${s.total}</span></td>
+            <td><small>${s.date}</small></td>
+          </tr>
+        `).join('');
+      }
+      document.getElementById('scoresModal').classList.add('active');
+    }
+
+    function exportScoresToCSV() {
+      const scores = loadScores();
+      if (scores.length === 0) {
+        alert('لا توجد بيانات درجات لتصديرها!');
+        return;
+      }
+      let csvContent = "\uFEFFاسم الطالب,عنوان الاختبار,المرحلة,الدرجة,الدرجة الكلية,التاريخ\n";
+      scores.forEach(s => {
+        csvContent += `"${s.studentName}","${s.quizTitle}","${s.gradeName}",${s.score},${s.total},"${s.date}"\n`;
+      });
+      const blob = new Blob([csvContent], { type: 'text/csv;charset=utf-8;' });
+      const link = document.createElement("a");
+      const url = URL.createObjectURL(blob);
+      link.setAttribute("href", url);
+      link.setAttribute("download", `درجات_الطلاب_منصة_أحمد_فكري.csv`);
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
+    }
+
+    function clearAllScores() {
+      if (confirm("هل أنت متأكد من رغبتك في مسح كافة درجات الطلاب المسجلة؟")) {
+        localStorage.removeItem('ahmed_fekry_student_scores_final');
+        openScoresModal();
+      }
+    }
+
+    function closeModal(id) {
+      document.getElementById(id).classList.remove('active');
+      if (id === 'videoModal') {
+        document.getElementById('videoIframe').src = '';
+      }
+    }
+
+    renderAll();
+  </script>
+</body>
+</html>
