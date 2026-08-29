@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>اللغة العربية مع أ/ أحمد فكري | المنصة التعليمية</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&family=Amiri:wght@700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   
@@ -28,18 +28,8 @@
       --transition: all 0.3s ease;
     }
 
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-      font-family: 'Cairo', sans-serif;
-    }
-
-    body {
-      background-color: var(--bg-main);
-      color: var(--text-dark);
-      line-height: 1.6;
-    }
+    * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Cairo', sans-serif; }
+    body { background-color: var(--bg-main); color: var(--text-dark); line-height: 1.6; }
 
     .top-contact-bar {
       background: #09231b;
@@ -50,14 +40,7 @@
       align-items: center;
       font-size: 0.85rem;
     }
-
-    .top-contact-bar a {
-      color: #fff;
-      text-decoration: none;
-      display: inline-flex;
-      align-items: center;
-      gap: 6px;
-    }
+    .top-contact-bar a { color: #fff; text-decoration: none; display: inline-flex; align-items: center; gap: 6px; }
 
     .navbar {
       background: var(--primary);
@@ -72,275 +55,90 @@
       z-index: 1000;
     }
 
-    .brand {
-      display: flex;
-      align-items: center;
-      gap: 12px;
-      font-size: 1.35rem;
-      font-weight: 800;
-    }
-
+    .brand { display: flex; align-items: center; gap: 12px; font-size: 1.35rem; font-weight: 800; }
     .nav-teacher-avatar {
-      width: 44px;
-      height: 44px;
-      border-radius: 50%;
-      border: 2px solid var(--accent);
-      object-fit: cover;
-      background-color: var(--primary-light);
+      width: 44px; height: 44px; border-radius: 50%;
+      border: 2px solid var(--accent); object-fit: cover; background-color: var(--primary-light);
     }
-
-    .nav-links {
-      display: flex;
-      gap: 0.6rem;
-      list-style: none;
-    }
-
+    .nav-links { display: flex; gap: 0.6rem; list-style: none; }
     .nav-btn {
-      background: transparent;
-      border: none;
-      color: white;
-      font-size: 0.95rem;
-      font-weight: 600;
-      padding: 8px 14px;
-      border-radius: 8px;
-      cursor: pointer;
-      display: flex;
-      align-items: center;
-      gap: 8px;
+      background: transparent; border: none; color: white; font-size: 0.95rem; font-weight: 600;
+      padding: 8px 14px; border-radius: 8px; cursor: pointer; display: flex; align-items: center; gap: 8px;
       transition: var(--transition);
     }
+    .nav-btn:hover, .nav-btn.active { background: var(--primary-light); color: #fff; }
 
-    .nav-btn:hover, .nav-btn.active {
-      background: var(--primary-light);
-      color: #fff;
-    }
-
-    .container {
-      max-width: 1200px;
-      margin: 1.5rem auto;
-      padding: 0 1.2rem;
-    }
+    .container { max-width: 1200px; margin: 1.5rem auto; padding: 0 1.2rem; }
 
     .hero-container {
       background: linear-gradient(135deg, #0b2e23 0%, #1b533e 100%);
-      border-radius: var(--radius);
-      color: white;
-      overflow: hidden;
-      margin-bottom: 2rem;
-      box-shadow: var(--shadow);
-      display: grid;
-      grid-template-columns: 1.2fr 0.9fr;
-      align-items: center;
+      border-radius: var(--radius); color: white; overflow: hidden; margin-bottom: 2rem;
+      box-shadow: var(--shadow); display: grid; grid-template-columns: 1.2fr 0.9fr; align-items: center;
     }
-
-    .hero-content {
-      padding: 2.2rem;
-    }
-
-    .teacher-profile-header {
-      display: flex;
-      align-items: center;
-      gap: 14px;
-      margin-bottom: 1rem;
-    }
-
+    .hero-content { padding: 2.2rem; }
+    .teacher-profile-header { display: flex; align-items: center; gap: 14px; margin-bottom: 1rem; }
     .hero-teacher-photo {
-      width: 70px;
-      height: 70px;
-      border-radius: 50%;
-      border: 3px solid var(--accent);
-      object-fit: cover;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.3);
-      background-color: var(--primary);
+      width: 70px; height: 70px; border-radius: 50%; border: 3px solid var(--accent);
+      object-fit: cover; box-shadow: 0 4px 10px rgba(0,0,0,0.3); background-color: var(--primary);
     }
-
     .hero-badge {
-      display: inline-flex;
-      align-items: center;
-      gap: 6px;
-      background: rgba(212, 163, 115, 0.2);
-      color: var(--accent);
-      border: 1px solid var(--accent);
-      padding: 4px 12px;
-      border-radius: 50px;
-      font-size: 0.85rem;
-      font-weight: 700;
+      display: inline-flex; align-items: center; gap: 6px; background: rgba(212, 163, 115, 0.2);
+      color: var(--accent); border: 1px solid var(--accent); padding: 4px 12px; border-radius: 50px;
+      font-size: 0.85rem; font-weight: 700;
     }
-
-    .hero-content h1 {
-      font-size: 2.1rem;
-      font-weight: 900;
-      line-height: 1.3;
-      margin-bottom: 0.8rem;
-    }
-
-    .hero-content p {
-      color: #cbd5e1;
-      font-size: 1rem;
-      margin-bottom: 1.5rem;
-    }
-
-    .hero-actions {
-      display: flex;
-      gap: 12px;
-      flex-wrap: wrap;
-    }
-
-    .hero-image-wrapper {
-      padding: 1.5rem;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
-
+    .hero-content h1 { font-size: 2.1rem; font-weight: 900; line-height: 1.3; margin-bottom: 0.8rem; }
+    .hero-content p { color: #cbd5e1; font-size: 1rem; margin-bottom: 1.5rem; }
+    .hero-actions { display: flex; gap: 12px; flex-wrap: wrap; }
+    .hero-image-wrapper { padding: 1.5rem; display: flex; justify-content: center; align-items: center; }
     .hero-side-img {
-      width: 100%;
-      max-height: 280px;
-      object-fit: cover;
-      border-radius: 12px;
-      box-shadow: 0 6px 20px rgba(0,0,0,0.35);
-      border: 2px solid rgba(212, 163, 115, 0.4);
+      width: 100%; max-height: 280px; object-fit: cover; border-radius: 12px;
+      box-shadow: 0 6px 20px rgba(0,0,0,0.35); border: 2px solid rgba(212, 163, 115, 0.4);
     }
 
     .grade-selector {
-      background: var(--card-bg);
-      padding: 1.2rem;
-      border-radius: var(--radius);
-      box-shadow: var(--shadow);
-      margin-bottom: 2rem;
-      display: flex;
-      flex-direction: column;
-      gap: 10px;
+      background: var(--card-bg); padding: 1.2rem; border-radius: var(--radius);
+      box-shadow: var(--shadow); margin-bottom: 2rem; display: flex; flex-direction: column; gap: 10px;
     }
-
-    .grade-selector label {
-      font-weight: 800;
-      color: var(--primary);
-      display: flex;
-      align-items: center;
-      gap: 8px;
-    }
-
-    .grade-buttons {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 10px;
-    }
-
+    .grade-selector label { font-weight: 800; color: var(--primary); display: flex; align-items: center; gap: 8px; }
+    .grade-buttons { display: flex; flex-wrap: wrap; gap: 10px; }
     .grade-btn {
-      background: #f8fafc;
-      border: 1px solid var(--border-color);
-      padding: 9px 16px;
-      border-radius: 8px;
-      cursor: pointer;
-      font-weight: 700;
-      color: #334155;
-      transition: var(--transition);
-      flex: 1 1 calc(16.66% - 10px);
-      min-width: 140px;
-      text-align: center;
+      background: #f8fafc; border: 1px solid var(--border-color); padding: 9px 16px;
+      border-radius: 8px; cursor: pointer; font-weight: 700; color: #334155; transition: var(--transition);
+      flex: 1 1 calc(16.66% - 10px); min-width: 140px; text-align: center;
     }
-
     .grade-btn:hover { background: #e2e8f0; }
-
-    .grade-btn.active {
-      background: var(--primary);
-      color: white;
-      border-color: var(--primary);
-    }
+    .grade-btn.active { background: var(--primary); color: white; border-color: var(--primary); }
 
     .section-title {
-      font-size: 1.45rem;
-      font-weight: 800;
-      color: var(--primary);
-      margin-bottom: 1.5rem;
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      border-bottom: 2px solid var(--accent);
-      padding-bottom: 0.5rem;
+      font-size: 1.45rem; font-weight: 800; color: var(--primary); margin-bottom: 1.5rem;
+      display: flex; align-items: center; gap: 10px; border-bottom: 2px solid var(--accent); padding-bottom: 0.5rem;
     }
 
-    .grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
-      gap: 1.5rem;
-    }
-
+    .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 1.5rem; }
     .card {
-      background: var(--card-bg);
-      border-radius: var(--radius);
-      box-shadow: var(--shadow);
-      border: 1px solid var(--border-color);
-      overflow: hidden;
-      display: flex;
-      flex-direction: column;
+      background: var(--card-bg); border-radius: var(--radius); box-shadow: var(--shadow);
+      border: 1px solid var(--border-color); overflow: hidden; display: flex; flex-direction: column;
       transition: var(--transition);
     }
-
-    .card:hover {
-      transform: translateY(-4px);
-      box-shadow: 0 10px 25px rgba(0,0,0,0.08);
-    }
-
+    .card:hover { transform: translateY(-4px); box-shadow: 0 10px 25px rgba(0,0,0,0.08); }
     .card-header {
-      background: var(--primary-light);
-      color: white;
-      padding: 12px 16px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
+      background: var(--primary-light); color: white; padding: 12px 16px;
+      display: flex; justify-content: space-between; align-items: center;
     }
-
-    .card-tag {
-      background: var(--accent);
-      color: #212529;
-      font-size: 0.75rem;
-      font-weight: 800;
-      padding: 3px 8px;
-      border-radius: 4px;
-    }
-
-    .card-body {
-      padding: 1.2rem;
-      flex-grow: 1;
-    }
-
-    .card-title {
-      font-size: 1.15rem;
-      font-weight: 700;
-      margin-bottom: 8px;
-    }
-
-    .card-desc {
-      color: var(--text-muted);
-      font-size: 0.9rem;
-      margin-bottom: 1rem;
-    }
-
+    .card-tag { background: var(--accent); color: #212529; font-size: 0.75rem; font-weight: 800; padding: 3px 8px; border-radius: 4px; }
+    .card-body { padding: 1.2rem; flex-grow: 1; }
+    .card-title { font-size: 1.15rem; font-weight: 700; margin-bottom: 8px; }
+    .card-desc { color: var(--text-muted); font-size: 0.9rem; margin-bottom: 1rem; }
     .card-footer {
-      padding: 12px 16px;
-      background: #fafafa;
-      border-top: 1px solid var(--border-color);
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
+      padding: 12px 16px; background: #fafafa; border-top: 1px solid var(--border-color);
+      display: flex; justify-content: space-between; align-items: center;
     }
 
     .btn {
-      padding: 9px 16px;
-      border-radius: 8px;
-      font-size: 0.9rem;
-      font-weight: 700;
-      cursor: pointer;
-      border: none;
-      display: inline-flex;
-      align-items: center;
-      gap: 6px;
-      text-decoration: none;
-      transition: var(--transition);
+      padding: 9px 16px; border-radius: 8px; font-size: 0.9rem; font-weight: 700;
+      cursor: pointer; border: none; display: inline-flex; align-items: center; gap: 6px;
+      text-decoration: none; transition: var(--transition);
     }
-
     .btn-primary { background: var(--primary); color: white; }
     .btn-primary:hover { background: var(--primary-light); }
     .btn-accent { background: var(--accent); color: #212529; }
@@ -351,228 +149,144 @@
     .btn-danger { background: var(--danger); color: white; }
 
     .modal-overlay {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background: rgba(0, 0, 0, 0.65);
-      display: none;
-      justify-content: center;
-      align-items: center;
-      z-index: 2000;
-      padding: 1rem;
+      position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+      background: rgba(0, 0, 0, 0.65); display: none; justify-content: center; align-items: center;
+      z-index: 2000; padding: 1rem;
     }
-
     .modal-overlay.active { display: flex; }
-
     .modal-content {
-      background: white;
-      border-radius: var(--radius);
-      width: 100%;
-      max-width: 800px;
-      max-height: 90vh;
-      overflow-y: auto;
-      padding: 2rem;
-      position: relative;
+      background: white; border-radius: var(--radius); width: 100%; max-width: 850px;
+      max-height: 90vh; overflow-y: auto; padding: 2rem; position: relative;
     }
-
     .modal-close {
-      position: absolute;
-      top: 15px;
-      left: 15px;
-      background: transparent;
-      border: none;
-      font-size: 1.5rem;
-      cursor: pointer;
-      color: var(--text-muted);
+      position: absolute; top: 15px; left: 15px; background: transparent;
+      border: none; font-size: 1.5rem; cursor: pointer; color: var(--text-muted);
     }
 
-    /* Timer Bar */
     .quiz-timer-bar {
-      position: sticky;
-      top: -2rem;
-      background: #fff;
-      padding: 10px 15px;
-      border-radius: 8px;
-      border: 2px solid var(--danger);
-      color: var(--danger);
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      font-weight: 800;
-      margin-bottom: 1.2rem;
-      z-index: 10;
+      position: sticky; top: -2rem; background: #fff; padding: 10px 15px; border-radius: 8px;
+      border: 2px solid var(--danger); color: var(--danger); display: flex; justify-content: space-between;
+      align-items: center; font-weight: 800; margin-bottom: 1.2rem; z-index: 10;
       box-shadow: 0 4px 10px rgba(220, 38, 38, 0.1);
     }
 
     .quiz-question {
-      margin-bottom: 1.5rem;
-      background: #fdfdfd;
-      padding: 1rem;
-      border: 1px solid var(--border-color);
-      border-radius: 8px;
+      margin-bottom: 1.5rem; background: #fdfdfd; padding: 1.2rem;
+      border: 1px solid var(--border-color); border-radius: 10px;
     }
-
-    .quiz-question p { font-weight: 700; margin-bottom: 0.8rem; }
+    .quiz-question p { font-weight: 700; margin-bottom: 0.8rem; font-size: 1.05rem; color: #1e293b; }
+    .question-type-badge {
+      display: inline-block; font-size: 0.75rem; font-weight: 800; padding: 2px 8px;
+      border-radius: 4px; margin-bottom: 6px; background: #e0e7ff; color: #3730a3;
+    }
 
     .quiz-options label {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      background: #f8f9fa;
-      padding: 8px 12px;
-      border-radius: 6px;
-      margin-bottom: 6px;
-      cursor: pointer;
-      border: 1px solid transparent;
-      transition: var(--transition);
+      display: flex; align-items: center; gap: 10px; background: #f8f9fa; padding: 9px 12px;
+      border-radius: 6px; margin-bottom: 6px; cursor: pointer; border: 1px solid transparent;
+      transition: var(--transition); font-size: 0.95rem;
     }
-
     .quiz-options label:hover { background: #e9ecef; }
 
+    .drag-pool {
+      display: flex; flex-wrap: wrap; gap: 8px; background: #f1f5f9; padding: 10px;
+      border-radius: 8px; margin-bottom: 12px; border: 1px dashed #cbd5e1;
+    }
+    .drag-chip {
+      background: var(--primary); color: white; padding: 6px 12px; border-radius: 6px;
+      font-size: 0.85rem; font-weight: 700; cursor: grab; user-select: none;
+    }
+    .drop-box {
+      display: inline-flex; align-items: center; justify-content: center; min-width: 140px;
+      height: 38px; border: 2px dashed #94a3b8; border-radius: 6px; background: #fff;
+      margin: 0 6px; vertical-align: middle; font-weight: 700; color: var(--primary);
+      padding: 0 10px; transition: var(--transition);
+    }
+    .drop-box.hovered { background: #e2e8f0; border-color: var(--primary); }
+    .drop-box.filled { border-style: solid; border-color: var(--accent); background: #fefce8; }
+
+    .matching-table { width: 100%; border-collapse: collapse; margin-top: 8px; }
+    .matching-table td { padding: 8px 10px; border-bottom: 1px solid #e2e8f0; font-size: 0.95rem; }
+    .matching-select {
+      width: 100%; padding: 8px 10px; border-radius: 6px; border: 1px solid var(--border-color);
+      background: #f8fafc; font-weight: 600; color: var(--text-dark);
+    }
+
     .quiz-result {
-      text-align: center;
-      padding: 1.5rem;
-      background: #f0fdf4;
-      border: 1px solid #bbf7d0;
-      border-radius: 8px;
-      margin-top: 1rem;
-      display: none;
+      text-align: center; padding: 1.5rem; background: #f0fdf4; border: 1px solid #bbf7d0;
+      border-radius: 8px; margin-top: 1rem; display: none;
     }
+    .score-badge { font-size: 2.2rem; font-weight: 900; color: var(--success); margin-bottom: 8px; }
 
-    .score-badge {
-      font-size: 2.2rem;
-      font-weight: 900;
-      color: var(--success);
-      margin-bottom: 8px;
-    }
-
-    /* Answer Review */
     .review-item {
-      text-align: right;
-      background: #ffffff;
-      padding: 12px 16px;
-      border-radius: 8px;
-      margin-bottom: 12px;
-      border-right: 5px solid #cbd5e1;
-      border-top: 1px solid #e2e8f0;
-      border-bottom: 1px solid #e2e8f0;
-      border-left: 1px solid #e2e8f0;
+      text-align: right; background: #ffffff; padding: 14px 18px; border-radius: 10px;
+      margin-bottom: 14px; border-right: 6px solid #cbd5e1; border-top: 1px solid #e2e8f0;
+      border-bottom: 1px solid #e2e8f0; border-left: 1px solid #e2e8f0; box-shadow: 0 2px 8px rgba(0,0,0,0.03);
     }
-
     .review-item.correct { border-right-color: var(--success); background: #f0fdf4; }
     .review-item.incorrect { border-right-color: var(--danger); background: #fef2f2; }
 
-    /* Certificate */
-    .certificate-card {
-      border: 8px double var(--accent);
-      padding: 2.5rem 2rem;
-      text-align: center;
-      background: #fffdfa;
-      border-radius: 12px;
-      box-shadow: 0 4px 15px rgba(0,0,0,0.08);
-      position: relative;
-      margin: 1.5rem 0;
+    .explanation-box {
+      margin-top: 10px;
+      background: #fffdf5;
+      border: 1px dashed var(--accent);
+      padding: 10px 14px;
+      border-radius: 8px;
+      font-size: 0.92rem;
+      color: #78350f;
+      line-height: 1.6;
     }
-
-    .cert-title {
-      font-family: 'Amiri', serif;
-      font-size: 2.4rem;
-      color: var(--primary);
-      margin-bottom: 1rem;
-    }
-
-    .cert-student-name {
-      font-size: 1.8rem;
-      font-weight: 900;
-      color: #b08968;
-      border-bottom: 2px dashed var(--accent);
-      display: inline-block;
-      padding: 0 20px 5px 20px;
-      margin: 10px 0;
-    }
-
-    .cert-grade-badge {
-      display: inline-block;
-      background: var(--primary);
-      color: #fff;
-      padding: 6px 18px;
-      border-radius: 50px;
-      font-weight: 800;
-      font-size: 1.1rem;
-      margin: 10px 0;
-    }
-
-    .cert-footer {
-      display: flex;
-      justify-content: space-between;
+    .explanation-box strong {
+      color: #92400e;
+      display: inline-flex;
       align-items: center;
-      margin-top: 2rem;
-      padding-top: 1rem;
-      border-top: 1px solid #e2e8f0;
+      gap: 6px;
     }
 
-    .table-container {
-      overflow-x: auto;
-      margin-top: 1rem;
+    .certificate-card {
+      border: 8px double var(--accent); padding: 2.5rem 2rem; text-align: center;
+      background: #fffdfa; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+      position: relative; margin: 1.5rem 0;
     }
-    table.data-table {
-      width: 100%;
-      border-collapse: collapse;
-      text-align: right;
+    .cert-title { font-family: 'Amiri', serif; font-size: 2.4rem; color: var(--primary); margin-bottom: 1rem; }
+    .cert-student-name {
+      font-size: 1.8rem; font-weight: 900; color: #b08968; border-bottom: 2px dashed var(--accent);
+      display: inline-block; padding: 0 20px 5px 20px; margin: 10px 0;
     }
-    table.data-table th, table.data-table td {
-      padding: 10px 12px;
-      border-bottom: 1px solid var(--border-color);
-      font-size: 0.9rem;
+    .cert-grade-badge {
+      display: inline-block; background: var(--primary); color: #fff; padding: 6px 18px;
+      border-radius: 50px; font-weight: 800; font-size: 1.1rem; margin: 10px 0;
     }
-    table.data-table th {
-      background-color: var(--primary-light);
-      color: white;
+    .cert-footer {
+      display: flex; justify-content: space-between; align-items: center;
+      margin-top: 2rem; padding-top: 1rem; border-top: 1px solid #e2e8f0;
     }
 
-    footer {
-      background: #09231b;
-      color: #94a3b8;
-      text-align: center;
-      padding: 1.5rem;
-      margin-top: 3rem;
-      font-size: 0.9rem;
+    .table-container { overflow-x: auto; margin-top: 1rem; }
+    table.data-table { width: 100%; border-collapse: collapse; text-align: right; }
+    table.data-table th, table.data-table td { padding: 10px 12px; border-bottom: 1px solid var(--border-color); font-size: 0.9rem; }
+    table.data-table th { background-color: var(--primary-light); color: white; }
+
+    .form-control {
+      width: 100%; padding: 10px 14px; border: 1px solid var(--border-color);
+      border-radius: 8px; margin-top: 6px; font-size: 1rem;
     }
+
+    footer { background: #09231b; color: #94a3b8; text-align: center; padding: 1.5rem; margin-top: 3rem; font-size: 0.9rem; }
 
     @media print {
       body * { visibility: hidden; }
       #printableCertificate, #printableCertificate * { visibility: visible; }
-      #printableCertificate {
-        position: absolute;
-        left: 0;
-        top: 0;
-        width: 100%;
-        border: 10px double var(--accent);
-      }
-    }
-
-    @media (max-width: 850px) {
-      .hero-container { grid-template-columns: 1fr; }
-      .hero-image-wrapper { display: none; }
-      .navbar { flex-direction: column; gap: 1rem; }
-      .nav-links { flex-wrap: wrap; justify-content: center; }
-      .grade-btn { flex: 1 1 calc(50% - 10px); }
+      #printableCertificate { position: absolute; left: 0; top: 0; width: 100%; border: 10px double var(--accent); }
     }
   </style>
 </head>
 <body>
 
-  <!-- Top Contact Bar -->
   <div class="top-contact-bar">
     <div><i class="fa-solid fa-graduation-cap"></i> منصة الأستاذ أحمد فكري للغة العربية</div>
-    <div>
-      <a href="tel:01005599895"><i class="fa-solid fa-phone"></i> 01005599895</a>
-    </div>
+    <div><a href="tel:01005599895"><i class="fa-solid fa-phone"></i> 01005599895</a></div>
   </div>
 
-  <!-- Top Navbar -->
   <nav class="navbar">
     <div class="brand">
       <img src="teacher.jpg" onerror="this.src='teacher.png'; this.onerror=null;" alt="أ/ أحمد فكري" class="nav-teacher-avatar" />
@@ -588,7 +302,6 @@
 
   <div class="container">
     
-    <!-- Hero Banner with Teacher Info & Left Side Image -->
     <div class="hero-container">
       <div class="hero-content">
         <div class="teacher-profile-header">
@@ -604,68 +317,59 @@
           <a href="https://wa.me/201005599895" target="_blank" class="btn btn-whatsapp">
             <i class="fa-brands fa-whatsapp"></i> تواصل واتساب: 01005599895
           </a>
-          <a href="tel:01005599895" class="btn btn-accent">
-            <i class="fa-solid fa-phone"></i> اتصال مباشر
-          </a>
+          <a href="tel:01005599895" class="btn btn-accent"><i class="fa-solid fa-phone"></i> اتصال مباشر</a>
         </div>
       </div>
-      
       <div class="hero-image-wrapper">
         <img src="hero-side.png" onerror="this.src='cover.png'; this.onerror=null;" alt="منصة الاختبارات" class="hero-side-img" />
       </div>
     </div>
 
-    <!-- Stage Selector -->
     <div class="grade-selector">
       <label><i class="fa-solid fa-layer-group"></i> اختر المرحلة الدراسية:</label>
       <div class="grade-buttons">
-        <button class="grade-btn active" onclick="setGrade('p4')">الرابع الابتدائي</button>
+        <button class="grade-btn" onclick="setGrade('p4')">الرابع الابتدائي</button>
         <button class="grade-btn" onclick="setGrade('p5')">الخامس الابتدائي</button>
         <button class="grade-btn" onclick="setGrade('p6')">السادس الابتدائي</button>
-        <button class="grade-btn" onclick="setGrade('m1')">الأول الإعدادي</button>
+        <button class="grade-btn active" onclick="setGrade('m1')">الأول الإعدادي</button>
         <button class="grade-btn" onclick="setGrade('m2')">الثاني الإعدادي</button>
         <button class="grade-btn" onclick="setGrade('m3')">الثالث الإعدادي</button>
       </div>
     </div>
 
-    <!-- 1. الاختبارات الإلكترونية -->
     <section id="quizzes-section">
       <div class="section-title">
         <i class="fa-solid fa-award"></i>
-        <span id="quizzes-title">الاختبارات الإلكترونية - الصف الرابع الابتدائي</span>
+        <span id="quizzes-title">الاختبارات الإلكترونية - الصف الأول الإعدادي</span>
       </div>
       <div class="grid" id="quizzes-grid"></div>
     </section>
 
-    <!-- 2. الشروحات -->
     <section id="lessons-section" style="display: none;">
       <div class="section-title">
         <i class="fa-solid fa-chalkboard-user"></i>
-        <span id="lessons-title">شروحات - الصف الرابع الابتدائي</span>
+        <span id="lessons-title">شروحات - الصف الأول الإعدادي</span>
       </div>
       <div class="grid" id="lessons-grid"></div>
     </section>
 
-    <!-- 3. التلخيصات والمذكرات -->
     <section id="summaries-section" style="display: none;">
       <div class="section-title">
         <i class="fa-solid fa-book-open"></i>
-        <span id="summaries-title">المذكرات والتلخيصات - الصف الرابع الابتدائي</span>
+        <span id="summaries-title">المذكرات والتلخيصات - الصف الأول الإعدادي</span>
       </div>
       <div class="grid" id="summaries-grid"></div>
     </section>
 
   </div>
 
-  <!-- Quiz Modal with 15-Min Timer & Results & Certificate -->
   <div class="modal-overlay" id="quizModal">
     <div class="modal-content">
       <button class="modal-close" onclick="closeModal('quizModal')">&times;</button>
       
-      <!-- شريط المؤقت الزمني 15 دقيقة -->
       <div class="quiz-timer-bar" id="quizTimerContainer">
         <span><i class="fa-solid fa-stopwatch"></i> الوقت المتبقي:</span>
-        <span id="quizTimerDisplay" style="font-size: 1.2rem;">15:00</span>
+        <span id="quizTimerDisplay" style="font-size: 1.2rem;">25:00</span>
       </div>
 
       <h3 id="quizTitle" style="margin-bottom: 1rem; color: var(--primary);"></h3>
@@ -674,7 +378,7 @@
         <div style="background: #f1f3f5; padding: 1.2rem; border-radius: 8px; margin-bottom: 1.5rem;">
           <div class="form-group" style="margin-bottom: 0;">
             <label style="color: var(--primary); font-size: 1.05rem;"><i class="fa-solid fa-user-pen"></i> اكتب اسمك ثلاثي لبدء الاختبار *</label>
-            <input type="text" id="studentName" class="form-control" placeholder="مثال: محمد أحمد علي" required />
+            <input type="text" id="studentName" class="form-control" placeholder="مثال: أحمد محمد علي" required />
           </div>
         </div>
 
@@ -684,32 +388,27 @@
         </button>
       </form>
 
-      <!-- نتيجة الاختبار وقسم الشهادة ومراجعة الأسئلة -->
       <div id="quizResult" class="quiz-result">
         <h3 id="studentNameResult" style="color: var(--primary); margin-bottom: 8px;"></h3>
         <div class="score-badge" id="scoreText">0 / 0</div>
         <p id="scoreMessage" style="font-weight: 700;"></p>
 
-        <!-- أزرار الإجراءات بعد النتيجة -->
         <div style="display: flex; justify-content: center; gap: 10px; margin: 1.5rem 0; flex-wrap: wrap;">
           <button class="btn btn-accent" onclick="toggleCertificateView()"><i class="fa-solid fa-certificate"></i> عرض شهادة التقدير</button>
-          <button class="btn btn-primary" onclick="toggleReviewView()"><i class="fa-solid fa-list-check"></i> مراجعة الأسئلة والإجابات</button>
+          <button class="btn btn-primary" onclick="toggleReviewView()"><i class="fa-solid fa-list-check"></i> مراجعة الأسئلة والتعليلات التعليمية</button>
         </div>
 
-        <!-- قالب شهادة التقدير -->
         <div id="certificateWrapper" style="display: none;">
           <div class="certificate-card" id="printableCertificate">
             <h2 class="cert-title">✨ شهــادة تقديــر وتفــوّق ✨</h2>
             <p style="font-size: 1.1rem; color: #475569;">يَسرّ أ/ أحمد فكري معلم اللغة العربية أن يمنح الطالب/ـة:</p>
             <div class="cert-student-name" id="certStudentName">اسم الطالب</div>
             <p style="font-size: 1.05rem; color: #475569; margin-top: 8px;">
-              هذه الشهادة تقديراً لاجتيازه: <strong id="certQuizTitle">اختبار النحو</strong>
+              هذه الشهادة تقديراً لاجتيازه: <strong id="certQuizTitle">اختبار اللغة العربية</strong>
             </p>
-            <div>
-              <span class="cert-grade-badge" id="certGradeBadge">بتقدير: ممتاز 🌟</span>
-            </div>
+            <div><span class="cert-grade-badge" id="certGradeBadge">بتقدير: ممتاز 🌟</span></div>
             <p style="font-weight: 700; color: var(--primary); font-size: 1.15rem; margin-top: 6px;">
-              الدرجة المحققة: <span id="certScoreDisplay">30 / 30</span> (<span id="certPercentDisplay">100%</span>)
+              الدرجة المحققة: <span id="certScoreDisplay">0 / 0</span> (<span id="certPercentDisplay">100%</span>)
             </p>
             <div class="cert-footer">
               <div><small>تاريخ الاختبار: <span id="certDateDisplay"></span></small></div>
@@ -719,10 +418,9 @@
           <button class="btn btn-success" onclick="window.print()"><i class="fa-solid fa-print"></i> طباعة / حفظ الشهادة PDF</button>
         </div>
 
-        <!-- مراجعة الإجابات الصحيحة والخاطئة -->
         <div id="reviewWrapper" style="display: none; margin-top: 1.5rem;">
           <h4 style="text-align: right; color: var(--primary); margin-bottom: 1rem; border-bottom: 2px solid var(--accent); padding-bottom: 5px;">
-            <i class="fa-solid fa-clipboard-question"></i> تفاصيل الإجابات الصحيحة والنموذجية:
+            <i class="fa-solid fa-graduation-cap"></i> الشروحات والتعليلات النموذجية للإجابات:
           </h4>
           <div id="reviewQuestionsContainer"></div>
         </div>
@@ -732,7 +430,6 @@
     </div>
   </div>
 
-  <!-- Scores List Modal (Protected Gradebook) -->
   <div class="modal-overlay" id="scoresModal">
     <div class="modal-content" style="max-width: 800px;">
       <button class="modal-close" onclick="closeModal('scoresModal')">&times;</button>
@@ -780,223 +477,418 @@
       'm3': 'الصف الثالث الإعدادي'
     };
 
-    let currentGrade = 'p4';
+    let currentGrade = 'm1';
     let currentTab = 'quizzes';
 
-    // 1. الصف الرابع: أقسام الكلام (30 سؤال مع تنويع مواضع الإجابة)
+    // 1. الصف الرابع: أقسام الكلام (30 سؤالاً)[cite: 1]
     const grade4Questions = [
-      { q: 'كلمة "مدرسة" تدل على:', options: ['اسم', 'فعل', 'حرف', 'جملة'], correct: 0 },
-      { q: 'كلمة "يَكْتُبُ" تدل على حدث في زمن الحاضر، فهي:', options: ['اسم', 'فعل ماضٍ', 'فعل مضارع', 'حرف'], correct: 2 },
-      { q: 'من علامات الاسم التي تميزه:', options: ['اتصال تاء التأنيث الساكنة', 'دخول (الـ) والتنوين', 'دلالته على طلب', 'ليس له معنى بمفرده'], correct: 1 },
-      { q: 'كلمة "إلى" في جملة "ذهبَ أحمد إلى المدرسة" تصنف على أنها:', options: ['اسم', 'فعل', 'حرف عطف', 'حرف جر'], correct: 3 },
-      { q: 'كلمة "شجرة" تعد اسماً لأنها تدل على:', options: ['إنسان', 'حيوان', 'نبات', 'جماد'], correct: 2 },
-      { q: 'الفعل في جملة "قرأَ التلميذُ القصةَ" هو:', options: ['التلميذُ', 'قرأَ', 'القصةَ', 'تلميذ'], correct: 1 },
-      { q: 'الكلمة التي تنتهي بتنوين من الكلمات الآتية هي بالضرورة:', options: ['فعل', 'اسم', 'حرف', 'ظرف فقط'], correct: 1 },
-      { q: 'كلمة "في" ليس لها معنى تام إلا مع:', options: ['غيرها من الكلمات', 'نفسها فقط', 'الأفعال فقط', 'الضمائر فقط'], correct: 0 },
-      { q: 'الفعل الذي يدل على طلب حدوث شيء في المستقبل يسمى:', options: ['فعلاً ماضياً', 'فعلاً مضارعاً', 'فعل أمر', 'اسماً'], correct: 2 },
-      { q: 'كلمة "عصفور" تعد اسماً لأنها تدل على:', options: ['جماد', 'طائر / حيوان', 'نبات', 'مكان'], correct: 1 },
-      { q: 'الكلمة التي تدل على فعل ماضٍ فيما يلي هي:', options: ['يَلْعَبُ', 'لَعِبَ', 'اِلْعَبْ', 'لاعبٌ'], correct: 1 },
-      { q: 'أي من الكلمات الآتية يعتبر حرف عطف؟', options: ['عن', 'في', 'ثم', 'إلى'], correct: 2 },
-      { q: 'كلمة "حديقةٌ" تعتبر اسماً لأن بها علامة وهي:', options: ['التاء المفتوحة', 'الألف واللام', 'ياء الملكية', 'التاء المربوطة والتنوين'], correct: 3 },
-      { q: 'نوع كلمة "سافَرَ" هو:', options: ['فعل ماضٍ', 'فعل مضارع', 'فعل أمر', 'اسم فاعل'], correct: 0 },
-      { q: 'الكلمة التي تبدأ بـ (الـ) في الجملة "النجاحُ هدفُ المجتهدِ" تعد:', options: ['حرفاً', 'فعلاً', 'اسماً', 'صوتاً'], correct: 2 },
-      { q: 'كلمة "اِحْرِصْ" في جملة "احرص على وقتك" هي:', options: ['فعل أمر', 'فعل ماضٍ', 'فعل مضارع', 'اسم'], correct: 0 },
-      { q: 'حروف الجر من أمثلتها:', options: ['(واو - فاء - ثم - أو)', '(من - إلى - عن - على)', '(كان - أصبح - أضحى)', '(كتب - يكتب - اكتب)'], correct: 1 },
-      { q: 'الاسم الذي يدل على جماد فيما يلي هو:', options: ['أسد', 'زهرة', 'قلم', 'خالد'], correct: 2 },
-      { q: 'كلمة "يَرْسُمُ" تبدأ بحرف من حروف المضارعة وتدل على:', options: ['حدث وقع وانتهى', 'طلب الرسم', 'مكان الرسم', 'حدث مستمر في الحاضر'], correct: 3 },
-      { q: 'الكلمة التي تدل على صفة من الكلمات الآتية وتعتبر اسماً هي:', options: ['ينام', 'نشيط', 'إلى', 'ثم'], correct: 1 },
-      { q: 'في جملة "وضعتُ الكتابَ على الطاولةِ"، الحرف هو:', options: ['وضعت', 'الكتاب', 'على', 'الطاولة'], correct: 2 },
-      { q: 'كلمة "مصر" اسم يدل على:', options: ['إنسان', 'مكان / بلد', 'جماد', 'نبات'], correct: 1 },
-      { q: 'الجملة التي تبدأ بفعل ماضٍ هي:', options: ['يشربُ الطفلُ الحليبَ', 'اشربْ الحليبَ يا طفل', 'شربَ الطفلُ الحليبَ', 'الحليبُ مفيدٌ للطفل'], correct: 2 },
-      { q: 'الاسم الواقع بعد حرف الجر في "خرجَ المعلمُ من الفصلِ" هو:', options: ['المعلمُ', 'خرجَ', 'من', 'الفصلِ'], correct: 3 },
-      { q: 'كلمة "أو" في جملة "سافر بالقطارِ أو السيارةِ" هي:', options: ['حرف عطف', 'حرف جر', 'فعل أمر', 'اسم إشارة'], correct: 0 },
-      { q: 'أي كلمة من الكلمات الآتية لا تقبل دخول (الـ) التعريف عليها؟', options: ['كتاب', 'يَفْهَمُ', 'قلم', 'سماء'], correct: 1 },
-      { q: 'كلمة "صادقاً" اسم وعلامته:', options: ['دخول حرف الجر', 'التاء المربوطة', 'التنوين', 'الألف واللام'], correct: 2 },
-      { q: 'الفعل "نَجَحَ" يدل على حدث:', options: ['يحدث الآن', 'انتهى في الماضي', 'سيحدث في المستقبل بطلب', 'لا يرتبط بزمن'], correct: 1 },
-      { q: 'كل ما دل على اسم إنسان أو حيوان أو نبات أو جماد أو صفة أو مكان يسمى:', options: ['فعلاً', 'حرفاً', 'جملة', 'اسماً'], correct: 3 },
-      { q: 'الكلمة التي لا تفيد معنى بمفردها وتفهم فقط في سياق الجملة هي:', options: ['الاسم', 'الفعل', 'الحرف', 'الخبر'], correct: 2 }
+      { q: 'كلمة "مدرسة" تدل على:', options: ['اسم', 'فعل', 'حرف', 'جملة'], correct: 0, explanation: 'كلمة "مدرسة" اسم لأنها تدل على مكان وتقبل علامات الاسم مثل التاء المربوطة والتنوين ودخول (الـ).' },
+      { q: 'كلمة "يَكْتُبُ" تدل على حدث في زمن الحاضر، فهي:', options: ['اسم', 'فعل ماضٍ', 'فعل مضارع', 'حرف'], correct: 2, explanation: 'تدل على عمل مستمر في الحاضر وتبدأ بحرف من حروف المضارعة (الياء).' },
+      { q: 'من علامات الاسم التي تميزه:', options: ['اتصال تاء التأنيث الساكنة', 'دخول (الـ) والتنوين', 'دلالته على طلب', 'ليس له معنى بمفرده'], correct: 1, explanation: 'الاسم يقبل الجر والتنوين والنداء ودخول (الـ) والتاء المربوطة.' },
+      { q: 'كلمة "إلى" في جملة "ذهبَ أحمد إلى المدرسة" تصنف على أنها:', options: ['اسم', 'فعل', 'حرف عطف', 'حرف جر'], correct: 3, explanation: '"إلى" حرف جر يربط أجزاء الكلام ويجر الاسم الواقع بعده.' },
+      { q: 'كلمة "شجرة" تعد اسماً لأنها تدل على:', options: ['إنسان', 'حيوان', 'نبات', 'جماد'], correct: 2, explanation: 'الأسماء تشمل كل ما دل على إنسان أو حيوان أو نبات أو جماد أو صفة أو مكان.' },
+      { q: 'الفعل في جملة "قرأَ التلميذُ القصةَ" هو:', options: ['التلميذُ', 'قرأَ', 'القصةَ', 'تلميذ'], correct: 1, explanation: '"قرأ" فعل ماضٍ يدل على حدث القراءة في الزمن الماضي.' },
+      { q: 'الكلمة التي تنتهي بتنوين من الكلمات الآتية هي بالضرورة:', options: ['فعل', 'اسم', 'حرف', 'ظرف فقط'], correct: 1, explanation: 'التنوين علامة مميزة وخاصة بالأسماء فقط ولا يدخل الأفعال أو الحروف.' },
+      { q: 'كلمة "في" ليس لها معنى تام إلا مع:', options: ['غيرها من الكلمات', 'نفسها فقط', 'الأفعال فقط', 'الضمائر فقط'], correct: 0, explanation: 'الحرف كلمة لا يظهر معناها كاملاً إلا عند تركيبها مع غيرها في الجملة.' },
+      { q: 'الفعل الذي يدل على طلب حدوث شيء في المستقبل يسمى:', options: ['فعلاً ماضياً', 'فعلاً مضارعاً', 'فعل أمر', 'اسماً'], correct: 2, explanation: 'فعل الأمر هو ما دل على طلب حصول الفعل بعد زمن التكلم.' },
+      { q: 'كلمة "عصفور" تعد اسماً لأنها تدل على:', options: ['جماد', 'طائر / حيوان', 'نبات', 'مكان'], correct: 1, explanation: 'عصفور يدل على كائن حي (طائر).' },
+      { q: 'الكلمة التي تدل على فعل ماضٍ فيما يلي هي:', options: ['يَلْعَبُ', 'لَعِبَ', 'اِلْعَبْ', 'لاعبٌ'], correct: 1, explanation: '"لَعِبَ" دلت على حدث انتهى في الزمن الماضي.' },
+      { q: 'أي من الكلمات الآتية يعتبر حرف عطف؟', options: ['عن', 'في', 'ثم', 'إلى'], correct: 2, explanation: '"ثم" تفيد الترتيب مع التراخي وهي من حروف العطف.' },
+      { q: 'كلمة "حديقةٌ" تعتبر اسماً لأن بها علامة وهي:', options: ['التاء المفتوحة', 'الألف واللام', 'ياء الملكية', 'التاء المربوطة والتنوين'], correct: 3, explanation: 'اجتمعت بها علامتا التاء المربوطة والتنوين.' },
+      { q: 'نوع كلمة "سافَرَ" هو:', options: ['فعل ماضٍ', 'فعل مضارع', 'فعل أمر', 'اسم فاعل'], correct: 0, explanation: '"سافر" فعل ماضٍ مبني على الفتح دل على السفر في زمن مضى.' },
+      { q: 'الكلمة التي تبدأ بـ (الـ) في الجملة "النجاحُ هدفُ المجتهدِ" تعد:', options: ['حرفاً', 'فعلاً', 'اسماً', 'صوتاً'], correct: 2, explanation: 'دخول (الـ) التعريف علامة جازمة على اسمية الكلمة.' },
+      { q: 'كلمة "اِحْرِصْ" في جملة "احرص على وقتك" هي:', options: ['فعل أمر', 'فعل ماضٍ', 'فعل مضارع', 'اسم'], correct: 0, explanation: 'فعل أمر موجه للمخاطب يفيد طلب الحرص.' },
+      { q: 'حروف الجر من أمثلتها:', options: ['(واو - فاء - ثم - أو)', '(من - إلى - عن - على)', '(كان - أصبح - أضحى)', '(كتب - يكتب - اكتب)'], correct: 1, explanation: 'من، إلى، عن، على، في، الباء، الكاف، اللام هي حروف الجر المشهورة.' },
+      { q: 'الاسم الذي يدل على جماد فيما يلي هو:', options: ['أسد', 'زهرة', 'قلم', 'خالد'], correct: 2, explanation: 'القلم شيء غير حي لا ينمو ولا يتحرك فهو جماد.' },
+      { q: 'كلمة "يَرْسُمُ" تبدأ بحرف من حروف المضارعة وتدل على:', options: ['حدث وقع وانتهى', 'طلب الرسم', 'مكان الرسم', 'حدث مستمر في الحاضر'], correct: 3, explanation: 'تبدأ بياء المضارعة وتدل على الاستمرار والتجدد في الحاضر.' },
+      { q: 'الكلمة التي تدل على صفة من الكلمات الآتية وتعتبر اسماً هي:', options: ['ينام', 'نشيط', 'إلى', 'ثم'], correct: 1, explanation: '"نشيط" صفة تصف الاسم وهي نوع من أنواع الأسماء.' },
+      { q: 'في جملة "وضعتُ الكتابَ على الطاولةِ"، الحرف هو:', options: ['وضعت', 'الكتاب', 'على', 'الطاولة'], correct: 2, explanation: '"على" حرف جر يفيد الاستعلاء.' },
+      { q: 'كلمة "مصر" اسم يدل على:', options: ['إنسان', 'مكان / بلد', 'جماد', 'نبات'], correct: 1, explanation: 'مصر علم على بلد ومكان محدد.' },
+      { q: 'الجملة التي تبدأ بفعل ماضٍ هي:', options: ['يشربُ الطفلُ الحليبَ', 'اشربْ الحليبَ يا طفل', 'شربَ الطفلُ الحليبَ', 'الحليبُ مفيدٌ للطفل'], correct: 2, explanation: 'بدأت بالفعل "شربَ" وهو ماضٍ.' },
+      { q: 'الاسم الواقع بعد حرف الجر في "خرجَ المعلمُ من الفصلِ" هو:', options: ['المعلمُ', 'خرجَ', 'من', 'الفصلِ'], correct: 3, explanation: '"الفصلِ" اسم مجرور بعد حرف الجر "من".' },
+      { q: 'كلمة "أو" في جملة "سافر بالقطارِ أو السيارةِ" هي:', options: ['حرف عطف', 'حرف جر', 'فعل أمر', 'اسم إشارة'], correct: 0, explanation: '"أو" حرف عطف يفيد التخيير أو الشك.' },
+      { q: 'أي كلمة من الكلمات الآتية لا تقبل دخول (الـ) التعريف عليها؟', options: ['كتاب', 'يَفْهَمُ', 'قلم', 'سماء'], correct: 1, explanation: '"يَفْهَمُ" فعل مضارع، والأفعال لا تقبل دخول (الـ) التعريف.' },
+      { q: 'كلمة "صادقاً" اسم وعلامته:', options: ['دخول حرف الجر', 'التاء المربوطة', 'التنوين', 'الألف واللام'], correct: 2, explanation: 'علامته التنوين المنصوب في آخره.' },
+      { q: 'الفعل "نَجَحَ" يدل على حدث:', options: ['يحدث الآن', 'انتهى في الماضي', 'سيحدث في المستقبل بطلب', 'لا يرتبط بزمن'], correct: 1, explanation: 'حدث تم واكتمل في الزمن الماضي قبل وقت التكلم.' },
+      { q: 'كل ما دل على اسم إنسان أو حيوان أو نبات أو جماد أو صفة أو مكان يسمى:', options: ['فعلاً', 'حرفاً', 'جملة', 'اسماً'], correct: 3, explanation: 'هذا هو التعريف الشامل للاسم في قواعد اللغة العربية.' },
+      { q: 'الكلمة التي لا تفيد معنى بمفردها وتفهم فقط في سياق الجملة هي:', options: ['الاسم', 'الفعل', 'الحرف', 'الخبر'], correct: 2, explanation: 'الحرف رابط وظيفي لا يستقل بالمعنى إلا في جملة.' }
     ];
 
-    // 2. الصف الخامس: إعراب الفاعل والمفعول به (30 سؤال مع تنويع مواضع الإجابة)
+    // 2. الصف الخامس: إعراب الفاعل والمفعول به (30 سؤالاً)[cite: 1]
     const grade5Questions = [
-      { q: 'الفاعل هو من قام بالفعل أو اتصف به، وحكمه الإعرابي دائماً:', options: ['النصب', 'الرفع', 'الجر', 'الجزم'], correct: 1 },
-      { q: 'المفعول به هو اسم يدل على من وقع عليه فعل الفاعل، وحكمه دائماً:', options: ['الرفع', 'الجر', 'النصب', 'البناء'], correct: 2 },
-      { q: 'يُرفع الفاعل بالضمة إذا كان:', options: ['مثنى فقط', 'جمع مذكر سالماً فقط', 'من الأسماء الخمسة فقط', 'مفرداً أو جمع تكسير أو جمع مؤنث سالماً'], correct: 3 },
-      { q: 'علامة رفع الفاعل في جملة "حضرَ المعلمانِ":', options: ['الضمة', 'الألف لأنه مثنى', 'النون', 'الفتحة'], correct: 1 },
-      { q: 'علامة رفع الفاعل في جملة "صامَ المسلمونَ رمضان":', options: ['الواو لأنه جمع مذكر سالم', 'الضمة', 'النون', 'ثبوت النون'], correct: 0 },
-      { q: 'يُنصب المفعول به بالفتحة إذا كان:', options: ['مثنى', 'مفرداً أو جمع تكسير', 'جمع مؤنث سالماً', 'جمع مذكر سالماً'], correct: 1 },
-      { q: 'يُنصب المفعول به بالياء إذا كان:', options: ['مفرداً', 'جمع مؤنث سالماً', 'مثنى أو جمع مذكر سالماً', 'جمع تكسير'], correct: 2 },
-      { q: 'يُنصب المفعول به بالكسرة نيابة عن الفتحة إذا كان:', options: ['جمع مؤنث سالماً', 'مفرداً', 'مثنى', 'جمع تكسير'], correct: 0 },
-      { q: 'إعراب كلمة "قصتين" في "قرأَ الطالبُ قصتينِ":', options: ['فاعل مرفوع بالألف', 'مضاف إليه مجرور', 'مفعول به منصوب بالياء لأنه مثنى', 'نعت منصوب'], correct: 2 },
-      { q: 'إعراب كلمة "المعلماتِ" في "كرّمتِ الدولةُ المعلماتِ":', options: ['فاعل مرفوع بالضمة', 'مفعول به منصوب بالفتحة', 'مجرور بالكسرة', 'مفعول به منصوب بالكسرة'], correct: 3 },
-      { q: 'الفاعل في جملة "شرحَ الدرسَ المعلمُ" هو:', options: ['الدرسَ', 'المعلمُ', 'ضمير مستتر', 'شرح'], correct: 1 },
-      { q: 'المفعول به في جملة "أكلَ الفاكهةَ الولدُ" هو:', options: ['الفاكهةَ', 'الولدُ', 'أكلَ', 'ضمير مستتر'], correct: 0 },
-      { q: '"كتبَ التلاميذُ الواجبَ" علامة رفع الفاعل (التلاميذ):', options: ['الألف', 'الواو', 'الضمة لأنه جمع تكسير', 'الفتحة'], correct: 2 },
-      { q: '"شاهدتُ الفلاحينَ يزرعون" كلمة "الفلاحينَ" مفعول به منصوب وعلامة نصبه:', options: ['الفتحة', 'الياء لأنه جمع مذكر سالم', 'الكسرة', 'الألف'], correct: 1 },
-      { q: 'الجملة التي تشتمل على فاعل ومفعول به معاً هي:', options: ['نامَ الطفلُ في السرير', 'رسمَ الفنانُ لوحةً', 'فازَ المجتهدُ بالجائزة', 'ذهبَ أحمد إلى الحديقة'], correct: 1 },
-      { q: 'الضبط الصحيح لكلمة (القصة) في "ألّفَ الكاتبُ القصة":', options: ['القصةُ', 'القصةِ', 'القصةَ', 'القصةْ'], correct: 2 },
-      { q: 'الضبط الصحيح لكلمة (الطالب) في "شكرَ المعلمُ الطالب":', options: ['الطالبُ', 'الطالبِ', 'الطالبْ', 'الطالبَ'], correct: 3 },
-      { q: '"ساعدَ المحتاجينَ الميسورون" الفاعل في الجملة هو:', options: ['الميسورون', 'المحتاجين', 'ساعد', 'ضمير مستتر'], correct: 0 },
-      { q: 'علامة إعراب الفاعل في "تفوقتِ الطالباتُ":', options: ['الألف', 'الضمة', 'الكسرة', 'الفتحة'], correct: 1 },
-      { q: '"اشترى أبي جهازينِ" إعراب "جهازين":', options: ['فاعل مرفوع بالألف', 'مضاف إليه مجرور', 'مفعول به منصوب بالياء', 'خبر منصوب'], correct: 2 },
-      { q: 'الفاعل في "سمعَ الأذانَ المصلون" مرفوع وعلامة رفعه:', options: ['الضمة', 'النون', 'الألف', 'الواو'], correct: 3 },
-      { q: 'في جملة "عالجَ الأطباءُ المرضى"، المفعول به هو:', options: ['المرضى', 'الأطباء', 'عالج', 'ضمير مستتر'], correct: 0 },
-      { q: 'إعراب الفاعل في "تعاونَ الشريكانِ في العمل":', options: ['فاعل مرفوع بالضمة', 'فاعل مرفوع بالألف', 'مبتدأ مرفوع', 'مفعول به منصوب'], correct: 1 },
-      { q: '"قدّمَ الطلابُ مشروعاتٍ مفيدة" مفعول به منصوب وعلامة نصبه:', options: ['الفتحة', 'الياء', 'الكسرة لأنه جمع مؤنث سالم', 'الضمة'], correct: 2 },
-      { q: 'حدد الجملة التي كُتبت بعلامات إعراب صحيحة:', options: ['كافأَ المعلمَ المتفوقون', 'كافأَ المعلمِ المتفوقين', 'كافأ المعلمُ المتفوقون', 'كافأَ المعلمُ المتفوقينَ'], correct: 3 },
-      { q: 'إذا كان الفاعل جمع مؤنث سالماً يُرفع بـ:', options: ['الضمة الظاهرة', 'الألف', 'الواو', 'النون'], correct: 0 },
-      { q: 'إعراب "المهندسون" في "خططَ المهندسونَ المشروع":', options: ['مفعول به منصوب', 'فاعل مرفوع بالواو', 'مبتدأ مؤخر', 'خبر المبتدأ'], correct: 1 },
-      { q: 'الفاعل في جملة "ركبَ القطارَ المسافرون":', options: ['القطار', 'ركب', 'المسافرون', 'ضمير مستتر'], correct: 2 },
-      { q: 'المفعول به دائماً يأتي في الجملة:', options: ['الاسمية', 'شبه الجملة', 'الشرطية فقط', 'الفعلية'], correct: 3 },
-      { q: '"بنى العمالُ مساجدَ كثيرة" علامة نصب المفعول به (مساجد):', options: ['الفتحة', 'الكسرة', 'الياء', 'الألف'], correct: 0 }
+      { q: 'الفاعل هو من قام بالفعل أو اتصف به، وحكمه الإعرابي دائماً:', options: ['النصب', 'الرفع', 'الجر', 'الجزم'], correct: 1, explanation: 'الفاعل من مرفوعات الأسماء دائماً في اللغة العربية.' },
+      { q: 'المفعول به هو اسم يدل على من وقع عليه فعل الفاعل، وحكمه دائماً:', options: ['الرفع', 'الجر', 'النصب', 'البناء'], correct: 2, explanation: 'المفعول به من منصوبات الأسماء دائماً.' },
+      { q: 'يُرفع الفاعل بالضمة إذا كان:', options: ['مثنى فقط', 'جمع مذكر سالماً فقط', 'من الأسماء الخمسة فقط', 'مفرداً أو جمع تكسير أو جمع مؤنث سالماً'], correct: 3, explanation: 'الضمة هي علامة الرفع الأصلية للمفرد وجمع التكسير وجمع المؤنث السالم.' },
+      { q: 'علامة رفع الفاعل في جملة "حضرَ المعلمانِ":', options: ['الضمة', 'الألف لأنه مثنى', 'النون', 'الفتحة'], correct: 1, explanation: 'المثنى يرفع بالألف نيابة عن الضمة.' },
+      { q: 'علامة رفع الفاعل في جملة "صامَ المسلمونَ رمضان":', options: ['الواو لأنه جمع مذكر سالم', 'الضمة', 'النون', 'ثبوت النون'], correct: 0, explanation: 'جمع المذكر السالم يرفع بالواو نيابة عن الضمة.' },
+      { q: 'يُنصب المفعول به بالفتحة إذا كان:', options: ['مثنى', 'مفرداً أو جمع تكسير', 'جمع مؤنث سالماً', 'جمع مذكر سالماً'], correct: 1, explanation: 'الفتحة علامة النصب الأصلية للمفرد وجمع التكسير.' },
+      { q: 'يُنصب المفعول به بالياء إذا كان:', options: ['مفرداً', 'جمع مؤنث سالماً', 'مثنى أو جمع مذكر سالماً', 'جمع تكسير'], correct: 2, explanation: 'الياء علامة فرعية لنصب المثنى وجمع المذكر السالم.' },
+      { q: 'يُنصب المفعول به بالكسرة نيابة عن الفتحة إذا كان:', options: ['جمع مؤنث سالماً', 'مفرداً', 'مثنى', 'جمع تكسير'], correct: 0, explanation: 'جمع المؤنث السالم ينصب بالكسرة نيابة عن الفتحة كعلامة فرعية.' },
+      { q: 'إعراب كلمة "قصتين" في "قرأَ الطالبُ قصتينِ":', options: ['فاعل مرفوع بالألف', 'مضاف إليه مجرور', 'مفعول به منصوب بالياء لأنه مثنى', 'نعت منصوب'], correct: 2, explanation: 'وقع عليهما فعل القراءة فهما مفعول به منصوب بالياء لأنه مثنى.' },
+      { q: 'إعراب كلمة "المعلماتِ" في "كرّمتِ الدولةُ المعلماتِ":', options: ['فاعل مرفوع بالضمة', 'مفعول به منصوب بالفتحة', 'مجرور بالكسرة', 'مفعول به منصوب بالكسرة'], correct: 3, explanation: 'مفعول به منصوب بالكسرة نيابة عن الفتحة لأنه جمع مؤنث سالم.' },
+      { q: 'الفاعل في جملة "شرحَ الدرسَ المعلمُ" هو:', options: ['الدرسَ', 'المعلمُ', 'ضمير مستتر', 'شرح'], correct: 1, explanation: 'المعلم هو من قام بالشرح (فاعل مؤخر مرفوع بالضمة)، وتقدم عليه المفعول به.' },
+      { q: 'المفعول به في جملة "أكلَ الفاكهةَ الولدُ" هو:', options: ['الفاكهةَ', 'الولدُ', 'أكلَ', 'ضمير مستتر'], correct: 0, explanation: 'الفاكهة هي المأكولة التي وقع عليها الأكل (مفعول به مقدم منصوب بالفتحة).' },
+      { q: '"كتبَ التلاميذُ الواجبَ" علامة رفع الفاعل (التلاميذ):', options: ['الألف', 'الواو', 'الضمة لأنه جمع تكسير', 'الفتحة'], correct: 2, explanation: 'التلاميذ جمع تكسير يرفع بالضمة الظاهرة.' },
+      { q: '"شاهدتُ الفلاحينَ يزرعون" كلمة "الفلاحينَ" مفعول به منصوب وعلامة نصبه:', options: ['الفتحة', 'الياء لأنه جمع مذكر سالم', 'الكسرة', 'الألف'], correct: 1, explanation: 'ينصب جمع المذكر السالم بالياء.' },
+      { q: 'الجملة التي تشتمل على فاعل ومفعول به معاً هي:', options: ['نامَ الطفلُ في السرير', 'رسمَ الفنانُ لوحةً', 'فازَ المجتهدُ بالجائزة', 'ذهبَ أحمد إلى الحديقة'], correct: 1, explanation: 'الفنان فاعل، ولوحة مفعول به منصوب، وبقية الجمل أفعالها لازمة اكتفت بالفاعل.' },
+      { q: 'الضبط الصحيح لكلمة (القصة) في "ألّفَ الكاتبُ القصة":', options: ['القصةُ', 'القصةِ', 'القصةَ', 'القصةْ'], correct: 2, explanation: 'مفعول به مفرد منصوب بالفتحة الظاهرة.' },
+      { q: 'الضبط الصحيح لكلمة (الطالب) في "شكرَ المعلمُ الطالب":', options: ['الطالبُ', 'الطالبِ', 'الطالبْ', 'الطالبَ'], correct: 3, explanation: 'مفعول به منصوب بالفتحة الظاهرة على آخره.' },
+      { q: '"ساعدَ المحتاجينَ الميسورون" الفاعل في الجملة هو:', options: ['الميسورون', 'المحتاجين', 'ساعد', 'ضمير مستتر'], correct: 0, explanation: 'الميسورون هم الفاعلون الحقيقيون للمساعدة، وهو فاعل مؤخر مرفوع بالواو.' },
+      { q: 'علامة إعراب الفاعل في "تفوقتِ الطالباتُ":', options: ['الألف', 'الضمة', 'الكسرة', 'الفتحة'], correct: 1, explanation: 'جمع المؤنث السالم يرفع بالضمة الظاهرة.' },
+      { q: '"اشترى أبي جهازينِ" إعراب "جهازين":', options: ['فاعل مرفوع بالألف', 'مضاف إليه مجرور', 'مفعول به منصوب بالياء', 'خبر منصوب'], correct: 2, explanation: 'مفعول به منصوب بالياء لأنه مثنى.' },
+      { q: 'الفاعل في "سمعَ الأذانَ المصلون" مرفوع وعلامة رفعه:', options: ['الضمة', 'النون', 'الألف', 'الواو'], correct: 3, explanation: 'المصلون فاعل مؤخر مرفوع بالواو لأنه جمع مذكر سالم.' },
+      { q: 'في جملة "عالجَ الأطباءُ المرضى"، المفعول به هو:', options: ['المرضى', 'الأطباء', 'عالج', 'ضمير مستتر'], correct: 0, explanation: 'المرضى اسم وقع عليه العلاج، مفعول به منصوب بالفتحة المقدرة.' },
+      { q: 'إعراب الفاعل في "تعاونَ الشريكانِ في العمل":', options: ['فاعل مرفوع بالضمة', 'فاعل مرفوع بالألف', 'مبتدأ مرفوع', 'مفعول به منصوب'], correct: 1, explanation: 'الشريكان فاعل مرفوع بالألف لأنه مثنى.' },
+      { q: '"قدّمَ الطلابُ مشروعاتٍ مفيدة" مفعول به منصوب وعلامة نصبه:', options: ['الفتحة', 'الياء', 'الكسرة لأنه جمع مؤنث سالم', 'الضمة'], correct: 2, explanation: 'مشروعات جمع مؤنث سالم ينصب بالكسرة نيابة عن الفتحة.' },
+      { q: 'حدد الجملة التي كُتبت بعلامات إعراب صحيحة:', options: ['كافأَ المعلمَ المتفوقون', 'كافأَ المعلمِ المتفوقين', 'كافأ المعلمُ المتفوقون', 'كافأَ المعلمُ المتفوقينَ'], correct: 3, explanation: 'المعلمُ (فاعل مرفوع بالضمة) والمتفوقينَ (مفعول به منصوب بالياء).' },
+      { q: 'إذا كان الفاعل جمع مؤنث سالماً يُرفع بـ:', options: ['الضمة الظاهرة', 'الألف', 'الواو', 'النون'], correct: 0, explanation: 'يرفع جمع المؤنث السالم بالضمة.' },
+      { q: 'إعراب "المهندسون" في "خططَ المهندسونَ المشروع":', options: ['مفعول به منصوب', 'فاعل مرفوع بالواو', 'مبتدأ مؤخر', 'خبر المبتدأ'], correct: 1, explanation: 'فاعل مرفوع بالواو لأنه جمع مذكر سالم.' },
+      { q: 'الفاعل في جملة "ركبَ القطارَ المسافرون":', options: ['القطار', 'ركب', 'المسافرون', 'ضمير مستتر'], correct: 2, explanation: 'المسافرون هم الذين ركبوا، فاعل مؤخر مرفوع بالواو.' },
+      { q: 'المفعول به دائماً يأتي في الجملة:', options: ['الاسمية', 'شبه الجملة', 'الشرطية فقط', 'الفعلية'], correct: 3, explanation: 'المفعول به ركن مكمل في الجملة الفعلية التي فعلها متعدٍ.' },
+      { q: '"بنى العمالُ مساجدَ كثيرة" علامة نصب المفعول به (مساجد):', options: ['الفتحة', 'الكسرة', 'الياء', 'الألف'], correct: 0, explanation: 'مساجد جمع تكسير ينصب بالفتحة الظاهرة.' }
     ];
 
-    // 3. الصف السادس: النكرة والمعرفة (30 سؤال مع تنويع مواضع الإجابة)
+    // 3. الصف السادس: النكرة والمعرفة (30 سؤالاً)[cite: 1]
     const grade6Questions = [
-      { q: 'الاسم النكرة هو ما دل على شيء:', options: ['معين ومحدد بذاته', 'غير معين أو محدد', 'مستحيل الحدوث', 'حدث مرتبط بزمن'], correct: 1 },
-      { q: 'الاسم المعرفة هو ما دل على شيء:', options: ['غير معين وغير معروف', 'حرف لا يفيد معنى', 'معين ومحدد', 'فعل ماضٍ'], correct: 2 },
-      { q: 'الضمائر كلها من الأسماء:', options: ['النكرات', 'الأفعال', 'الحروف', 'المعارف'], correct: 3 },
-      { q: 'أسماء الإشارة والأسماء الموصولة تعد من:', options: ['المعارف', 'النكرات', 'الحروف', 'الأفعال المبنية'], correct: 0 },
-      { q: 'الاسم الذي يدل على شخص بعينه أو بلد بعينها يسمى:', options: ['نكرة مقصودة', 'عَلَماً وهو معرفة', 'اسماً مبهماً', 'حرفاً'], correct: 1 },
-      { q: 'نوع كلمة "قلم" بمفردها مجردة من الإضافة والـ التعريف:', options: ['معرفة بالعلمية', 'معرفة بالإضافة', 'نكرة', 'اسم إشارة'], correct: 2 },
-      { q: 'كلمة "القلم" تعد معرفة بسبب:', options: ['العلمية', 'الإضافة', 'كونها ضميراً', 'دخول (الـ) التعريف'], correct: 3 },
-      { q: 'كلمة "كتابي" تعد معرفة لأنها:', options: ['معرفة بالإضافة إلى ضمير', 'منونة', 'علم لمكان', 'اسم إشارة'], correct: 0 },
-      { q: 'كلمة "محمد" تعد معرفة لأنها:', options: ['معرفة بـ أل', 'عَلَم', 'اسم موصول', 'اسم إشارة'], correct: 1 },
-      { q: 'كلمة "مكة" تصنف على أنها:', options: ['نكرة', 'حرف جر', 'معرفة (علم لمكان)', 'اسم موصول'], correct: 2 },
-      { q: 'في جملة "هذا طالبٌ نشيط"، الاسم المعرفة هو:', options: ['طالب', 'نشيط', 'كل الكلمات نكرات', 'هذا (اسم إشارة)'], correct: 3 },
-      { q: 'في جملة "جاء الذي تفوق"، الاسم المعرفة هو:', options: ['الذي (اسم موصول)', 'جاء', 'تفوق', 'لا يوجد معرفة'], correct: 0 },
-      { q: 'الاسم النكرة في جملة "قرأتُ كتاباً مفيداً" هو:', options: ['التاء في قرأت فقط', 'كتاباً ومفيداً معاً', 'لا يوجد نكرة', 'قرأت فقط'], correct: 1 },
-      { q: 'كلمة "طالبُ العلمِ" اكتسبت التعريف عن طريق:', options: ['التنوين', 'العلمية', 'الإضافة إلى معرف بـ الـ', 'الإشارة'], correct: 2 },
-      { q: '"نحن نحب الوطن" الضمير "نحن" يصنف من:', options: ['النكرات', 'الأفعال', 'الحروف', 'المعارف'], correct: 3 },
-      { q: 'أي الكلمات الآتية اسم نكرة؟', options: ['حديقةٌ', 'مصر', 'أنتَ', 'الشارع'], correct: 0 },
-      { q: 'أي الكلمات الآتية اسم معرفة؟', options: ['رجلٌ', 'هؤلاء', 'شجرةٌ', 'مدينةٌ'], correct: 1 },
-      { q: '"سافرَ صديقي إلى القاهرة" الأسماء المعارف في الجملة هي:', options: ['سافر فقط', 'إلى فقط', 'صديقي والقاهرة والضمير', 'لا توجد معارف'], correct: 2 },
-      { q: 'تحويل النكرة إلى معرفة في "ركبتُ قطاراً" يكون:', options: ['ركبتُ في قطار', 'ركبتُ قطاراً سريعاً', 'قطاراً ركبت', 'ركبتُ القطارَ'], correct: 3 },
-      { q: 'الاسم النكرة في "أضاءَ المصباحُ غرفةً مظلمة":', options: ['غرفةً ومظلمة', 'المصباح', 'أضاء', 'المصباح وغرفة'], correct: 0 },
-      { q: 'كلمة "شوارعُ المدينةِ" كلمة "شوارع" نوعها:', options: ['نكرة باقية على تنكيرها', 'معرفة بالإضافة', 'علم', 'اسم إشارة'], correct: 1 },
-      { q: 'الضمائر المتصلة (مثل كاف الخطاب وهاء الغيبة) من:', options: ['النكرات', 'الحروف الناسخة', 'المعارف', 'الأفعال'], correct: 2 },
-      { q: '"مصرُ بلدُ الحضارةِ" في الجملة السابقة كم اسماً معرفة؟', options: ['معرفة واحدة', 'معرفتان فقط', 'لا توجد معارف', 'ثلاثة معارف (مصر، بلد، الحضارة)'], correct: 3 },
-      { q: 'كلمة "هذان" تعد من المعارف لأنها:', options: ['اسم إشارة', 'علم', 'معرفة بـ أل', 'اسم موصول'], correct: 0 },
-      { q: 'كلمة "اللتان" تعد من المعارف لأنها:', options: ['اسم إشارة', 'اسم موصول', 'ضمير منفصل', 'علم'], correct: 1 },
-      { q: 'الاسم المعين بذاته بدون واسطة كالضمير أو الإشارة يسمى في الأشخاص والبلدان:', options: ['نكرة مقصودة', 'موصولاً', 'عَلَماً', 'مضافاً'], correct: 2 },
-      { q: 'تنوين الاسم غالباً يدل على أنه:', options: ['معرفة بـ أل', 'فعل ماض', 'حرف مبني', 'نكرة (طالما لم يكن علماً)'], correct: 3 },
-      { q: '"استمعتُ إلى نصيحةِ المعلمِ" كلمة "نصيحة" أصبحت معرفة لأنها:', options: ['أضيفت إلى اسم معرف بأل', 'منونة', 'علم', 'اسم إشارة'], correct: 0 },
-      { q: 'أي الجمل الآتية تحتوي على نكرة فقط (بدون معارف إلا الفاعل المستتر)؟', options: ['هذا كتابي', 'اشتريتُ ثوباً جميلاً', 'مصر بلد الأمان', 'حضر المعلم'], correct: 1 },
-      { q: 'المعارف في اللغة العربية تشمل:', options: ['الأفعال والحروف فقط', 'الأسماء المنونة فقط', 'الضمائر، الأعلام، أسماء الإشارة، الموصول، المعرف بـ أل، المضاف لمعرفة', 'المبتدأ والخبر فقط'], correct: 2 }
+      { q: 'الاسم النكرة هو ما دل على شيء:', options: ['معين ومحدد بذاته', 'غير معين أو محدد', 'مستحيل الحدوث', 'حدث مرتبط بزمن'], correct: 1, explanation: 'النكرة تدل على شيء غير معين وشائع في جنسه.' },
+      { q: 'الاسم المعرفة هو ما دل على شيء:', options: ['غير معين وغير معروف', 'حرف لا يفيد معنى', 'معين ومحدد', 'فعل ماضٍ'], correct: 2, explanation: 'المعرفة اسم وضع ليدل على مدلول معين بعينه.' },
+      { q: 'الضمائر كلها من الأسماء:', options: ['النكرات', 'الأفعال', 'الحروف', 'المعارف'], correct: 3, explanation: 'الضمائر تعد أعرف المعارف بعد لفظ الجلالة.' },
+      { q: 'أسماء الإشارة والأسماء الموصولة تعد من:', options: ['المعارف', 'النكرات', 'الحروف', 'الأفعال المبنية'], correct: 0, explanation: 'هما من أقسام المعارف الستة الأساسية.' },
+      { q: 'الاسم الذي يدل على شخص بعينه أو بلد بعينها يسمى:', options: ['نكرة مقصودة', 'عَلَماً وهو معرفة', 'اسماً مبهماً', 'حرفاً'], correct: 1, explanation: 'العلم اسم يعين مسماه تعييناً مطلقاً بدون قرينة.' },
+      { q: 'نوع كلمة "قلم" بمفردها مجردة من الإضافة والـ التعريف:', options: ['معرفة بالعلمية', 'معرفة بالإضافة', 'نكرة', 'اسم إشارة'], correct: 2, explanation: 'اسم نكرة شائع يطلق على أي قلم غير محدد.' },
+      { q: 'كلمة "القلم" تعد معرفة بسبب:', options: ['العلمية', 'الإضافة', 'كونها ضميراً', 'دخول (الـ) التعريف'], correct: 3, explanation: 'اقترنت بأداة التعريف (الـ).' },
+      { q: 'كلمة "كتابي" تعد معرفة لأنها:', options: ['معرفة بالإضافة إلى ضمير', 'منونة', 'علم لمكان', 'اسم إشارة'], correct: 0, explanation: 'أضيفت إلى الضمير (ياء المتكلم) فاكتسبت التعريف.' },
+      { q: 'كلمة "محمد" تعد معرفة لأنها:', options: ['معرفة بـ أل', 'عَلَم', 'اسم موصول', 'اسم إشارة'], correct: 1, explanation: 'علم يدل على اسم إنسان معين.' },
+      { q: 'كلمة "مكة" تصنف على أنها:', options: ['نكرة', 'حرف جر', 'معرفة (علم لمكان)', 'اسم موصول'], correct: 2, explanation: 'علم يدل على مدينة ومكان جغرافي محدد.' },
+      { q: 'في جملة "هذا طالبٌ نشيط"، الاسم المعرفة هو:', options: ['طالب', 'نشيط', 'كل الكلمات نكرات', 'هذا (اسم إشارة)'], correct: 3, explanation: 'أسماء الإشارة من المعارف، أما طالب ونشيط فهما نكرتان.' },
+      { q: 'في جملة "جاء الذي تفوق"، الاسم المعرفة هو:', options: ['الذي (اسم موصول)', 'جاء', 'تفوق', 'لا يوجد معرفة'], correct: 0, explanation: '"الذي" اسم موصول وهو من المعارف.' },
+      { q: 'الاسم النكرة في جملة "قرأتُ كتاباً مفيداً" هو:', options: ['التاء في قرأت فقط', 'كتاباً ومفيداً معاً', 'لا يوجد نكرة', 'قرأت فقط'], correct: 1, explanation: 'كتاباً اسم نكرة منون ومفيداً نعت نكرة منون.' },
+      { q: 'كلمة "طالبُ العلمِ" اكتسبت التعريف عن طريق:', options: ['التنوين', 'العلمية', 'الإضافة إلى معرف بـ الـ', 'الإشارة'], correct: 2, explanation: 'المضاف إلى معرف بأل يكتسب التعريف بالإضافة.' },
+      { q: '"نحن نحب الوطن" الضمير "نحن" يصنف من:', options: ['النكرات', 'الأفعال', 'الحروف', 'المعارف'], correct: 3, explanation: 'ضمائر المتكلم كلها أسماء معارف.' },
+      { q: 'أي الكلمات الآتية اسم نكرة؟', options: ['حديقةٌ', 'مصر', 'أنتَ', 'الشارع'], correct: 0, explanation: 'حديقةٌ نكرة منونة لا تقترن بأل ولا تضاف، وبقية الكلمات معارف.' },
+      { q: 'أي الكلمات الآتية اسم معرفة؟', options: ['رجلٌ', 'هؤلاء', 'شجرةٌ', 'مدينةٌ'], correct: 1, explanation: 'هؤلاء اسم إشارة فهو معرفة.' },
+      { q: '"سافرَ صديقي إلى القاهرة" الأسماء المعارف في الجملة هي:', options: ['سافر فقط', 'إلى فقط', 'صديقي والقاهرة والضمير', 'لا توجد معارف'], correct: 2, explanation: 'صديقي معرف بالإضافة للضمير، والقاهرة علم معرف بأل والياء ضمير.' },
+      { q: 'تحويل النكرة إلى معرفة في "ركبتُ قطاراً" يكون:', options: ['ركبتُ في قطار', 'ركبتُ قطاراً سريعاً', 'قطاراً ركبت', 'ركبتُ القطارَ'], correct: 3, explanation: 'إدخال (الـ) التعريف يحول النكرة إلى معرفة.' },
+      { q: 'الاسم النكرة في "أضاءَ المصباحُ غرفةً مظلمة":', options: ['غرفةً ومظلمة', 'المصباح', 'أضاء', 'المصباح وغرفة'], correct: 0, explanation: 'غرفة ومظلمة اسمان نكرتان منونان يدلان على غير معين.' },
+      { q: 'كلمة "شوارعُ المدينةِ" كلمة "شوارع" نوعها:', options: ['نكرة باقية على تنكيرها', 'معرفة بالإضافة', 'علم', 'اسم إشارة'], correct: 1, explanation: 'اكتسبت التعريف بإضافتها إلى كلمة "المدينة" المعرفة بأل.' },
+      { q: 'الضمائر المتصلة (مثل كاف الخطاب وهاء الغيبة) من:', options: ['النكرات', 'الحروف الناسخة', 'المعارف', 'الأفعال'], correct: 2, explanation: 'الضمائر المتصلة كالمتفصلة تماماً كلها معارف مبنية.' },
+      { q: '"مصرُ بلدُ الحضارةِ" في الجملة السابقة كم اسماً معرفة؟', options: ['معرفة واحدة', 'معرفتان فقط', 'لا توجد معارف', 'ثلاثة معارف (مصر، بلد، الحضارة)'], correct: 3, explanation: 'مصر (علم)، بلد (معرف بالإضافة)، الحضارة (معرف بأل).' },
+      { q: 'كلمة "هذان" تعد من المعارف لأنها:', options: ['اسم إشارة', 'علم', 'معرفة بـ أل', 'اسم موصول'], correct: 0, explanation: 'من أسماء الإشارة الدالة على المثنى.' },
+      { q: 'كلمة "اللتان" تعد من المعارف لأنها:', options: ['اسم إشارة', 'اسم موصول', 'ضمير منفصل', 'علم'], correct: 1, explanation: 'من الأسماء الموصولة الدالة على المثنى المؤنث.' },
+      { q: 'الاسم المعين بذاته بدون واسطة كالضمير أو الإشارة يسمى في الأشخاص والبلدان:', options: ['نكرة مقصودة', 'موصولاً', 'عَلَماً', 'مضافاً'], correct: 2, explanation: 'هذا هو تعريف العلم.' },
+      { q: 'تنوين الاسم غالباً يدل على أنه:', options: ['معرفة بـ أل', 'فعل ماض', 'حرف مبني', 'نكرة (طالما لم يكن علماً)'], correct: 3, explanation: 'التنوين علامة التنكير في الأسماء المجردة من الإضافة وأل.' },
+      { q: '"استمعتُ إلى نصيحةِ المعلمِ" كلمة "نصيحة" أصبحت معرفة لأنها:', options: ['أضيفت إلى اسم معرف بأل', 'منونة', 'علم', 'اسم إشارة'], correct: 0, explanation: 'المعرف بالإضافة يكتسب رتبة ما أضيف إليه.' },
+      { q: 'أي الجمل الآتية تحتوي على نكرة فقط (بدون معارف إلا الفاعل المستتر)؟', options: ['هذا كتابي', 'اشتريتُ ثوباً جميلاً', 'مصر بلد الأمان', 'حضر المعلم'], correct: 1, explanation: 'ثوباً وجميلاً اسمان نكرتان.' },
+      { q: 'المعارف في اللغة العربية تشمل:', options: ['الأفعال والحروف فقط', 'الأسماء المنونة فقط', 'الضمائر، الأعلام، أسماء الإشارة، الموصول، المعرف بـ أل، المضاف لمعرفة', 'المبتدأ والخبر فقط'], correct: 2, explanation: 'هذه هي الأقسام الستة الرئيسية للمعارف في لغتنا العربية.' }
     ];
 
-    // 4. الصف الأول الإعدادي: الفعل اللازم والمتعدي لمفعول واحد (30 سؤال مع تنويع مواضع الإجابة)
-    const grade1PrepQuestions = [
-      { q: 'الفعل اللازم هو الفعل الذي:', options: ['ينصب مفعولاً به واحداً', 'يكتفي بفاعله ولا يحتاج إلى مفعول به', 'ينصب مفعولين', 'يحتاج إلى اسم وخبر'], correct: 1 },
-      { q: 'الفعل المتعدي هو الفعل الذي:', options: ['يرفع فاعلاً فقط', 'لا يتصل به فاعل', 'لا يكتفي بفاعله ويتعداه إلى نصب مفعول به', 'يلزم حالة واحدة دائماً'], correct: 2 },
-      { q: 'في جملة "خرجَ الطلابُ إلى فنائهم بنشاط"، الفعل (خرجَ):', options: ['فعل متعدٍ لمفعول به', 'فعل ناسخ ناقص', 'فعل جامد', 'فعل لازم'], correct: 3 },
-      { q: 'في جملة "كرّمَ المعلمُ التلميذَ المتفوق"، الفعل (كرّمَ):', options: ['فعل متعدٍ لمفعول به', 'فعل لازم', 'فعل معتل ناقص', 'فعل لازم ملحق'], correct: 0 },
-      { q: 'من علامات الفعل المتعدي قبوله الاتصال بـ:', options: ['تاء التأنيث الساكنة فقط', 'ضمائر النصب المتصلة (هاء الغيبة، كاف الخطاب، ياء المتكلم)', 'نون النسوة فقط', 'واو الجماعة فقط'], correct: 1 },
-      { q: 'الفعل في جملة "اطمأنَّ قلبُ المؤمنِ بذكر الله" نوعه:', options: ['فعل متعدٍ لمفعول به', 'فعل ناقص', 'فعل لازم', 'فعل مضعف متعدٍ'], correct: 2 },
-      { q: 'الفعل في جملة "شرحَ المعلمُ الدرسَ بوضوح" نوعه:', options: ['فعل لازم', 'فعل جامد', 'فعل ناقص', 'فعل متعدٍ لمفعول به'], correct: 3 },
-      { q: '"نامَ الطفلُ هادئاً" كلمة (هادئاً) إعرابها:', options: ['حال منصوب بالفتحة (والفعل لازم)', 'مفعول به منصوب', 'تمييز منصوب', 'مفعول مطلق'], correct: 0 },
-      { q: '"سقطتِ الأمطارُ بغزارة" الفعل (سقطَ):', options: ['فعل متعدٍ لمفعول به', 'فعل لازم', 'فعل متعدٍ محذوف المفعول', 'فعل ناسخ'], correct: 1 },
-      { q: '"أكرمَ الرجلُ ضيفه" الفعل (أكرمَ):', options: ['فعل لازم', 'فعل ناقص', 'فعل متعدٍ لمفعول به (ضيفه)', 'فعل مبني للمجهول'], correct: 2 },
-      { q: 'الأفعال التالية كلها أفعال لازمة ما عدا:', options: ['جَلَسَ', 'ذَهَبَ', 'انكسَرَ', 'حَفِظَ'], correct: 3 },
-      { q: 'الأفعال التالية كلها أفعال متعدية ما عدا:', options: ['ظَهَرَ', 'قَرَأَ', 'كَتَبَ', 'فَهِمَ'], correct: 0 },
-      { q: 'في جملة "انتصرَ الجيشُ في المعركة"، الفعل (انتصرَ):', options: ['فعل متعدٍ نصب مفعولاً', 'فعل لازم يكتفي بفاعله', 'فعل ناقص', 'فعل متعدٍ للجار والمجرور'], correct: 1 },
-      { q: 'في جملة "عالجَ الطبيبُ المريضَ"، المفعول به هو:', options: ['الطبيبُ', 'عالجَ', 'المريضَ', 'ضمير مستتر'], correct: 2 },
-      { q: 'إذا اتصل بالفعل ضمير من ضمائر النصب (مثل: أكرمتكَ، علّمهُ، سمعني)، يكون الفعل حتماً:', options: ['فعلاً لازماً', 'فعلاً ناقصاً', 'فعلاً جامداً', 'فعلاً متعدياً'], correct: 3 },
-      { q: '"جلسَ الولدُ على المقعدِ" لجعل الفعل اللازم (جلس) متعدياً نقول:', options: ['أجلستُ الولدَ على المقعدِ', 'جلسَ الولدُ جلوساً', 'جلسَ الولدُ مسروراً', 'تجلسُ البنت'], correct: 0 },
-      { q: '"انكسرَ الزجاجُ" الفعل (انكسرَ) يصنف على أنه:', options: ['فعل متعدٍ', 'فعل لازم', 'فعل ناقص ناسخ', 'فعل مبني على السكون'], correct: 1 },
-      { q: '"كتبَ الطالبُ الواجبَ" علامة نصب المفعول به (الواجب):', options: ['الضمة', 'الكسرة', 'الفتحة الظاهرة', 'الألف'], correct: 2 },
-      { q: '"شاهدتُ المباراتينِ" الفعل (شاهدَ) متعدٍ، والمفعول به منصوب وععلامة نصبه:', options: ['الفتحة المقدرة', 'الكسرة', 'الألف', 'الياء لأنه مثنى'], correct: 3 },
-      { q: '"احترمَ الناسُ المخلصينَ" المفعول به هنا منصوب بـ:', options: ['الياء لأنه جمع مذكر سالم', 'الفتحة', 'الكسرة', 'الواو'], correct: 0 },
-      { q: '"كافأتِ المدرسةُ الطالباتِ المتفوقاتِ" المفعول به منصوب بـ:', options: ['الفتحة', 'الكسرة لأنه جمع مؤنث سالم', 'الياء', 'الألف'], correct: 1 },
-      { q: 'الفعل في "أشرقتِ الشمسُ صباحاً" نوعه:', options: ['متعدٍ نصب مفعولاً', 'ناقص', 'لازم (وصباحاً ظرف زمان)', 'متعدٍ لمفعول محذوف'], correct: 2 },
-      { q: '"أدى المؤمنُ الصلاةَ بخشوع" الفعل (أدّى):', options: ['فعل لازم', 'فعل جامد', 'فعل ناقص', 'فعل متعدٍ لمفعول به'], correct: 3 },
-      { q: '"ارتفعَ صوتُ الحقّ" الفعل (ارتفعَ):', options: ['فعل لازم', 'فعل متعدٍ لمفعول به', 'فعل متعدٍ بالإضافة', 'فعل ناسخ'], correct: 0 },
-      { q: '"أعانَ القويُّ الضعيفَ" الفاعل والمفعول به على الترتيب هما:', options: ['الضعيف / القوي', 'القويُّ (فاعل) / الضعيفَ (مفعول به)', 'أعان / القوي', 'ضمير مستتر / الضعيف'], correct: 1 },
-      { q: '"عادَ المسافرُ إلى وطنهِ سالماً" كلمة (سالماً) إعرابها:', options: ['مفعول به منصوب', 'نعت مجرور', 'حال منصوب (والفعل عاد لازم)', 'مفعول لأجله'], correct: 2 },
-      { q: '"نظّفَ العاملُ الشارعَ" الفعل (نظّفَ) متعدٍ بالتضعيف وأصله اللازم هو:', options: ['تنظّفَ الشارعُ', 'استنظفَ العامل', 'مناظفة الشارع', 'نَظُفَ الشارعُ'], correct: 3 },
-      { q: 'الفعل المتعدي في الجمل الآتية هو:', options: ['حصدَ الفلاحُ القمحَ', 'وقفَ المعلمُ أمام الطلاب', 'جاءَ الحقُّ وزهقَ الباطل', 'سارَ القطارُ مسرعاً'], correct: 0 },
-      { q: 'الفعل اللازم في الجمل الآتية هو:', options: ['قرأَ التلميذُ قصةً', 'تفتحتِ الأزهارُ في الحديقة', 'رسمَ الفنانُ لوحةً', 'استقبلَ الأبُ الضيوفَ'], correct: 1 },
-      { q: '"أحبكَ يا وطني" الفعل (أحبَّ) نوعه:', options: ['فعل لازم', 'فعل ناقص', 'فعل متعدٍ (والكاف ضمير متصل في محل نصب مفعول به)', 'فعل مبني للمجهول'], correct: 2 }
+    // 4.1 الصف الأول الإعدادي: النحو (الفعل اللازم والمتعدي - 30 سؤالاً)[cite: 1]
+    const grade1PrepGrammar = [
+      { q: 'الفعل اللازم هو الفعل الذي:', options: ['ينصب مفعولاً به واحداً', 'يكتفي بفاعله ولا يحتاج إلى مفعول به', 'ينصب مفعولين', 'يحتاج إلى اسم وخبر'], correct: 1, explanation: 'الفعل اللازم يرفع فاعلاً ويكتفي به لتكوين جملة تامة المعنى.' },
+      { q: 'الفعل المتعدي هو الفعل الذي:', options: ['يرفع فاعلاً فقط', 'لا يتصل به فاعل', 'لا يكتفي بفاعله ويتعداه إلى نصب مفعول به', 'يلزم حالة واحدة دائماً'], correct: 2, explanation: 'الفعل المتعدي لا يكتمل معناه إلا بوجود مفعول به يقع عليه الفعل.' },
+      { q: 'في جملة "خرجَ الطلابُ إلى فنائهم بنشاط"، الفعل (خرجَ):', options: ['فعل متعدٍ لمفعول به', 'فعل ناسخ ناقص', 'فعل جامد', 'فعل لازم'], correct: 3, explanation: 'الفعل "خرج" اكتفى بفاعله "الطلاب" وتمم المعنى بالجار والمجرور.' },
+      { q: 'في جملة "كرّمَ المعلمُ التلميذَ المتفوق"، الفعل (كرّمَ):', options: ['فعل متعدٍ لمفعول به', 'فعل لازم', 'فعل معتل ناقص', 'فعل لازم ملحق'], correct: 0, explanation: 'نصب مفعولاً به وهو "التلميذَ".' },
+      { q: 'من علامات الفعل المتعدي قبوله الاتصال بـ:', options: ['تاء التأنيث الساكنة فقط', 'ضمائر النصب المتصلة (هاء الغيبة، كاف الخطاب، ياء المتكلم)', 'نون النسوة فقط', 'واو الجماعة فقط'], correct: 1, explanation: 'يقبل ضمائر النصب وتكون في محل نصب مفعول به (مثل: كافأه، كافأك، كافأني).' },
+      { q: 'الفعل في جملة "اطمأنَّ قلبُ المؤمنِ بذكر الله" نوعه:', options: ['فعل متعدٍ لمفعول به', 'فعل ناقص', 'فعل لازم', 'فعل مضعف متعدٍ'], correct: 2, explanation: 'اكتفى بفاعله "قلبُ" ولا يحتاج لمفعول به.' },
+      { q: 'الفعل في جملة "شرحَ المعلمُ الدرسَ بوضوح" نوعه:', options: ['فعل لازم', 'فعل جامد', 'فعل ناقص', 'فعل متعدٍ لمفعول به'], correct: 3, explanation: 'نصب المفعول به "الدرسَ".' },
+      { q: '"نامَ الطفلُ هادئاً" كلمة (هادئاً) إعرابها:', options: ['حال منصوب بالفتحة (والفعل لازم)', 'مفعول به منصوب', 'تمييز منصوب', 'مفعول مطلق'], correct: 0, explanation: '"هادئاً" تبين هيئة الفاعل أثناء النوم فهي حال، والفعل "نام" لازم.' },
+      { q: '"سقطتِ الأمطارُ بغزارة" الفعل (سقطَ):', options: ['فعل متعدٍ لمفعول به', 'فعل لازم', 'فعل متعدٍ محذوف المفعول', 'فعل ناسخ'], correct: 1, explanation: 'اكتفى بفاعله "الأمطارُ".' },
+      { q: '"أكرمَ الرجلُ ضيفه" الفعل (أكرمَ):', options: ['فعل لازم', 'فعل ناقص', 'فعل متعدٍ لمفعول به (ضيفه)', 'فعل مبني للمجهول'], correct: 2, explanation: 'نصب المفعول به "ضيفه".' },
+      { q: 'الأفعال التالية كلها أفعال لازمة ما عدا:', options: ['جَلَسَ', 'ذَهَبَ', 'انكسَرَ', 'حَفِظَ'], correct: 3, explanation: '"حَفِظَ" فعل متعدٍ ينصب مفعولاً به (حفظ الطالبُ الدرسَ).' },
+      { q: 'الأفعال التالية كلها أفعال متعدية ما عدا:', options: ['ظَهَرَ', 'قَرَأَ', 'كَتَبَ', 'فَهِمَ'], correct: 0, explanation: '"ظَهَرَ" فعل لازم لا ينصب مفعولاً به (ظهر الحقُّ).' },
+      { q: 'في جملة "انتصرَ الجيشُ في المعركة"، الفعل (انتصرَ):', options: ['فعل متعدٍ نصب مفعولاً', 'فعل لازم يكتفي بفاعله', 'فعل ناقص', 'فعل متعدٍ للجار والمجرور'], correct: 1, explanation: 'اكتفى بفاعله "الجيشُ".' },
+      { q: 'في جملة "عالجَ الطبيبُ المريضَ"، المفعول به هو:', options: ['الطبيبُ', 'عالجَ', 'المريضَ', 'ضمير مستتر'], correct: 2, explanation: '"المريضَ" وقع عليه العلاج فهو مفعول به منصوب.' },
+      { q: 'إذا اتصل بالفعل ضمير من ضمائر النصب (مثل: أكرمتكَ، علّمهُ، سمعني)، يكون الفعل حتماً:', options: ['فعلاً لازماً', 'فعلاً ناقصاً', 'فعلاً جامداً', 'فعلاً متعدياً'], correct: 3, explanation: 'لأن هذه الضمائر تعرب في محل نصب مفعول به.' },
+      { q: '"جلسَ الولدُ على المقعدِ" لجعل الفعل اللازم (جلس) متعدياً نقول:', options: ['أجلستُ الولدَ على المقعدِ', 'جلسَ الولدُ جلوساً', 'جلسَ الولدُ مسروراً', 'تجلسُ البنت'], correct: 0, explanation: 'بزيادة همزة التعدية في أوله (أَجْلَسَ).' },
+      { q: '"انكسرَ الزجاجُ" الفعل (انكسرَ) يصنف على أنه:', options: ['فعل متعدٍ', 'فعل لازم', 'فعل ناقص ناسخ', 'فعل مبني على السكون'], correct: 1, explanation: 'أفعال المطاوعة (انفعل) مثل انكسر وانفتح كلها أفعال لازمة.' },
+      { q: '"كتبَ الطالبُ الواجبَ" علامة نصب المفعول به (الواجب):', options: ['الضمة', 'الكسرة', 'الفتحة الظاهرة', 'الألف'], correct: 2, explanation: 'اسم مفرد منصوب بالفتحة الظاهرة.' },
+      { q: '"شاهدتُ المباراتينِ" الفعل (شاهدَ) متعدٍ، والمفعول به منصوب وععلامة نصبه:', options: ['الفتحة المقدرة', 'الكسرة', 'الألف', 'الياء لأنه مثنى'], correct: 3, explanation: 'المثنى ينصب بالياء.' },
+      { q: '"احترمَ الناسُ المخلصينَ" المفعول به هنا منصوب بـ:', options: ['الياء لأنه جمع مذكر سالم', 'الفتحة', 'الكسرة', 'الواو'], correct: 0, explanation: 'ينصب جمع المذكر السالم بالياء.' },
+      { q: '"كافأتِ المدرسةُ الطالباتِ المتفوقاتِ" المفعول به منصوب بـ:', options: ['الفتحة', 'الكسرة لأنه جمع مؤنث سالم', 'الياء', 'الألف'], correct: 1, explanation: 'جمع المؤنث السالم ينصب بالكسرة نيابة عن الفتحة.' },
+      { q: 'الفعل في "أشرقتِ الشمسُ صباحاً" نوعه:', options: ['متعدٍ نصب مفعولاً', 'ناقص', 'لازم (وصباحاً ظرف زمان)', 'متعدٍ لمفعول محذوف'], correct: 2, explanation: '"صباحاً" ظرف زمان وليس مفعولاً به، فالفعل لازم.' },
+      { q: '"أدى المؤمنُ الصلاةَ بخشوع" الفعل (أدّى):', options: ['فعل لازم', 'فعل جامد', 'فعل ناقص', 'فعل متعدٍ لمفعول به'], correct: 3, explanation: 'نصب المفعول به "الصلاةَ".' },
+      { q: '"ارتفعَ صوتُ الحقّ" الفعل (ارتفعَ):', options: ['فعل لازم', 'فعل متعدٍ لمفعول به', 'فعل متعدٍ بالإضافة', 'فعل ناسخ'], correct: 0, explanation: 'اكتفى بفاعله "صوتُ" والحق مضاف إليه.' },
+      { q: '"أعانَ القويُّ الضعيفَ" الفاعل والمفعول به على الترتيب هما:', options: ['الضعيف / القوي', 'القويُّ (فاعل) / الضعيفَ (مفعول به)', 'أعان / القوي', 'ضمير مستتر / الضعيف'], correct: 1, explanation: 'القوي فاعل مرفوع، والضعيف مفعول به منصوب.' },
+      { q: '"عادَ المسافرُ إلى وطنهِ سالماً" كلمة (سالماً) إعرابها:', options: ['مفعول به منصوب', 'نعت مجرور', 'حال منصوب (والفعل عاد لازم)', 'مفعول لأجله'], correct: 2, explanation: '"سالماً" حال تبين هيئة المسافر عند العودة، والفعل عاد لازم.' },
+      { q: '"نظّفَ العاملُ الشارعَ" الفعل (نظّفَ) متعدٍ بالتضعيف وأصله اللازم هو:', options: ['تنظّفَ الشارعُ', 'استنظفَ العامل', 'مناظفة الشارع', 'نَظُفَ الشارعُ'], correct: 3, explanation: '"نَظُفَ" لازم، وتعدى بالتضعيف في عينه "نَظَّفَ".' },
+      { q: 'الفعل المتعدي في الجمل الآتية هو:', options: ['حصدَ الفلاحُ القمحَ', 'وقفَ المعلمُ أمام الطلاب', 'جاءَ الحقُّ وزهقَ الباطل', 'سارَ القطارُ مسرعاً'], correct: 0, explanation: 'نصب المفعول به "القمحَ"، وبقية الجمل أفعالها لازمة.' },
+      { q: 'الفعل اللازم في الجمل الآتية هو:', options: ['قرأَ التلميذُ قصةً', 'تفتحتِ الأزهارُ في الحديقة', 'رسمَ الفنانُ لوحةً', 'استقبلَ الأبُ الضيوفَ'], correct: 1, explanation: '"تفتحت" اكتفى بفاعله "الأزهار" ولا مفعول به له.' },
+      { q: '"أحبكَ يا وطني" الفعل (أحبَّ) نوعه:', options: ['فعل لازم', 'فعل ناقص', 'فعل متعدٍ (والكاف ضمير متصل في محل نصب مفعول به)', 'فعل مبني للمجهول'], correct: 2, explanation: 'اتصل بكاف الخطاب وهي ضمير نصب في محل نصب مفعول به.' }
     ];
 
-    // 5. الصف الثاني الإعدادي: الإعراب والبناء في الأسماء والحروف (30 سؤال مع تنويع مواضع الإجابة)
+    // 4.2 الصف الأول الإعدادي: اختبار الـ 50 سؤالاً الشامل مع التعليلات والتفسيرات التفصيلية
+    const grade1PrepMansi50 = [
+      // 1-35: اختيار من متعدد (MCQ) مع التعليل والتفسير
+      { type: 'mcq', q: 'وُلِدَ العقيد أركان حرب أحمد صابر منسي في 4 أكتوبر عام:', options: ['1980م', '1978م', '1973م', '1985م'], correct: 1, explanation: 'نص الدرس يذكر صراحة: "وُلِدَ العقيدُ أركانُ حربٍ أحمد صابر منسي في 4 أكتوبر 1978م".' },
+      { type: 'mcq', q: 'المكان الذي وُلِدَ ونشأ فيه البطل أحمد منسي هو قرية بني قريش بمركز:', options: ['فاقوس بمحافظة الشرقية', 'بلبيس بمحافظة الشرقية', 'منيا القمح بمحافظة الشرقية', 'الزقازيق بمحافظة الشرقية'], correct: 2, explanation: 'ورد بالفقرة الأولى: "بِقَرْيَةِ بَنِي قُرَيْشٍ، بِمَرْكَزِ مِنْيَا الْقَمْحِ، بِمُحَافَظَةِ الشَّرْقِيَّةِ".' },
+      { type: 'mcq', q: 'تخرج الشهيد أحمد منسي في الكلية الحربية ثم انضم إلى:', options: ['كلية الشرطة', 'الكلية البحرية', 'قوات المدفعية', 'قوات الصاعقة المصرية'], correct: 3, explanation: 'ورد بالنص: "وَتَخَرَّجَ فِيهَا، وَانْضَمَّ إِلَى قُوَّاتِ الصَّاعِقَةِ الْمِصْرِيَّةِ".' },
+      { type: 'mcq', q: 'معنى كلمة "تَجَلَّتْ" 📖 الواردة في قوله (تجلت هذه المعاني في سيرة الشهيد):', options: ['ظهرت ووضحت', 'اختفت وتلاشت', 'صعبت وعسرت', 'استقرت وثبتت'], correct: 0, explanation: 'رمز الكتاب 📖 بالهامش: "تَجَلَّتْ: ظهرت، وضحت".' },
+      { type: 'mcq', q: 'مضاد كلمة "تَجَلَّتْ" 📖:', options: ['بانت', 'اختفت', 'ظهرت', 'وضحت'], correct: 1, explanation: 'رمز الكتاب 📖 بالهامش: "المضاد: اختفت".' },
+      { type: 'mcq', q: 'مضاد كلمة "الشَّرَف" 📖 الواردة في عبارة (ميدان الشرف):', options: ['العزة', 'الكرامة', 'الإهانة', 'الضعف'], correct: 2, explanation: 'معنى الشرف العزة والكرامة، ومضاده في هامش الكتاب 📖: "الإهانة".' },
+      { type: 'mcq', q: 'مضاد كلمة "التحقَ" 📖 (التحق بالكلية الحربية):', options: ['انضمَّ وثبت', 'شارك ودخل', 'تابع واستمر', 'انفصل وافترق'], correct: 3, explanation: 'التحق معناها انضم، ومضادها المقرر برمز الكتاب 📖: "انفصل، افترق".' },
+      { type: 'mcq', q: 'المراد بكلمة "يَتَسَلَّحُ" 📖 في قوله (حريصاً على أن يتسلح بالعلم):', options: ['يتزود', 'يقاتل بالسيف', 'يحمل الدروع', 'يتحصن بالحديد'], correct: 0, explanation: 'رمز الكتاب 📖 بالجدول: "يتسلح: المراد: يتزود".' },
+      { type: 'mcq', q: 'معنى كلمة "نالَ" 📖 في قوله (ونال درجة الماجستير في العلوم العسكرية):', options: ['طلب ورجا', 'حصل على', 'قرأ وفهم', 'قدّم وشرح'], correct: 1, explanation: 'رمز الكتاب 📖 باللغويات: "نال: حصل على".' },
+      { type: 'mcq', q: 'مضاد كلمة "الجِدِّيَّة" 📖 في وصف شخصيته (اتسمت شخصيته بالجدية):', options: ['الكسل والضعف', 'التخاذل', 'الهزل', 'التواضع'], correct: 2, explanation: 'رمز الكتاب 📖 بالهامش: "الجِدِّيَّة: المضاد: الهزل".' },
+      { type: 'mcq', q: 'مضاد كلمة "بَارًّا" 📖 في قوله (فقد كان بارًّا بوالديه):', options: ['مقصراً', 'جاهلاً', 'ناكرًا', 'عاقًّا'], correct: 3, explanation: 'البار هو المطيع المحسن، ومضاده المحدد برمز الكتاب 📖: "عاقًّا".' },
+      { type: 'mcq', q: 'معنى كلمة "عَوْن" 📖 في قوله (وخير عون لمن يحتاج للمساعدة):', options: ['مُعِين ومُساعِد', 'قائد وموجه', 'صديق ومرافق', 'مستشار وناصح'], correct: 0, explanation: 'رمز الكتاب 📖 باللغويات: "عَوْن: مُعِين، مساعد".' },
+      { type: 'mcq', q: 'المراد بكلمة "خاضَ" 📖 في قوله (خاض مع جنوده بطولات عظيمة):', options: ['تجنب وابتعد', 'دخل وشارك', 'شاهد وراقب', 'سمع وعلم'], correct: 1, explanation: 'رمز الكتاب 📖 بالهامش: "خاضَ: المراد: دخل، شارك".' },
+      { type: 'mcq', q: 'مضاد كلمة "خاضَ" 📖:', options: ['دخل', 'شارك', 'انسحب', 'اقتحم'], correct: 2, explanation: 'رمز الكتاب 📖 بالهامش: "المضاد: انسحب".' },
+      { type: 'mcq', q: 'المراد بـ "أسفرت عن" 📖 في قوله (أسفرت عن القضاء على عدد من القيادات الإرهابية):', options: ['تراجعت عن', 'كشفت عن', 'توقفت عند', 'أدَّت إلى'], correct: 3, explanation: 'رمز الكتاب 📖 باللغويات: "أسفرت عن: أدَّت إلى".' },
+      { type: 'mcq', q: 'مضاد كلمة "نُفَرِّطُ" 📖 في قوله (لا يجوز أن نفرط فيها):', options: ['نحافظ ونصون', 'نضيع ونقصر', 'نترك ونهمل', 'نبيع ونخسر'], correct: 0, explanation: 'نفرط معناها نقصر ونضيع، ومضادها برمز الكتاب 📖: "نحافظ، نصون".' },
+      { type: 'mcq', q: 'المراد بكلمة "غادر" 📖 في قوله (تعرض كمين البرث لهجوم غادر):', options: ['معروف ومنتظر', 'مفاجئ', 'ضعيف وبطيء', 'معتاد'], correct: 1, explanation: 'رمز الكتاب 📖 بالهامش: "غادر: المراد: مفاجئ".' },
+      { type: 'mcq', q: 'معنى كلمة "مفخخة" 📖 في قوله (استخدم الإرهابيون سيارات مفخخة):', options: ['مدرعة بالحديد', 'سريعة الحركة', 'مليئة بالمتفجرات', 'كبيرة الحجم'], correct: 2, explanation: 'رمز الكتاب 📖 باللغويات: "مفخخة: مليئة بالمتفجرات".' },
+      { type: 'mcq', q: 'المراد بكلمة "تصدى" 📖 في قوله (تصدى البطل للهجوم بكل شجاعة):', options: ['استسلم وخضع', 'هرب وتراجع', 'طلب المساعدة', 'تعرَّضَ وواجَهَ'], correct: 3, explanation: 'رمز الكتاب 📖 بالجدول: "تصدى: تعرَّضَ، واجهَ".' },
+      { type: 'mcq', q: 'مضاد كلمة "تصدى" 📖:', options: ['استسلم وخضع', 'واجه وقاتل', 'صمد وثبت', 'تقدّم وهاجم'], correct: 0, explanation: 'رمز الكتاب 📖 باللغويات: "المضاد: استسلم، خضع".' },
+      { type: 'mcq', q: 'مضاد كلمة "استثنائية" 📖 في قوله (وفي لحظة بطولة استثنائية):', options: ['نادرة', 'تقليدية', 'فريدة', 'عظيمة'], correct: 1, explanation: 'استثنائية معناها نادرة وفريدة، ومضادها برمز الكتاب 📖: "تقليدية".' },
+      { type: 'mcq', q: 'المراد بكلمة "مرمى" 📖 في قوله (بعيداً عن مرمى النيران):', options: ['مكان التصويب', 'شدة وقوة', 'مجال ونطاق', 'صوت ودخان'], correct: 2, explanation: 'رمز الكتاب 📖 باللغويات: "مرمى: المراد: مجال، نطاق".' },
+      { type: 'mcq', q: 'مضاد كلمة "خالداً" 📖 في قوله (وتحوّل باستشهاده رمزاً خالداً للفداء):', options: ['باقياً ومستمراً', 'شامخاً وعالياً', 'معروفاً ومشهوراً', 'فانياً وزائلاً'], correct: 3, explanation: 'خالداً معناها باقياً، ومضادها برمز الكتاب 📖: "فانياً، زائلاً".' },
+      { type: 'mcq', q: 'معنى كلمة "الفداء" 📖:', options: ['التضحية', 'الشجاعة', 'الوفاء', 'القوة'], correct: 0, explanation: 'رمز الكتاب 📖 باللغويات: "الفداء: التضحية".' },
+      { type: 'mcq', q: 'المراد بكلمة "خَتَمَ" 📖 في قوله (وبدمه ختم بوابة سيناء):', options: ['زيّن وجمّل', 'أغلق', 'فتح ووسع', 'كتب وسطر'], correct: 1, explanation: 'رمز الكتاب 📖 بالجدول: "خَتَمَ: المراد: أغلق".' },
+      // أسئلة النحو التكاملي من سياق النص مع التعليل:
+      { type: 'mcq', q: 'في جملة (تَجَلَّتْ هذه المعاني في سيرة الشهيد)، الفعل (تَجَلَّتْ):', options: ['فعل متعدٍ لمفعول به', 'فعل ناقص ناسخ', 'فعل لازم يكتفي بفاعله', 'فعل مبني للمجهول'], correct: 2, explanation: 'الفعل "تَجَلَّتْ" اكتفى برفع فاعله اسم الإشارة (هذه) ولم ينصب مفعولاً به، فهو فعل لازم.' },
+      { type: 'mcq', q: 'في جملة (انضمَّ منسي إلى قوات الصاعقة)، الفعل (انضمَّ) يصنف على أنه:', options: ['فعل متعدٍ لمفعول به', 'فعل متعدٍ لمفعولين', 'فعل جامد', 'فعل لازم'], correct: 3, explanation: 'الفعل "انضم" تم معناه برفع الفاعل (منسي) وتلاه جار ومجرور دون مفعول به، فهو لازم.' },
+      { type: 'mcq', q: 'في جملة (خاضَ الأبطالُ بطولاتٍ عظيمةً)، الفعل (خاضَ) نوعه:', options: ['فعل متعدٍ لمفعول به (بطولاتٍ)', 'فعل لازم', 'فعل ناقص', 'فعل متعدٍ بالهمزة'], correct: 0, explanation: 'تعدى الفعل فاعله (الأبطال) ونصب مفعولاً به واحداً وهو كلمة (بطولاتٍ).' },
+      { type: 'mcq', q: 'في جملة (صَعِدَ منسي إلى سطحِ المبنى)، الفعل (صَعِدَ) نوعه:', options: ['فعل متعدٍ لمفعول به', 'فعل لازم يكتفي بفاعله', 'فعل ناقص ناسخ', 'فعل مبني على الضم'], correct: 1, explanation: 'الفعل "صعد" اكتفى برفع فاعله (منسي) ولم ينصب مفعولاً به، فهو فعل لازم.' },
+      { type: 'mcq', q: 'في جملة (واجهَ منسي التحدياتِ بكل شجاعة)، الفعل (واجهَ):', options: ['فعل لازم', 'فعل ناقص', 'فعل متعدٍ لمفعول به (التحدياتِ)', 'فعل متعدٍ لمفعولين'], correct: 2, explanation: 'الفعل "واجه" فعل متعدٍ لأنه نصب المفعول به (التحدياتِ).' },
+      { type: 'mcq', q: 'إعراب كلمة (المعاني) في جملة (تجلتْ هذه المعاني):', options: ['فاعل مرفوع بالضمة', 'مفعول به منصوب بالفتحة', 'مضاف إليه مجرور بالكسرة', 'بدل مرفوع بالضمة المقدرة'], correct: 3, explanation: 'الاسم المعرف بأل بعد اسم الإشارة يعرب بدلاً مطابقاً، والبدل هنا مرفوع لأن اسم الإشارة قبله فاعل.' },
+      { type: 'mcq', q: 'إعراب كلمة (إنساناً) في قوله (كيف يكون إنساناً):', options: ['خبر كان منصوب وعلامة نصبه الفتحة', 'اسم كان مرفوع بالضمة', 'مفعول به منصوب بالفتحة', 'حال منصوبة بالفتحة'], correct: 0, explanation: 'اسم كان ضمير مستتر تقديره (هو)، و(إنساناً) خبر كان المنصوب الذي يتمم معناها.' },
+      { type: 'mcq', q: 'إعراب كلمة (إيماناً) في قوله (وكان حريصاً على أن يتسلح بالعلم إيماناً منه...):', options: ['مفعول به منصوب', 'مفعول لأجله منصوب وعلامة نصبه الفتحة', 'حال منصوبة بالفتحة', 'تمييز منصوب'], correct: 1, explanation: 'مصدر منصوب يبين سبب وعلة حدوث الفعل (لماذا كان حريصاً؟ إيماناً منه).' },
+      { type: 'mcq', q: 'إعراب كلمة (بطولاتٍ) في قوله (خاضَ مع جنوده بطولاتٍ عظيمةً):', options: ['فاعل مرفوع بالضمة', 'نعت منصوب بالفتحة', 'مفعول به منصوب وعلامة نصبه الكسرة لأنه جمع مؤنث سالم', 'اسم مجرور بالكسرة'], correct: 2, explanation: 'مفعول به وقع عليه الفعل، وهو جمع مؤنث سالم ينصب بالكسرة نيابة عن الفتحة.' },
+      { type: 'mcq', q: 'إعراب كلمة (رافعون) في قوله (وإذا استشهدنا نموت ونحن رافعون رءوسنا):', options: ['حال منصوب بالياء', 'نعت مرفوع بالواو', 'فاعل مرفوع بالواو', 'خبر المبتدأ (نحن) مرفوع وعلامة رفعه الواو لأنه جمع مذكر سالم'], correct: 3, explanation: 'جملة (نحن رافعون) جملة اسمية: نحن ضمير مبتدأ، ورافعون خبر مرفوع بالواو، والجملة في محل نصب حال.' },
+
+      // 36-43: سحب وإفلات لإكمال الفراغ (Drag & Drop) مع التعليل
+      {
+        type: 'dragdrop',
+        instruction: 'اسحب الكلمة الصحيحة كما وردت بنص الدرس وضعها في الفراغ:',
+        sentencePrefix: 'نشأ البطل أحمد منسي في أسرة غرست فيه القيم الدينية',
+        sentenceSuffix: 'وحب الوطن.',
+        pool: ['المتشددة', 'السمحة', 'الصارمة', 'القديمة'],
+        correctWord: 'السمحة',
+        explanation: 'الفقرة الأولى بالدرس تنص على: "نَشَأَ فِي أُسْرَةٍ غَرَسَتْ فِيهِ الْقِيَمَ الدِّينِيَّةَ السَّمْحَةَ وَحُبَّ الْوَطَنِ".'
+      },
+      {
+        type: 'dragdrop',
+        instruction: 'اسحب المصطلح الصحيح كما ورد بالدرس وضعه في مكانه:',
+        sentencePrefix: 'حصل أحمد منسي على دورات متقدمة في مجال',
+        sentenceSuffix: 'ونال درجة الماجستير في العلوم العسكرية.',
+        pool: ['الإمداد والتموين', 'الهندسة العسكرية', 'العمليات الخاصة', 'الاتصالات'],
+        correctWord: 'العمليات الخاصة',
+        explanation: 'نص الدرس يذكر: "فَحَصَلَ عَلَى دَوْرَاتٍ مُتَقَدِّمَةٍ فِي مَجَالِ الْعَمَلِيَّاتِ الْخَاصَّةِ".'
+      },
+      {
+        type: 'dragdrop',
+        instruction: 'اسحب اسم المنطقة كما ورد بالدرس وضعها في الفراغ:',
+        sentencePrefix: 'خاض منسي عملية تطهير ناجحة في منطقة',
+        sentenceSuffix: 'أسفرت عن القضاء على عدد من القيادات الإرهابية.',
+        pool: ['الشيخ زويد', 'نخل', 'الطور', 'بئر العبد'],
+        correctWord: 'الشيخ زويد',
+        explanation: 'الفقرة الثالثة توضح: "مِنْهَا: عَمَلِيَّةُ تَطْهِيرٍ نَاجِحَةٌ فِي مِنْطَقَةِ (الشَّيْخِ زُوَيْدٍ)".'
+      },
+      {
+        type: 'dragdrop',
+        instruction: 'اسحب الموقع الجغرافي لكمين البرث كما ورد بهامش الكتاب:',
+        sentencePrefix: 'البرث اسم منطقة تقع جنوب مدينة',
+        sentenceSuffix: 'بشمال سيناء.',
+        pool: ['العريش', 'نخل', 'رفح', 'الطور'],
+        correctWord: 'رفح',
+        explanation: 'هامش الكتاب المدرسي (*) يوضح: "البرث: اسم منطقة في جنوب مدينة رفح شمال سيناء".'
+      },
+      {
+        type: 'dragdrop',
+        instruction: 'اسحب التاريخ الدقيق لملحمة البرث كما ورد بالنص:',
+        sentencePrefix: 'تعرض كمين البرث في رفح لهجوم غادر يوم 7 يوليو من عام',
+        sentenceSuffix: 'م.',
+        pool: ['2016', '2017', '2018', '2019'],
+        correctWord: '2017',
+        explanation: 'الفقرة الرابعة بالدرس: "حَتَّى جَاءَ يَوْمُ 7 يُولْيُو 2017م، حِينَ تَعَرَّضَ كَمِينُ الْبَرْثِ لِهُجُومٍ غَادِرٍ".'
+      },
+      {
+        type: 'dragdrop',
+        instruction: 'اسحب الكلمة التي تصف تصرف منسي البطولي لإشغال الإرهابيين:',
+        sentencePrefix: 'وفي لحظة بطولة استثنائية صعد منسي إلى',
+        sentenceSuffix: 'مظهراً نفسه ليشغل انتباه الإرهابيين.',
+        pool: ['المدرعة', 'الخندق', 'سطح المبنى', 'البرج'],
+        correctWord: 'سطح المبنى',
+        explanation: 'النص يوضح بسالته: "صَعِدَ مَنْسِي إِلَى سَطْحِ الْمَبْنَى، مُظْهِرًا نَفْسَهُ لِيَشْغَلَ انْتِبَاهَ الإِرْهَابِيِّينَ".'
+      },
+      {
+        type: 'dragdrop',
+        instruction: 'اسحب العبارة المعبرة عن ختام بوابة سيناء بدم الشهيد:',
+        sentencePrefix: 'رسم بجسده حدود الكرامة، وبدمه خَتَمَ بوابة سيناء، كأنها قفل من نار لا يُفْتَح إلا',
+        sentenceSuffix: '.',
+        pool: ['للأعداء', 'للغرباء', 'للغزاة', 'لأبناء الوطن'],
+        correctWord: 'لأبناء الوطن',
+        explanation: 'الجملة الختامية للدرس: "كَأَنَّهَا قُفْلٌ مِنْ نَارٍ لَا يُفْتَحُ إِلَّا لِأَبْنَاءِ الْوَطَنِ".'
+      },
+      {
+        type: 'dragdrop',
+        instruction: 'اسحب الهدف النبيل الذي ضحى منسي بنفسه من أجله أثناء المعركة:',
+        sentencePrefix: 'صعد منسي لسطح المبنى ليمنح جنوده فرصة لنقل زملائهم',
+        sentenceSuffix: 'والشهداء بعيداً عن مرمى النيران.',
+        pool: ['المصابين', 'القادة', 'الزائرين', 'المشرفين'],
+        correctWord: 'المصابين',
+        explanation: 'النص يذكر: "وَيَمْنَحَ جُنُودَهُ فُرْصَةً لِنَقْلِ زُمَلَائِهِمُ الْمُصَابِينَ وَالشُّهَدَاءِ بَعِيدًا عَنْ مَرْمَى النِّيرَانِ".'
+      },
+
+      // 44-50: مطابقة وتوصيل (Matching) مع التعليل والتفسير
+      {
+        type: 'matching',
+        instruction: 'طابق الكلمات بمعانيها التي بجوارها رمز الكتاب 📖:',
+        items: [
+          { item: 'تَجَلَّتْ 📖', correct: 'ظهرت ووضحت' },
+          { item: 'نالَ 📖', correct: 'حصل على' },
+          { item: 'الفداء 📖', correct: 'التضحية' }
+        ],
+        pool: ['التضحية', 'ظهرت ووضحت', 'استسلم', 'حصل على', 'تراجع وانسحب'],
+        explanation: 'هذه هي المعاني المقررة في جداول اللغويات بهامش كتاب الوزارة والمشار إليها برمز 📖.'
+      },
+      {
+        type: 'matching',
+        instruction: 'طابق الكلمات بمضادها الدقيق الذي بجواره رمز الكتاب 📖:',
+        items: [
+          { item: 'الشرف 📖', correct: 'الإهانة' },
+          { item: 'التحقَ 📖', correct: 'انفصل وافترق' },
+          { item: 'نُفَرِّطُ 📖', correct: 'نحافظ ونصون' }
+        ],
+        pool: ['نحافظ ونصون', 'الإهانة', 'العزة والكرامة', 'انفصل وافترق', 'الظهور'],
+        explanation: 'أضداد الكلمات المقررة في جداول اللغويات بهوامش صفحات الدرس بالرمز 📖.'
+      },
+      {
+        type: 'matching',
+        instruction: 'طابق الكلمات بمضادها اللغوي المعين برمز الكتاب 📖:',
+        items: [
+          { item: 'الجِدِّيَّة 📖', correct: 'الهزل' },
+          { item: 'بارًّا 📖', correct: 'عاقًّا' },
+          { item: 'خاضَ 📖', correct: 'انسحب' }
+        ],
+        pool: ['عاقًّا', 'الهزل', 'انسحب', 'دخل', 'مطيعاً'],
+        explanation: 'الجدية مضادها الهزل، باراً مضادها عاقاً، وخاض (شارك) مضادها انسحب كما وردت بالهوامش 📖.'
+      },
+      {
+        type: 'matching',
+        instruction: 'طابق الكلمات في الفقرة الرابعة بمعناها المراد بالنص 📖:',
+        items: [
+          { item: 'غادر 📖', correct: 'مفاجئ' },
+          { item: 'مفخخة 📖', correct: 'مليئة بالمتفجرات' },
+          { item: 'خَتَمَ 📖', correct: 'أغلق' }
+        ],
+        pool: ['مليئة بالمتفجرات', 'مفاجئ', 'أغلق', 'معتاد ومعروف', 'مفتوح'],
+        explanation: 'هذه المعاني السياقية الخاصة بملحمة كمين البرث في الفقرة الرابعة برمز 📖.'
+      },
+      {
+        type: 'matching',
+        instruction: 'طابق الكلمات في ملحمة البرث بمرادفها ومضادها الصحيح 📖:',
+        items: [
+          { item: 'تصدى 📖 (المراد)', correct: 'تعرَّضَ وواجَهَ' },
+          { item: 'تصدى 📖 (المضاد)', correct: 'استسلم وخضع' },
+          { item: 'استثنائية 📖 (المضاد)', correct: 'تقليدية' }
+        ],
+        pool: ['تقليدية', 'تعرَّضَ وواجَهَ', 'استسلم وخضع', 'نادرة وفريدة', 'باقياً وفانياً'],
+        explanation: 'تصدى معناها واجه ومضادها استسلم، واستثنائية معناها نادرة ومضادها تقليدية برمز 📖.'
+      },
+      {
+        type: 'matching',
+        instruction: 'طابق اللغويات بنوعها الصرفي ومعناها الوارد برمز الكتاب 📖:',
+        items: [
+          { item: 'مرمى 📖 (المراد)', correct: 'مجال ونطاق' },
+          { item: 'خالداً 📖 (المراد)', correct: 'باقياً' },
+          { item: 'خالداً 📖 (المضاد)', correct: 'فانياً وزائلاً' }
+        ],
+        pool: ['فانياً وزائلاً', 'مجال ونطاق', 'باقياً', 'مؤقتاً', 'مكان'],
+        explanation: 'المرمى هو المجال والنطاق، وخالداً معناها باقياً ومضادها فانياً وزائلاً برمز 📖.'
+      },
+      {
+        type: 'matching',
+        instruction: 'طابق الأفعال الواردة بالدرس بنوعها من حيث اللزوم والتعدي لمفعول واحد:',
+        items: [
+          { item: 'تَجَلَّتْ المعاني', correct: 'فعل لازم' },
+          { item: 'خاضَ الأبطالُ بطولاتٍ', correct: 'فعل متعدٍ لمفعول به واحد' },
+          { item: 'صَعِدَ منسي لسطح المبنى', correct: 'فعل لازم' }
+        ],
+        pool: ['فعل لازم', 'فعل متعدٍ لمفعول به واحد', 'فعل متعدٍ لثلاثة مفاعيل', 'فعل ناسخ ناقص'],
+        explanation: '(تجلت وصعد) اكتفيا بالفاعل فهما لازمان، بينما (خاض) نصب المفعول به (بطولاتٍ) فهو متعدٍ لمفعول واحد.'
+      }
+    ];
+
+    // 5. الصف الثاني الإعدادي: الإعراب والبناء (30 سؤالاً)[cite: 1]
     const grade2PrepQuestions = [
-      { q: 'الاسم المعرب هو الذي:', options: ['يلزم آخره حالة واحدة لا تتغير', 'يتغير ضبط آخره بتغير موقعه الإعرابي في الجملة', 'لا ينون مطلقاً', 'ينصب بالكسرة دائماً'], correct: 1 },
-      { q: 'الاسم المبني هو الذي:', options: ['يتغير آخره دائماً', 'يقبل التنوين دائماً', 'يلزم آخره حركة واحدة مهما تغير موقعه في الجملة', 'يرفع بالألف وينصب بالياء'], correct: 2 },
-      { q: 'الحروف كلها في اللغة العربية:', options: ['معربة مرفوعة', 'معربة مجرورة', 'بعضها معرب وبعضها مبني', 'مبنية لا محل لها من الإعراب'], correct: 3 },
-      { q: 'الأصل في الأسماء هو:', options: ['الإعراب', 'البناء', 'المنع من الصرف', 'الجزم'], correct: 0 },
-      { q: 'الضمائر (المنفصلة والمتصلة) كلها من الأسماء:', options: ['المعربة', 'المبنية دائماً', 'الممنوعة من الصرف', 'المشتقة'], correct: 1 },
-      { q: 'أسماء الإشارة كلها مبنية ما عدا:', options: ['هؤلاء وذلك', 'هنا وهناك', '(هذان وهاتان) فهما معربان إعراب المثنى', 'تلك وأولئك'], correct: 2 },
-      { q: 'الأسماء الموصولة كلها مبنية ما عدا:', options: ['الذي والتي', 'الذين واللاتي', 'من وما', '(اللذان واللتان) فهما معربان إعراب المثنى'], correct: 3 },
-      { q: 'من أسماء الشرط المبنية:', options: ['(من، ما، مهما، أين، متى) ما عدا (أيّ) فهي معربة', 'إن وإذ', 'كل أسماء الشرط معربة', 'لا توجد أسماء شرط مبنية'], correct: 0 },
-      { q: 'من أسماء الاستفهام المبنية:', options: ['هل والهمزة فقط', '(من، ما، أين، متى، كيف، كم) ما عدا (أيّ) معربة', 'كل أسماء الاستفهام معربة', 'كيف وأي فقط معربان'], correct: 1 },
-      { q: 'من الظروف المبنية المشهورة في اللغة العربية:', options: ['صباحاً ومساءً', 'أمام وخلف', '(حيثُ، منذُ، أمسِ، الآنَ، إذْ، إذا)', 'شمالاً وجنوباً'], correct: 2 },
-      { q: 'إعراب "هذان" في جملة "هذان طالبان مجدان":', options: ['اسم إشارة مبني في محل رفع', 'خبر مرفوع بالألف', 'فاعل مرفوع بالضمة', 'مبتدأ مرفوع بالألف لأنه يعرب إعراب المثنى'], correct: 3 },
-      { q: 'إعراب "اللتين" في "كرّمتُ الفتاتين اللتين تفوقتا":', options: ['نعت منصوب بالياء لأنه ملحق بالمثنى/يعرب إعرابه', 'اسم موصول مبني في محل نصب', 'مفعول به ثان', 'مضاف إليه'], correct: 0 },
-      { q: '"أنتَ تؤدي واجبك" الضمير (أنتَ) مبني على:', options: ['الضم في محل رفع', 'الفتح في محل رفع مبتدأ', 'الكسر في محل نصب', 'السكون في محل رفع'], correct: 1 },
-      { q: '"حيثُ" ظرف مكان مبني على:', options: ['الفتح', 'الكسر', 'الضم في محل نصب', 'السكون'], correct: 2 },
-      { q: '"أمسِ" في جملة "سافرتُ أمسِ" ظرف زمان مبني على:', options: ['الفتح', 'الضم', 'السكون', 'الكسر في محل نصب'], correct: 3 },
-      { q: '"الآنَ" ظرف زمان مبني على:', options: ['الفتح في محل نصب', 'الضم', 'الكسر', 'السكون'], correct: 0 },
-      { q: 'الاسم المبني في جملة "هؤلاءِ طلابٌ يحرصون على العلم" هو:', options: ['طلاب فقط', 'هؤلاء وواو الجماعة', 'العلم فقط', 'يحرصون فقط'], correct: 1 },
-      { q: 'الاسم المعرب بعلامة فرعية في "نجحَ المجتهدون في الامتحان":', options: ['الامتحان', 'نجح', 'المجتهدون (مرفوع بالواو)', 'في'], correct: 2 },
-      { q: 'الاسم المعرب بعلامة أصلية في "قرأَ الطالبُ كتاباً":', options: ['قرأ', 'لا يوجد معرب', 'الطالب فقط', 'الطالبُ (بالضمة) وكتاباً (بالفتحة)'], correct: 3 },
-      { q: 'في جملة "قابلتُ هذينِ الرجلين"، إعراب "هذين":', options: ['مفعول به منصوب بالياء لأنه يعرب إعراب المثنى', 'اسم إشارة مبني على الياء', 'بدل منصوب', 'فاعل مرفوع'], correct: 0 },
-      { q: 'عند تحويل الجملة "هذا الطالب محبوب" إلى المثنى المعرب تصبح:', options: ['هؤلاء الطلاب محبوبون', 'هذان الطالبان محبوبان', 'هذين الطالبين محبوبين', 'هاتان الطالبتان محبوبتان'], correct: 1 },
-      { q: '"من" في "من يذاكر ينجح" نوعها وبناؤها:', options: ['حرف جر مبني', 'اسم استفهام معرب', 'اسم شرط مبني على السكون', 'اسم موصول معرب'], correct: 2 },
-      { q: '"من" في "من قرأَ هذا الدرس؟" نوعها وبناؤها:', options: ['اسم شرط مبني', 'حرف استفهام', 'اسم موصول معرب', 'اسم استفهام مبني على السكون'], correct: 3 },
-      { q: '"حضرَ من فازَ بالجائزة" كلمة "من" هنا:', options: ['اسم موصول مبني على السكون في محل رفع فاعل', 'اسم شرط مبني', 'حرف جر', 'اسم استفهام'], correct: 0 },
-      { q: 'أي من الكلمات الآتية اسم مبني؟', options: ['مدرسة', 'نحن', 'شمس', 'معلمون'], correct: 1 },
-      { q: 'أي من الكلمات الآتية اسم معرب؟', options: ['هذا', 'الذي', 'قلمان', 'متى'], correct: 2 },
-      { q: 'الضمير المتصل في "كتابي نظيف" (ياء المتكلم) في محل:', options: ['رفع مبتدأ', 'نصب مفعول به', 'رفع فاعل', 'جر مضاف إليه'], correct: 3 },
-      { q: 'الضمير في "أكرمتكَ" (كاف الخطاب) في محل:', options: ['نصب مفعول به', 'رفع فاعل', 'جر بالإضافة', 'رفع خبر'], correct: 0 },
-      { q: 'الاسم المبني على السكون فيما يلي هو:', options: ['أينَ', 'ما', 'حيثُ', 'أمسِ'], correct: 1 },
-      { q: 'الحرف "إلى" أو "ثم" أو "لن" حكمه الإعرابي:', options: ['حرف معرب مجرور', 'حرف منصوب بالفتحة', 'حرف مبني لا محل له من الإعراب', 'اسم مبني'], correct: 2 }
+      { q: 'الاسم المعرب هو الذي:', options: ['يلزم آخره حالة واحدة لا تتغير', 'يتغير ضبط آخره بتغير موقعه الإعرابي في الجملة', 'لا ينون مطلقاً', 'ينصب بالكسرة دائماً'], correct: 1, explanation: 'المعرب يتغير تشكيل آخره رفعاً ونصباً وجراً بتغير موقعه.' },
+      { q: 'الاسم المبني هو الذي:', options: ['يتغير آخره دائماً', 'يقبل التنوين دائماً', 'يلزم آخره حركة واحدة مهما تغير موقعه في الجملة', 'يرفع بالألف وينصب بالياء'], correct: 2, explanation: 'المبني يلزم حالة واحدة وحركة ثابتة في جميع التراكيب.' },
+      { q: 'الحروف كلها في اللغة العربية:', options: ['معربة مرفوعة', 'معربة مجرورة', 'بعضها معرب وبعضها مبني', 'مبنية لا محل لها من الإعراب'], correct: 3, explanation: 'جميع الحروف مبنية لا محل لها من الإعراب قاعدة نحوية ثابتة.' },
+      { q: 'الأصل في الأسماء هو:', options: ['الإعراب', 'البناء', 'المنع من الصرف', 'الجزم'], correct: 0, explanation: 'الأصل في الأسماء الإعراب، والبناء حالة استثنائية محصورة في أبواب محددة.' },
+      { q: 'الضمائر (المنفصلة والمتصلة) كلها من الأسماء:', options: ['المعربة', 'المبنية دائماً', 'الممنوعة من الصرف', 'المشتقة'], correct: 1, explanation: 'جميع الضمائر مبنية دائماً.' },
+      { q: 'أسماء الإشارة كلها مبنية ما عدا:', options: ['هؤلاء وذلك', 'هنا وهناك', '(هذان وهاتان) فهما معربان إعراب المثنى', 'تلك وأولئك'], correct: 2, explanation: 'هذان وهاتان يعربان إعراب المثنى بالألف رفعاً وبالياء نصباً وجراً.' },
+      { q: 'الأسماء الموصولة كلها مبنية ما عدا:', options: ['الذي والتي', 'الذين واللاتي', 'من وما', '(اللذان واللتان) فهما معربان إعراب المثنى'], correct: 3, explanation: 'اللذان واللتان يعربان إعراب المثنى رفعاً بالألف ونصباً وجراً بالياء.' },
+      { q: 'من أسماء الشرط المبنية:', options: ['(من، ما، مهما، أين، متى) ما عدا (أيّ) فهي معربة', 'إن وإذ', 'كل أسماء الشرط معربة', 'لا توجد أسماء شرط مبنية'], correct: 0, explanation: 'أسماء الشرط كلها مبنية ما عدا (أيّ) فهي معربة تظهر عليها الحركات.' },
+      { q: 'من أسماء الاستفهام المبنية:', options: ['هل والهمزة فقط', '(من، ما، أين، متى، كيف، كم) ما عدا (أيّ) معربة', 'كل أسماء الاستفهام معربة', 'كيف وأي فقط معربان'], correct: 1, explanation: 'أسماء الاستفهام مبنية ما عدا (أيّ).' },
+      { q: 'من الظروف المبنية المشهورة في اللغة العربية:', options: ['صباحاً ومساءً', 'أمام وخلف', '(حيثُ، منذُ، أمسِ، الآنَ، إذْ، إذا)', 'شمالاً وجنوباً'], correct: 2, explanation: 'هذه الظروف المحددة تبنى على حركات ثابتة في محل نصب.' },
+      { q: 'إعراب "هذان" في جملة "هذان طالبان مجدان":', options: ['اسم إشارة مبني في محل رفع', 'خبر مرفوع بالألف', 'فاعل مرفوع بالضمة', 'مبتدأ مرفوع بالألف لأنه يعرب إعراب المثنى'], correct: 3, explanation: 'هذان معرب ملحق بالمثنى يرفع بالألف مباشرة.' },
+      { q: 'إعراب "اللتين" في "كرّمتُ الفتاتين اللتين تفوقتا":', options: ['نعت منصوب بالياء لأنه ملحق بالمثنى/يعرب إعرابه', 'اسم موصول مبني في محل نصب', 'مفعول به ثان', 'مضاف إليه'], correct: 0, explanation: 'اللتين معرب يتبع ما قبله، وهو نعت منصوب بالياء.' },
+      { q: '"أنتَ تؤدي واجبك" الضمير (أنتَ) مبني على:', options: ['الضم في محل رفع', 'الفتح في محل رفع مبتدأ', 'الكسر في محل نصب', 'السكون في محل رفع'], correct: 1, explanation: 'ضمير مخاطب مبني على الفتح في محل رفع مبتدأ.' },
+      { q: '"حيثُ" ظرف مكان مبني على:', options: ['الفتح', 'الكسر', 'الضم في محل نصب', 'السكون'], correct: 2, explanation: 'ظرف مكان مبني على الضم دائماً.' },
+      { q: '"أمسِ" في جملة "سافرتُ أمسِ" ظرف زمان مبني على:', options: ['الفتح', 'الضم', 'السكون', 'الكسر في محل نصب'], correct: 3, explanation: 'أمسِ ظرف زمان مبني على الكسر في محل نصب.' },
+      { q: '"الآنَ" ظرف زمان مبني على:', options: ['الفتح في محل نصب', 'الضم', 'الكسر', 'السكون'], correct: 0, explanation: 'الآنَ ظرف زمان مبني على الفتح في محل نصب.' },
+      { q: 'الاسم المبني في جملة "هؤلاءِ طلابٌ يحرصون على العلم" هو:', options: ['طلاب فقط', 'هؤلاء وواو الجماعة', 'العلم فقط', 'يحرصون فقط'], correct: 1, explanation: 'هؤلاء اسم إشارة مبني، وواو الجماعة ضمير متصل مبني.' },
+      { q: 'الاسم المعرب بعلامة فرعية في "نجحَ المجتهدون في الامتحان":', options: ['الامتحان', 'نجح', 'المجتهدون (مرفوع بالواو)', 'في'], correct: 2, explanation: 'الواو علامة فرعية لرفع جمع المذكر السالم.' },
+      { q: 'الاسم المعرب بعلامة أصلية في "قرأَ الطالبُ كتاباً":', options: ['قرأ', 'لا يوجد معرب', 'الطالب فقط', 'الطالبُ (بالضمة) وكتاباً (بالفتحة)'], correct: 3, explanation: 'الضمة علامة رفع أصلية والفتحة علامة نصب أصلية.' },
+      { q: 'في جملة "قابلتُ هذينِ الرجلين"، إعراب "هذين":', options: ['مفعول به منصوب بالياء لأنه يعرب إعراب المثنى', 'اسم إشارة مبني على الياء', 'بدل منصوب', 'فاعل مرفوع'], correct: 0, explanation: 'هذين معرب يعرب إعراب المثنى، مفعول به منصوب بالياء.' },
+      { q: 'عند تحويل الجملة "هذا الطالب محبوب" إلى المثنى المعرب تصبح:', options: ['هؤلاء الطلاب محبوبون', 'هذان الطالبان محبوبان', 'هذين الطالبين محبوبين', 'هاتان الطالبتان محبوبتان'], correct: 1, explanation: 'هذان مبتدأ مرفوع بالألف والطالبان بدل مرفوع بالألف ومحبوبان خبر مرفوع بالألف.' },
+      { q: '"من" في "من يذاكر ينجح" نوعها وبناؤها:', options: ['حرف جر مبني', 'اسم استفهام معرب', 'اسم شرط مبني على السكون', 'اسم موصول معرب'], correct: 2, explanation: 'اسم شرط جازم مبني على السكون.' },
+      { q: '"من" في "من قرأَ هذا الدرس؟" نوعها وبناؤها:', options: ['اسم شرط مبني', 'حرف استفهام', 'اسم موصول معرب', 'اسم استفهام مبني على السكون'], correct: 3, explanation: 'اسم استفهام مبني على السكون في محل رفع مبتدأ.' },
+      { q: '"حضرَ من فازَ بالجائزة" كلمة "من" هنا:', options: ['اسم موصول مبني على السكون في محل رفع فاعل', 'اسم شرط مبني', 'حرف جر', 'اسم استفهام'], correct: 0, explanation: 'اسم موصول بمعنى (الذي) مبني في محل رفع فاعل.' },
+      { q: 'أي من الكلمات الآتية اسم مبني؟', options: ['مدرسة', 'نحن', 'شمس', 'معلمون'], correct: 1, explanation: 'نحن ضمير متكلم وهو مبني، وبقية الكلمات معربة.' },
+      { q: 'أي من الكلمات الآتية اسم معرب؟', options: ['هذا', 'الذي', 'قلمان', 'متى'], correct: 2, explanation: 'قلمان مثنى معرب بالألف رفعاً وبالياء نصباً وجراً.' },
+      { q: 'الضمير المتصل في "كتابي نظيف" (ياء المتكلم) في محل:', options: ['رفع مبتدأ', 'نصب مفعول به', 'رفع فاعل', 'جر مضاف إليه'], correct: 3, explanation: 'أي ضمير يتصل باسم يكون في محل جر مضاف إليه.' },
+      { q: 'الضمير في "أكرمتكَ" (كاف الخطاب) في محل:', options: ['نصب مفعول به', 'رفع فاعل', 'جر بالإضافة', 'رفع خبر'], correct: 0, explanation: 'ضمير نصب متصل بفعل فهو في محل نصب مفعول به.' },
+      { q: 'الاسم المبني على السكون فيما يلي هو:', options: ['أينَ', 'ما', 'حيثُ', 'أمسِ'], correct: 1, explanation: 'ما اسم مبني على السكون، أما أين فعلى الفتح، وحيث على الضم، وأمس على الكسر.' },
+      { q: 'الحرف "إلى" أو "ثم" أو "لن" حكمه الإعرابي:', options: ['حرف معرب مجرور', 'حرف منصوب بالفتحة', 'حرف مبني لا محل له من الإعراب', 'اسم مبني'], correct: 2, explanation: 'قاعدة ثابتة: جميع الحروف مبنية لا محل لها من الإعراب.' }
     ];
 
-    // 6. الصف الثالث الإعدادي: اسم الفاعل بدون إعمال (30 سؤال مع تنويع مواضع الإجابة)
+    // 6. الصف الثالث الإعدادي: اسم الفاعل (30 سؤالاً)[cite: 1]
     const grade3PrepQuestions = [
-      { q: 'اسم الفاعل هو اسم مشتق من الفعل المبني للمعلوم للدلالة على:', options: ['من وقع عليه الفعل', 'من قام بالفعل أو اتصف به', 'مكان حدوث الفعل', 'آلة حدوث الفعل'], correct: 1 },
-      { q: 'يُصاغ اسم الفاعل من الفعل الثلاثي الصحيح على وزن:', options: ['مَفْعُول', 'مُفَعِّل', 'فَاعِل', 'فَعِيل'], correct: 2 },
-      { q: 'اسم الفاعل من الفعل الثلاثي (كتَبَ) هو:', options: ['مَكْتُوب', 'كِتَاب', 'مُكْتَتِب', 'كاتِب'], correct: 3 },
-      { q: 'اسم الفاعل من الفعل الثلاثي المهموز الفاء (أخَذَ) هو:', options: ['آخِذ', 'مَأْخُوذ', 'أخّاذ', 'مُؤاخِذ'], correct: 0 },
-      { q: 'اسم الفاعل من الفعل الثلاثي المضعف (ردَّ / مدَّ) هو:', options: ['مَرْدُود', 'رَادّ / مَادّ', 'مُرْتَدّ', 'رَدِيد'], correct: 1 },
-      { q: 'اسم الفاعل من الفعل الأجوف (قالَ / صامَ) تُقلب عينه إلى همزة فيكون:', options: ['مَقُول / مَصُوم', 'قَوّال', 'قائِل / صائِم', 'مُقِيل'], correct: 2 },
-      { q: 'اسم الفاعل من الفعل الناقص المعتل الآخر (قضى / سعى) هو:', options: ['مَقْضِيّ', 'قَضّاء', 'مُقْتَضٍ', 'قاضٍ (القاضي) / ساعٍ (الساعي)'], correct: 3 },
-      { q: 'تحذف ياء اسم الفاعل الناقص (مثل قاضي) في حالتي:', options: ['الرفع والجر إذا كان نكرة غير مضافة', 'النصب دائماً', 'التعريف بأل فقط', 'الإضافة فقط'], correct: 0 },
-      { q: 'تثبت ياء اسم الفاعل المنقوص في حالة النصب، مثل:', options: ['جاء قاضٍ', 'رأيتُ قاضياً عادلاً', 'مررتُ بقاضٍ', 'قاضٍ حكم بالحق'], correct: 1 },
-      { q: 'يُصاغ اسم الفاعل من غير الثلاثي على وزن مضارعه مع:', options: ['فتح ما قبل الآخر وميم مضمومة', 'وزن فاعل مباشرة', 'إبدال حرف المضارعة ميماً مضمومة وكسر ما قبل الآخر', 'إضافة ألف بعد الحرف الأول فقط'], correct: 2 },
-      { q: 'اسم الفاعل من الفعل الرباعي (أخلَصَ) هو:', options: ['مُخْلَص', 'خالِص', 'إخلاص', 'مُخْلِص'], correct: 3 },
-      { q: 'اسم الفاعل من الفعل الخماسي (انطلَقَ) هو:', options: ['مُنْطَلِق', 'مُنْطَلَق', 'ناطِق', 'انطلاق'], correct: 0 },
-      { q: 'اسم الفاعل من الفعل السداسي (استخرَجَ) هو:', options: ['مُسْتَخْرَج', 'مُسْتَخْرِج', 'تخريج', 'خارِج'], correct: 1 },
-      { q: 'اسم الفاعل من الفعل (أكرَمَ):', options: ['كارِم', 'مُكْرَم', 'مُكْرِم', 'كريم'], correct: 2 },
-      { q: 'اسم الفاعل من الفعل (تعلّمَ):', options: ['مُتَعَلَّم', 'عالِم', 'عليم', 'مُتَعَلِّم'], correct: 3 },
-      { q: 'اسم الفاعل من الفعل (استقامَ):', options: ['مُسْتَقِيم', 'مُسْتَقَام', 'قائِم', 'مُقَام'], correct: 0 },
-      { q: 'اسم الفاعل من الفعل (أعادَ):', options: ['مُعَاد', 'مُعِيد', 'عائِد', 'مُعاوِد'], correct: 1 },
-      { q: 'اسم الفاعل من الفعل الثلاثي (باعَ):', options: ['مَبِيع', 'بَيّاع', 'بائِع', 'مُبِيع'], correct: 2 },
-      { q: 'اسم الفاعل من الفعل (دعا) عند تعريفه بأل:', options: ['المدعو', 'المُدَّعِي', 'الدعاء', 'الداعي'], correct: 3 },
-      { q: '"المؤمنُ شاكرٌ فضلَ ربه" اسم الفاعل من الثلاثي في الجملة:', options: ['شاكِر (من شكرَ)', 'المؤمِن (من آمَنَ غير ثلاثي)', 'الفضل', 'ربه'], correct: 0 },
-      { q: '"المعلمُ مُربٍّ للأجيال" اسم الفاعل غير الثلاثي في الجملة:', options: ['المعلم فقط', 'كلاهما (معلم ومربٍ) أسماء فاعلين لغير ثلاثي', 'الأجيال', 'مُربٍّ (من ربّى غير ثلاثي) فقط'], correct: 1 },
-      { q: 'اسم الفاعل من الفعل (نهى):', options: ['مَنْهِيّ', 'مُنْتَهٍ', 'ناهٍ (الناهي)', 'نَهّاء'], correct: 2 },
-      { q: 'اسم الفاعل من الفعل (زلزلَ):', options: ['مُزَلْزَل', 'زلزال', 'زائل', 'مُزَلْزِل'], correct: 3 },
-      { q: 'اسم الفاعل من الفعل (شهدَ):', options: ['شاهِد', 'مَشْهُود', 'شهيد', 'مُشَاهِد'], correct: 0 },
-      { q: 'اسم الفاعل من الفعل (جاهَدَ):', options: ['جاهِد', 'مُجاهِد', 'مُجاهَد', 'جهاد'], correct: 1 },
-      { q: 'اسم الفاعل من الفعل (استغفرَ):', options: ['غافِر', 'مُسْتَغْفَر', 'مُسْتَغْفِر', 'غفور'], correct: 2 },
-      { q: 'يُعرب اسم الفاعل في الجملة وفقاً لـ:', options: ['الفاعلية دائماً', 'النصب دائماً', 'البناء الدائم', 'موقعه في الجملة حسب العوامل الداخلة عليه'], correct: 3 },
-      { q: 'اسم الفاعل يمكن أن يأتي:', options: ['مفرداً ومثنى وجمعاً ومذكراً ومؤنثاً وتلحقه الـ التعريف', 'مفرداً مذكراً فقط', 'نكرة فقط دون أل', 'مبنياً دائماً'], correct: 0 },
-      { q: 'اسم الفاعل من الفعل (أعطى):', options: ['عاطٍ', 'مُعْطٍ (المُعْطِي)', 'مُعْطَى', 'عطاء'], correct: 1 },
-      { q: '"الساعي في الخير محبوب" اسم الفاعل هنا مشتق من فعل نوعه:', options: ['ثلاثي صحيح سالم', 'غير ثلاثي سداسي', 'ثلاثي معتل الآخر (ناقص)', 'ثلاثي مضعف'], correct: 2 }
+      { q: 'اسم الفاعل هو اسم مشتق من الفعل المبني للمعلوم للدلالة على:', options: ['من وقع عليه الفعل', 'من قام بالفعل أو اتصف به', 'مكان حدوث الفعل', 'آلة حدوث الفعل'], correct: 1, explanation: 'هو المشتق الدال على الفاعل القائم بالحدث أو المتصف به.' },
+      { q: 'يُصاغ اسم الفاعل من الفعل الثلاثي الصحيح على وزن:', options: ['مَفْعُول', 'مُفَعِّل', 'فَاعِل', 'فَعِيل'], correct: 2, explanation: 'قاعدة صياغة اسم الفاعل من الثلاثي تكون على وزن (فاعِل).' },
+      { q: 'اسم الفاعل من الفعل الثلاثي (كتَبَ) هو:', options: ['مَكْتُوب', 'كِتَاب', 'مُكْتَتِب', 'كاتِب'], correct: 3, explanation: 'كتب على وزن فَعَلَ، اسم فاعله (كاتِب).' },
+      { q: 'اسم الفاعل من الفعل الثلاثي المهموز الفاء (أخَذَ) هو:', options: ['آخِذ', 'مَأْخُوذ', 'أخّاذ', 'مُؤاخِذ'], correct: 0, explanation: 'تتحول الهمزة مع ألف فاعل إلى همزة مد (آخِذ).' },
+      { q: 'اسم الفاعل من الفعل الثلاثي المضعف (ردَّ / مدَّ) هو:', options: ['مَرْدُود', 'رَادّ / مَادّ', 'مُرْتَدّ', 'رَدِيد'], correct: 1, explanation: 'يبقى التضعيف كما هو على وزن فاعل (رَادّ - مَادّ).' },
+      { q: 'اسم الفاعل من الفعل الأجوف (قالَ / صامَ) تُقلب عينه إلى همزة فيكون:', options: ['مَقُول / مَصُوم', 'قَوّال', 'قائِل / صائِم', 'مُقِيل'], correct: 2, explanation: 'الألف المنقلبة عن واو أو ياء تقلب همزة مكسورة في اسم الفاعل (قائِل).' },
+      { q: 'اسم الفاعل من الفعل الناقص المعتل الآخر (قضى / سعى) هو:', options: ['مَقْضِيّ', 'قَضّاء', 'مُقْتَضٍ', 'قاضٍ (القاضي) / ساعٍ (الساعي)'], correct: 3, explanation: 'اسم منقوص تحذف ياؤه في الرفع والجر نكرة (قاضٍ - ساعٍ).' },
+      { q: 'تحذف ياء اسم الفاعل الناقص (مثل قاضي) في حالتي:', options: ['الرفع والجر إذا كان نكرة غير مضافة', 'النصب دائماً', 'التعريف بأل فقط', 'الإضافة فقط'], correct: 0, explanation: 'قاعدة الاسم المنقوص: تحذف ياؤه رفعاً وجراً إذا جرد من أل والإضافة.' },
+      { q: 'تثبت ياء اسم الفاعل المنقوص في حالة النصب، مثل:', options: ['جاء قاضٍ', 'رأيتُ قاضياً عادلاً', 'مررتُ بقاضٍ', 'قاضٍ حكم بالحق'], correct: 1, explanation: 'تثبت الياء وتظهر عليها الفتحة في حالة النصب (قاضياً).' },
+      { q: 'يُصاغ اسم الفاعل من غير الثلاثي على وزن مضارعه مع:', options: ['فتح ما قبل الآخر وميم مضمومة', 'وزن فاعل مباشرة', 'إبدال حرف المضارعة ميماً مضمومة وكسر ما قبل الآخر', 'إضافة ألف بعد الحرف الأول فقط'], correct: 2, explanation: 'نأتي بالمضارع، نقلب حرف المضارعة ميماً مضمومة، ونكسر ما قبل الآخر.' },
+      { q: 'اسم الفاعل من الفعل الرباعي (أخلَصَ) هو:', options: ['مُخْلَص', 'خالِص', 'إخلاص', 'مُخْلِص'], correct: 3, explanation: 'يُخْلِص ➔ مُخْلِص بضم الميم وكسر اللام.' },
+      { q: 'اسم الفاعل من الفعل الخماسي (انطلَقَ) هو:', options: ['مُنْطَلِق', 'مُنْطَلَق', 'ناطِق', 'انطلاق'], correct: 0, explanation: 'يَنْطَلِق ➔ مُنْطَلِق بضم الميم وكسر اللام.' },
+      { q: 'اسم الفاعل من الفعل السداسي (استخرَجَ) هو:', options: ['مُسْتَخْرَج', 'مُسْتَخْرِج', 'تخريج', 'خارِج'], correct: 1, explanation: 'يَسْتَخْرِج ➔ مُسْتَخْرِج بضم الميم وكسر الراء.' },
+      { q: 'اسم الفاعل من الفعل (أكرَمَ):', options: ['كارِم', 'مُكْرَم', 'مُكْرِم', 'كريم'], correct: 2, explanation: 'يُكْرِم ➔ مُكْرِم بضم الميم وكسر الراء.' },
+      { q: 'اسم الفاعل من الفعل (تعلّمَ):', options: ['مُتَعَلَّم', 'عالِم', 'عليم', 'مُتَعَلِّم'], correct: 3, explanation: 'يَتَعَلَّم ➔ مُتَعَلِّم بضم الميم وكسر اللام المشددة.' },
+      { q: 'اسم الفاعل من الفعل (استقامَ):', options: ['مُسْتَقِيم', 'مُسْتَقَام', 'قائِم', 'مُقَام'], correct: 0, explanation: 'يَسْتَقِيم ➔ مُسْتَقِيم بضم الميم وكسر القاف.' },
+      { q: 'اسم الفاعل من الفعل (أعادَ):', options: ['مُعَاد', 'مُعِيد', 'عائِد', 'مُعاوِد'], correct: 1, explanation: 'يُعِيد ➔ مُعِيد بضم الميم وكسر العين.' },
+      { q: 'اسم الفاعل من الفعل الثلاثي (باعَ):', options: ['مَبِيع', 'بَيّاع', 'بائِع', 'مُبِيع'], correct: 2, explanation: 'ثلاثي أجوف يقلب وسطه همزة مكسورة على وزن فاعل (بائِع).' },
+      { q: 'اسم الفاعل من الفعل (دعا) عند تعريفه بأل:', options: ['المدعو', 'المُدَّعِي', 'الدعاء', 'الداعي'], correct: 3, explanation: 'تثبت الياء عند الاقتران بأل (الداعي).' },
+      { q: '"المؤمنُ شاكرٌ فضلَ ربه" اسم الفاعل من الثلاثي في الجملة:', options: ['شاكِر (من شكرَ)', 'المؤمِن (من آمَنَ غير ثلاثي)', 'الفضل', 'ربه'], correct: 0, explanation: 'شاكر على وزن فاعل من الفعل الثلاثي (شكر).' },
+      { q: '"المعلمُ مُربٍّ للأجيال" اسم الفاعل غير الثلاثي في الجملة:', options: ['المعلم فقط', 'كلاهما (معلم ومربٍ) أسماء فاعلين لغير ثلاثي', 'الأجيال', 'مُربٍّ (من ربّى غير ثلاثي) فقط'], correct: 1, explanation: 'المعلم (من عَلَّمَ) ومربٍ (من رَبَّى) كلاهما مشتق من أفعال غير ثلاثية بضم الميم وكسر ما قبل الآخر.' },
+      { q: 'اسم الفاعل من الفعل (نهى):', options: ['مَنْهِيّ', 'مُنْتَهٍ', 'ناهٍ (الناهي)', 'نَهّاء'], correct: 2, explanation: 'ثلاثي ناقص يصاغ على (ناهٍ / الناهي).' },
+      { q: 'اسم الفاعل من الفعل (زلزلَ):', options: ['مُزَلْزَل', 'زلزال', 'زائل', 'مُزَلْزِل'], correct: 3, explanation: 'رباعي مجرد يُزَلْزِل ➔ مُزَلْزِل.' },
+      { q: 'اسم الفاعل من الفعل (شهدَ):', options: ['شاهِد', 'مَشْهُود', 'شهيد', 'مُشَاهِد'], correct: 0, explanation: 'ثلاثي صحيح سالم على وزن فاعل (شاهِد).' },
+      { q: 'اسم الفاعل من الفعل (جاهَدَ):', options: ['جاهِد', 'مُجاهِد', 'مُجاهَد', 'جهاد'], correct: 1, explanation: 'غير ثلاثي يُجاهِد ➔ مُجاهِد.' },
+      { q: 'اسم الفاعل من الفعل (استغفرَ):', options: ['غافِر', 'مُسْتَغْفَر', 'مُسْتَغْفِر', 'غفور'], correct: 2, explanation: 'سداسي يَسْتَغْفِر ➔ مُسْتَغْفِر.' },
+      { q: 'يُعرب اسم الفاعل في الجملة وفقاً لـ:', options: ['الفاعلية دائماً', 'النصب دائماً', 'البناء الدائم', 'موقعه في الجملة حسب العوامل الداخلة عليه'], correct: 3, explanation: 'المشتقات تعرب حسب موقعها في الجملة رفعاً ونصباً وجراً.' },
+      { q: 'اسم الفاعل يمكن أن يأتي:', options: ['مفرداً ومثنى وجمعاً ومذكراً ومؤنثاً وتلحقه الـ التعريف', 'مفرداً مذكراً فقط', 'نكرة فقط دون أل', 'مبنياً دائماً'], correct: 0, explanation: 'المشتق يتصرف فيقبل الإفراد والتثنية والجمع والتذكير والتأنيث والتنكير والتعريف.' },
+      { q: 'اسم الفاعل من الفعل (أعطى):', options: ['عاطٍ', 'مُعْطٍ (المُعْطِي)', 'مُعْطَى', 'عطاء'], correct: 1, explanation: 'رباعي يُعْطِي ➔ مُعْطٍ / المُعْطِي.' },
+      { q: '"الساعي في الخير محبوب" اسم الفاعل هنا مشتق من فعل نوعه:', options: ['ثلاثي صحيح سالم', 'غير ثلاثي سداسي', 'ثلاثي معتل الآخر (ناقص)', 'ثلاثي مضعف'], correct: 2, explanation: 'الساعي مشتق من الفعل الثلاثي المعتل الآخر (سعى).' }
     ];
 
     const defaultData = {
       lessons: [],
       summaries: [],
       quizzes: [
-        { id: 101, grade: 'p4', title: 'اختبار النحو الشامل: أقسام الكلام (اسم، فعل، حرف)', questions: grade4Questions },
-        { id: 102, grade: 'p5', title: 'اختبار النحو: إعراب الفاعل والمفعول به وعلاماتهما', questions: grade5Questions },
-        { id: 103, grade: 'p6', title: 'اختبار النحو: النكرة والمعرفة وأنواع المعارف', questions: grade6Questions },
-        { id: 104, grade: 'm1', title: 'اختبار النحو: الفعل اللازم والفعل المتعدي لمفعول به', questions: grade1PrepQuestions },
-        { id: 105, grade: 'm2', title: 'اختبار النحو: الإعراب والبناء في الأسماء والحروف', questions: grade2PrepQuestions },
-        { id: 106, grade: 'm3', title: 'اختبار الصرف: صياغة واشتقاق اسم الفاعل من الثلاثي وغير الثلاثي', questions: grade3PrepQuestions }
+        { id: 101, grade: 'p4', title: 'اختبار النحو الشامل: أقسام الكلام (اسم، فعل، حرف)', questions: grade4Questions, duration: 15 },
+        { id: 102, grade: 'p5', title: 'اختبار النحو: إعراب الفاعل والمفعول به وعلاماتهما', questions: grade5Questions, duration: 15 },
+        { id: 103, grade: 'p6', title: 'اختبار النحو: النكرة والمعرفة وأنواع المعارف', questions: grade6Questions, duration: 15 },
+        { id: 104, grade: 'm1', title: 'اختبار درس (أسطورة مصرية: البطل أحمد المنسي) - 50 سؤالاً شاملاً مع التفسير التعليمي (25 دقيقة)', questions: grade1PrepMansi50, duration: 25 },
+        { id: 105, grade: 'm1', title: 'اختبار النحو: الفعل اللازم والفعل المتعدي لمفعول به', questions: grade1PrepGrammar, duration: 15 },
+        { id: 106, grade: 'm2', title: 'اختبار النحو: الإعراب والبناء في الأسماء والحروف', questions: grade2PrepQuestions, duration: 15 },
+        { id: 107, grade: 'm3', title: 'اختبار الصرف: صياغة واشتقاق اسم الفاعل من الثلاثي وغير الثلاثي', questions: grade3PrepQuestions, duration: 15 }
       ]
     };
 
@@ -1012,7 +904,9 @@
     function setGrade(grade) {
       currentGrade = grade;
       document.querySelectorAll('.grade-btn').forEach(btn => btn.classList.remove('active'));
-      event.target.classList.add('active');
+      if (event && event.target) {
+        event.target.classList.add('active');
+      }
 
       document.getElementById('lessons-title').innerText = `شروحات - ${gradeNames[grade]}`;
       document.getElementById('summaries-title').innerText = `المذكرات والتلخيصات - ${gradeNames[grade]}`;
@@ -1062,11 +956,11 @@
         <div class="card">
           <div class="card-header" style="background: #582f0e;">
             <span class="card-tag">اختبار إلكتروني</span>
-            <small><i class="fa-solid fa-stopwatch"></i> المدة: 15 دقيقة</small>
+            <small><i class="fa-solid fa-stopwatch"></i> المدة: ${quiz.duration || 15} دقيقة</small>
           </div>
           <div class="card-body">
             <h4 class="card-title">${quiz.title}</h4>
-            <p class="card-desc">عدد الأسئلة: <strong>${quiz.questions.length} سؤالاً</strong> | الوقت المحدد: <strong>15 دقيقة</strong></p>
+            <p class="card-desc">عدد الأسئلة: <strong>${quiz.questions.length} سؤالاً</strong> | الوقت المحدد: <strong>${quiz.duration || 15} دقيقة</strong></p>
           </div>
           <div class="card-footer">
             <button class="btn btn-primary" onclick="startQuiz(${quiz.id})">
@@ -1083,13 +977,12 @@
       renderSummaries();
     }
 
-    // إدارة المؤقت التنازلي (15 دقيقة = 900 ثانية)
     let activeQuiz = null;
     let quizTimerInterval = null;
-    let timeLeft = 900;
+    let timeLeft = 1500;
 
-    function startQuizTimer() {
-      timeLeft = 900;
+    function startQuizTimer(minutes) {
+      timeLeft = (minutes || 15) * 60;
       updateTimerDisplay();
       clearInterval(quizTimerInterval);
       quizTimerInterval = setInterval(() => {
@@ -1097,7 +990,7 @@
         updateTimerDisplay();
         if (timeLeft <= 0) {
           clearInterval(quizTimerInterval);
-          alert("انتهى وقت الاختبار المحدد (15 دقيقة)! سيتم تسليم الإجابات واحتساب النتيجة تلقائياً.");
+          alert("انتهى وقت الاختبار المحدد! سيتم تسليم الإجابات تلقائياً.");
           document.getElementById('quizForm').requestSubmit();
         }
       }, 1000);
@@ -1123,22 +1016,102 @@
       document.getElementById('studentName').value = '';
 
       const container = document.getElementById('quizQuestionsContainer');
-      container.innerHTML = activeQuiz.questions.map((q, qIndex) => `
-        <div class="quiz-question">
-          <p>${qIndex + 1}. ${q.q}</p>
-          <div class="quiz-options">
-            ${q.options.map((opt, optIndex) => `
-              <label>
-                <input type="radio" name="q_${qIndex}" value="${optIndex}" />
-                <span>${opt}</span>
-              </label>
-            `).join('')}
-          </div>
-        </div>
-      `).join('');
+      
+      container.innerHTML = activeQuiz.questions.map((q, qIndex) => {
+        const qType = q.type || 'mcq';
+
+        if (qType === 'mcq') {
+          return `
+            <div class="quiz-question">
+              <span class="question-type-badge"><i class="fa-solid fa-circle-dot"></i> اختيار من متعدد</span>
+              <p>س ${qIndex + 1}: ${q.q}</p>
+              <div class="quiz-options">
+                ${q.options.map((opt, optIndex) => `
+                  <label>
+                    <input type="radio" name="q_${qIndex}" value="${optIndex}" />
+                    <span>${opt}</span>
+                  </label>
+                `).join('')}
+              </div>
+            </div>
+          `;
+        } else if (qType === 'dragdrop') {
+          return `
+            <div class="quiz-question">
+              <span class="question-type-badge" style="background: #fef3c7; color: #92400e;"><i class="fa-solid fa-hand-pointer"></i> سحب وإفلات لإكمال الفراغ</span>
+              <p>س ${qIndex + 1}: ${q.instruction}</p>
+              <div class="drag-pool" id="pool_${qIndex}">
+                ${q.pool.map(word => `
+                  <span class="drag-chip" draggable="true" ondragstart="handleDragStart(event, '${word}', ${qIndex})">${word}</span>
+                `).join('')}
+              </div>
+              <div style="font-size: 1.05rem; line-height: 2.2; margin-top: 10px;">
+                <span>${q.sentencePrefix}</span>
+                <span class="drop-box" id="dropbox_${qIndex}" 
+                      ondragover="handleDragOver(event)" 
+                      ondragleave="handleDragLeave(event)" 
+                      ondrop="handleDrop(event, ${qIndex})">
+                  اسحب هنا
+                </span>
+                <span>${q.sentenceSuffix}</span>
+                <input type="hidden" name="q_${qIndex}" id="hidden_q_${qIndex}" value="" />
+              </div>
+            </div>
+          `;
+        } else if (qType === 'matching') {
+          return `
+            <div class="quiz-question">
+              <span class="question-type-badge" style="background: #dcfce7; color: #166534;"><i class="fa-solid fa-arrows-split-up-and-left"></i> مطابقة وتوصيل</span>
+              <p>س ${qIndex + 1}: ${q.instruction}</p>
+              <table class="matching-table">
+                ${q.items.map((it, itemIdx) => `
+                  <tr>
+                    <td style="width: 45%; font-weight: 700; color: var(--primary);">${it.item}</td>
+                    <td style="width: 55%;">
+                      <select name="q_${qIndex}_${itemIdx}" class="matching-select">
+                        <option value="">-- اختر المطابق الصحيح --</option>
+                        ${q.pool.map(pOpt => `<option value="${pOpt}">${pOpt}</option>`).join('')}
+                      </select>
+                    </td>
+                  </tr>
+                `).join('')}
+              </table>
+            </div>
+          `;
+        }
+      }).join('');
 
       document.getElementById('quizModal').classList.add('active');
-      startQuizTimer();
+      startQuizTimer(activeQuiz.duration || 15);
+    }
+
+    function handleDragStart(e, word, qIndex) {
+      e.dataTransfer.setData('text/plain', JSON.stringify({ word: word, qIndex: qIndex }));
+    }
+
+    function handleDragOver(e) {
+      e.preventDefault();
+      e.currentTarget.classList.add('hovered');
+    }
+
+    function handleDragLeave(e) {
+      e.currentTarget.classList.remove('hovered');
+    }
+
+    function handleDrop(e, targetQIndex) {
+      e.preventDefault();
+      const dropBox = e.currentTarget;
+      dropBox.classList.remove('hovered');
+      
+      const dataStr = e.dataTransfer.getData('text/plain');
+      if (!dataStr) return;
+      const data = JSON.parse(dataStr);
+      
+      if (data.qIndex === targetQIndex) {
+        dropBox.innerText = data.word;
+        dropBox.classList.add('filled');
+        document.getElementById(`hidden_q_${targetQIndex}`).value = data.word;
+      }
     }
 
     function submitQuiz(e) {
@@ -1154,24 +1127,70 @@
       let reviewHtml = '';
 
       activeQuiz.questions.forEach((q, i) => {
-        const selected = document.querySelector(`input[name="q_${i}"]:checked`);
-        const userChoice = selected ? parseInt(selected.value) : -1;
-        const isCorrect = userChoice === q.correct;
-        
-        if (isCorrect) score++;
+        const qType = q.type || 'mcq';
+        const explanationText = q.explanation ? `
+          <div class="explanation-box">
+            <strong><i class="fa-solid fa-lightbulb"></i> التفسير والتعليل التعليمي:</strong> ${q.explanation}
+          </div>` : '';
 
-        const userText = userChoice !== -1 ? q.options[userChoice] : 'لم تتم الإجابة';
-        const correctText = q.options[q.correct];
+        if (qType === 'mcq') {
+          const selected = document.querySelector(`input[name="q_${i}"]:checked`);
+          const userChoice = selected ? parseInt(selected.value) : -1;
+          const isCorrect = userChoice === q.correct;
+          if (isCorrect) score++;
 
-        reviewHtml += `
-          <div class="review-item ${isCorrect ? 'correct' : 'incorrect'}">
-            <p><strong>س ${i + 1}:</strong> ${q.q}</p>
-            <div style="font-size: 0.95rem; margin-top: 5px;">
-              <span>إجابتك: <strong style="color: ${isCorrect ? 'var(--success)' : 'var(--danger)'};">${userText}</strong></span> | 
-              <span>الإجابة الصحيحة: <strong style="color: var(--success);">${correctText}</strong></span>
+          const userText = userChoice !== -1 ? q.options[userChoice] : 'لم تتم الإجابة';
+          const correctText = q.options[q.correct];
+
+          reviewHtml += `
+            <div class="review-item ${isCorrect ? 'correct' : 'incorrect'}">
+              <p><strong>س ${i + 1} (اختياري):</strong> ${q.q}</p>
+              <div style="font-size: 0.95rem; margin-top: 5px;">
+                <span>إجابتك: <strong style="color: ${isCorrect ? 'var(--success)' : 'var(--danger)'};">${userText}</strong></span> | 
+                <span>الإجابة النموذجية: <strong style="color: var(--success);">${correctText}</strong></span>
+              </div>
+              ${explanationText}
             </div>
-          </div>
-        `;
+          `;
+        } else if (qType === 'dragdrop') {
+          const userWord = (document.getElementById(`hidden_q_${i}`)?.value || '').trim();
+          const isCorrect = userWord === q.correctWord;
+          if (isCorrect) score++;
+
+          reviewHtml += `
+            <div class="review-item ${isCorrect ? 'correct' : 'incorrect'}">
+              <p><strong>س ${i + 1} (سحب وإفلات):</strong> ${q.instruction} [${q.sentencePrefix} (...مكان الفراغ...) ${q.sentenceSuffix}]</p>
+              <div style="font-size: 0.95rem; margin-top: 5px;">
+                <span>إجابتك المسحوبة: <strong style="color: ${isCorrect ? 'var(--success)' : 'var(--danger)'};">${userWord || 'لم تقم بالسحب'}</strong></span> | 
+                <span>الكلمة الصحيحة: <strong style="color: var(--success);">${q.correctWord}</strong></span>
+              </div>
+              ${explanationText}
+            </div>
+          `;
+        } else if (qType === 'matching') {
+          let matchingAllCorrect = true;
+          let detailsArr = [];
+
+          q.items.forEach((it, itemIdx) => {
+            const userSelection = document.querySelector(`select[name="q_${i}_${itemIdx}"]`)?.value || '';
+            const isMatch = userSelection === it.correct;
+            if (!isMatch) matchingAllCorrect = false;
+            detailsArr.push(`(${it.item} ➔ ${userSelection || 'فارغ'} [الصحيح: ${it.correct}])`);
+          });
+
+          if (matchingAllCorrect) score++;
+
+          reviewHtml += `
+            <div class="review-item ${matchingAllCorrect ? 'correct' : 'incorrect'}">
+              <p><strong>س ${i + 1} (مطابقة وتوصيل):</strong> ${q.instruction}</p>
+              <div style="font-size: 0.95rem; margin-top: 5px;">
+                <span>نتيجة المطابقة: <strong style="color: ${matchingAllCorrect ? 'var(--success)' : 'var(--danger)'};">${matchingAllCorrect ? 'مطابقة صحيحة بالكامل' : 'يوجد مطابقة غير صحيحة'}</strong></span>
+                <div style="margin-top: 4px; font-size: 0.85rem; color: #475569;">${detailsArr.join(' | ')}</div>
+              </div>
+              ${explanationText}
+            </div>
+          `;
+        }
       });
 
       document.getElementById('reviewQuestionsContainer').innerHTML = reviewHtml;
@@ -1179,22 +1198,15 @@
       const percentage = Math.round((score / total) * 100);
       let appreciation = "مقبول";
 
-      if (percentage >= 85) {
-        appreciation = "ممتاز 🌟";
-      } else if (percentage >= 75) {
-        appreciation = "جيد جداً 🎖️";
-      } else if (percentage >= 65) {
-        appreciation = "جيد 👍";
-      } else if (percentage >= 50) {
-        appreciation = "مقبول ✍️";
-      } else {
-        appreciation = "يحتاج إلى تحسين 💪";
-      }
+      if (percentage >= 85) appreciation = "ممتاز 🌟";
+      else if (percentage >= 75) appreciation = "جيد جداً 🎖️";
+      else if (percentage >= 65) appreciation = "جيد 👍";
+      else if (percentage >= 50) appreciation = "مقبول ✍️";
+      else appreciation = "يحتاج إلى تحسين 💪";
 
       const now = new Date();
       const dateStr = `${now.getFullYear()}/${now.getMonth()+1}/${now.getDate()} - ${now.getHours()}:${String(now.getMinutes()).padStart(2, '0')}`;
 
-      // تجهيز بيانات الشهادة
       document.getElementById('certStudentName').innerText = studentName;
       document.getElementById('certQuizTitle').innerText = activeQuiz.title;
       document.getElementById('certGradeBadge').innerText = `التقدير: ${appreciation}`;
@@ -1202,7 +1214,6 @@
       document.getElementById('certPercentDisplay').innerText = `${percentage}%`;
       document.getElementById('certDateDisplay').innerText = dateStr;
 
-      // 1. الحفظ المحلي
       const scores = loadScores();
       const record = {
         id: Date.now(),
@@ -1217,7 +1228,6 @@
       scores.unshift(record);
       saveScores(scores);
 
-      // 2. الإرسال السحابي إلى Google Sheets
       if (GOOGLE_SHEET_URL && GOOGLE_SHEET_URL !== "YOUR_GOOGLE_SCRIPT_WEB_APP_URL_HERE") {
         fetch(GOOGLE_SHEET_URL, {
           method: "POST",
