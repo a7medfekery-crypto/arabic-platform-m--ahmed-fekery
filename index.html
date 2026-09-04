@@ -345,21 +345,36 @@
     .quiz-options label:hover { background: #e9ecef; }
 
     .drag-pool {
-      display: flex; flex-wrap: wrap; gap: 6px; background: #f1f5f9; padding: 8px;
-      border-radius: 8px; margin-bottom: 10px; border: 1px dashed #cbd5e1;
+      display: flex; flex-wrap: wrap; gap: 8px; background: #f1f5f9; padding: 10px;
+      border-radius: 8px; margin-bottom: 12px; border: 1px dashed #cbd5e1;
     }
     .drag-chip {
-      background: var(--primary); color: white; padding: 5px 10px; border-radius: 6px;
-      font-size: 0.82rem; font-weight: 700; cursor: grab; user-select: none;
+      background: var(--primary); color: white; padding: 6px 12px; border-radius: 6px;
+      font-size: 0.85rem; font-weight: 700; cursor: pointer; user-select: none;
+      transition: var(--transition); border: 2px solid transparent; display: inline-flex; align-items: center; gap: 5px;
+    }
+    .drag-chip:hover {
+      background: var(--primary-light); transform: translateY(-2px);
+    }
+    .drag-chip.selected {
+      background: #b45309 !important; border-color: #fde047; box-shadow: 0 0 10px rgba(180, 83, 9, 0.4);
+      transform: scale(1.04);
+    }
+    .drag-chip.used {
+      background: #94a3b8; opacity: 0.55; cursor: pointer;
     }
     .drop-box {
-      display: inline-flex; align-items: center; justify-content: center; min-width: 120px;
-      height: 36px; border: 2px dashed #94a3b8; border-radius: 6px; background: #fff;
+      display: inline-flex; align-items: center; justify-content: center; min-width: 130px;
+      height: 38px; border: 2px dashed #94a3b8; border-radius: 6px; background: #fff;
       margin: 4px; vertical-align: middle; font-weight: 700; color: var(--primary);
-      padding: 0 8px; transition: var(--transition); font-size: 0.9rem;
+      padding: 0 10px; transition: var(--transition); font-size: 0.9rem; cursor: pointer;
     }
-    .drop-box.hovered { background: #e2e8f0; border-color: var(--primary); }
-    .drop-box.filled { border-style: solid; border-color: var(--accent); background: #fefce8; }
+    .drop-box:hover {
+      border-color: var(--accent); background: #fafafa;
+    }
+    .drop-box.filled {
+      border-style: solid; border-color: var(--accent); background: #fefce8; color: #854d0e;
+    }
 
     .matching-table { width: 100%; border-collapse: collapse; margin-top: 8px; }
     .matching-table td { padding: 6px 8px; border-bottom: 1px solid #e2e8f0; font-size: 0.88rem; }
@@ -679,10 +694,14 @@
       summaries: [],
       quizzes: [
         { id: 100, grade: 'p4', title: 'اختبار درس (كل منا له حلم) - 50 سؤالاً شاملاً مع التفسير التعليمي (25 دقيقة)', questions: typeof grade4Dream50 !== 'undefined' ? grade4Dream50 : [], duration: 25 },
+        { id: 118, grade: 'p4', title: 'اختبار درس (مَن أنا؟ - أبلة فضيلة) - 50 سؤالاً شاملاً مع النحو (30 دقيقة)', questions: typeof grade4WhoAmI50 !== 'undefined' ? grade4WhoAmI50 : [], duration: 30 },
         { id: 101, grade: 'p4', title: 'اختبار النحو الشامل: أقسام الكلام (اسم، فعل، حرف)', questions: typeof grade4Questions !== 'undefined' ? grade4Questions : [], duration: 15 },
         { id: 102, grade: 'p5', title: 'اختبار درس (لم ألوّث ماء النهر) - 50 سؤالاً شاملاً مع إعراب الفاعل والمفعول به (25 دقيقة)', questions: typeof grade5Nile50 !== 'undefined' ? grade5Nile50 : [], duration: 25 },
+        { id: 117, grade: 'p5', title: 'اختبار درس (بطل حل المشكلات) - 50 سؤالاً شاملاً مع النحو (30 دقيقة)', questions: typeof grade5ProblemSolver50 !== 'undefined' ? grade5ProblemSolver50 : [], duration: 30 },
         { id: 103, grade: 'p5', title: 'اختبار النحو: إعراب الفاعل والمفعول به وعلاماتهما', questions: typeof grade5Questions !== 'undefined' ? grade5Questions : [], duration: 15 },
         { id: 104, grade: 'p6', title: 'اختبار درس (كنز لا يُقدّر بثمن) - 50 سؤالاً شاملاً مع التفسير التعليمي (25 دقيقة)', questions: typeof grade6Treasure50 !== 'undefined' ? grade6Treasure50 : [], duration: 25 },
+        { id: 114, grade: 'p6', title: 'اختبار درس (اصنع قرارك) - 50 سؤالاً شاملاً مع النحو والتفسير التعليمي (30 دقيقة)', questions: typeof grade6MakeDecision50 !== 'undefined' ? grade6MakeDecision50 : [], duration: 30 },
+        { id: 115, grade: 'p6', title: 'اختبار نص (إلى الشباب) - 50 سؤالاً شاملاً في المفردات ومظاهر الجمال (30 دقيقة)', questions: typeof grade6ToTheYouth50 !== 'undefined' ? grade6ToTheYouth50 : [], duration: 30 },
         { id: 105, grade: 'p6', title: 'اختبار النحو: النكرة والمعرفة وأنواع المعارف', questions: typeof grade6Questions !== 'undefined' ? grade6Questions : [], duration: 15 },
         { id: 106, grade: 'm1', title: 'اختبار درس (أسطورة مصرية: البطل أحمد المنسي) - 50 سؤالاً شاملاً مع التفسير التعليمي (25 دقيقة)', questions: typeof grade1PrepMansi50 !== 'undefined' ? grade1PrepMansi50 : [], duration: 25 },
         { id: 107, grade: 'm1', title: 'اختبار النحو: الفعل اللازم والفعل المتعدي لمفعول به', questions: typeof grade1PrepGrammar !== 'undefined' ? grade1PrepGrammar : [], duration: 15 },
@@ -878,7 +897,7 @@
 
     let activeQuiz = null;
     let quizTimerInterval = null;
-    let timeLeft = 1500;
+    let timeLeft = 1800;
 
     function startQuizTimer(minutes) {
       timeLeft = (minutes || 15) * 60;
@@ -937,20 +956,19 @@
         } else if (qType === 'dragdrop') {
           return `
             <div class="quiz-question">
-              <span class="question-type-badge" style="background: #fef3c7; color: #92400e;"><i class="fa-solid fa-hand-pointer"></i> سحب وإفلات لإكمال الفراغ</span>
+              <span class="question-type-badge" style="background: #fef3c7; color: #92400e;"><i class="fa-solid fa-arrow-pointer"></i> اضغط على الكلمة المناسبة لوضعها بالفراغ</span>
               <p>س ${qIndex + 1}: ${q.instruction}</p>
               <div class="drag-pool" id="pool_${qIndex}">
-                ${q.pool.map(word => `
-                  <span class="drag-chip" draggable="true" ondragstart="handleDragStart(event, '${word}', ${qIndex})">${word}</span>
+                ${q.pool.map((word, wIdx) => `
+                  <span class="drag-chip" id="chip_${qIndex}_${wIdx}" onclick="selectWordForBlank(${qIndex}, ${wIdx}, '${word.replace(/'/g, "\\'")}')">
+                    <i class="fa-regular fa-hand-point-up"></i> ${word}
+                  </span>
                 `).join('')}
               </div>
               <div style="font-size: 0.98rem; line-height: 2.2; margin-top: 10px;">
                 <span>${q.sentencePrefix}</span>
-                <span class="drop-box" id="dropbox_${qIndex}" 
-                      ondragover="handleDragOver(event)" 
-                      ondragleave="handleDragLeave(event)" 
-                      ondrop="handleDrop(event, ${qIndex})">
-                  اسحب هنا
+                <span class="drop-box" id="dropbox_${qIndex}" onclick="handleBlankClick(${qIndex})">
+                  (اضغط الكلمة لتملأ هنا)
                 </span>
                 <span>${q.sentenceSuffix}</span>
                 <input type="hidden" name="q_${qIndex}" id="hidden_q_${qIndex}" value="" />
@@ -984,33 +1002,47 @@
       startQuizTimer(activeQuiz.duration || 15);
     }
 
-    function handleDragStart(e, word, qIndex) {
-      e.dataTransfer.setData('text/plain', JSON.stringify({ word: word, qIndex: qIndex }));
-    }
+    function selectWordForBlank(qIndex, wIdx, word) {
+      const dropBox = document.getElementById(`dropbox_${qIndex}`);
+      const hiddenInput = document.getElementById(`hidden_q_${qIndex}`);
+      const chip = document.getElementById(`chip_${qIndex}_${wIdx}`);
 
-    function handleDragOver(e) {
-      e.preventDefault();
-      e.currentTarget.classList.add('hovered');
-    }
-
-    function handleDragLeave(e) {
-      e.currentTarget.classList.remove('hovered');
-    }
-
-    function handleDrop(e, targetQIndex) {
-      e.preventDefault();
-      const dropBox = e.currentTarget;
-      dropBox.classList.remove('hovered');
-      
-      const dataStr = e.dataTransfer.getData('text/plain');
-      if (!dataStr) return;
-      const data = JSON.parse(dataStr);
-      
-      if (data.qIndex === targetQIndex) {
-        dropBox.innerText = data.word;
-        dropBox.classList.add('filled');
-        document.getElementById(`hidden_q_${targetQIndex}`).value = data.word;
+      if (hiddenInput.value === word) {
+        clearBlank(qIndex);
+        return;
       }
+
+      document.querySelectorAll(`#pool_${qIndex} .drag-chip`).forEach(c => {
+        c.classList.remove('selected');
+        c.classList.remove('used');
+      });
+
+      chip.classList.add('selected');
+      chip.classList.add('used');
+
+      dropBox.innerHTML = `<strong>${word}</strong> <i class="fa-solid fa-xmark" style="font-size:0.75rem; margin-right:4px; opacity:0.6;"></i>`;
+      dropBox.classList.add('filled');
+      hiddenInput.value = word;
+    }
+
+    function handleBlankClick(qIndex) {
+      const hiddenInput = document.getElementById(`hidden_q_${qIndex}`);
+      if (hiddenInput.value) {
+        clearBlank(qIndex);
+      }
+    }
+
+    function clearBlank(qIndex) {
+      const dropBox = document.getElementById(`dropbox_${qIndex}`);
+      const hiddenInput = document.getElementById(`hidden_q_${qIndex}`);
+      dropBox.innerText = "(اضغط الكلمة لتملأ هنا)";
+      dropBox.classList.remove('filled');
+      hiddenInput.value = "";
+
+      document.querySelectorAll(`#pool_${qIndex} .drag-chip`).forEach(c => {
+        c.classList.remove('selected');
+        c.classList.remove('used');
+      });
     }
 
     function submitQuiz(e) {
@@ -1058,9 +1090,9 @@
 
           reviewHtml += `
             <div class="review-item ${isCorrect ? 'correct' : 'incorrect'}">
-              <p><strong>س ${i + 1} (سحب وإفلات):</strong> ${q.instruction} [${q.sentencePrefix} (...مكان الفراغ...) ${q.sentenceSuffix}]</p>
+              <p><strong>س ${i + 1} (إكمال الفراغ بالضغط):</strong> ${q.instruction} [${q.sentencePrefix} (...مكان الفراغ...) ${q.sentenceSuffix}]</p>
               <div style="font-size: 0.92rem; margin-top: 5px;">
-                <span>إجابتك المسحوبة: <strong style="color: ${isCorrect ? 'var(--success)' : 'var(--danger)'};">${userWord || 'لم تقم بالسحب'}</strong></span> | 
+                <span>إجابتك المختارة: <strong style="color: ${isCorrect ? 'var(--success)' : 'var(--danger)'};">${userWord || 'لم تقم بالاختيار'}</strong></span> | 
                 <span>الكلمة الصحيحة: <strong style="color: var(--success);">${q.correctWord}</strong></span>
               </div>
               ${explanationText}
